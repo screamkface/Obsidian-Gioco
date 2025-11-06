@@ -1,0 +1,22 @@
+{
+	"nodes":[
+		{"id":"93d361ffbf59cbb1","type":"group","x":-1720,"y":-1200,"width":1647,"height":440,"label":"Fazioni"},
+		{"id":"824d468aea7c5587","type":"file","file":"Gioco/Idea Gioco (Reigns con AI).md","x":-500,"y":-260,"width":400,"height":400,"color":"6"},
+		{"id":"ffce7fb5fa4f2c1b","type":"file","file":"Gioco/Finali/Stile dei finali.md","x":-1160,"y":-260,"width":400,"height":400,"color":"2"},
+		{"id":"64d65eac0541657f","type":"file","file":"Gioco/Logica.md","x":-500,"y":360,"width":400,"height":400,"color":"4"},
+		{"id":"0a265c6fb496aa01","type":"file","file":"Gioco/Fazione/Cultisti.md","x":-1700,"y":-1180,"width":400,"height":400,"color":"1"},
+		{"id":"95d1e68b9dd48da0","type":"file","file":"Gioco/Fazione/I Figli della Terra (Gli Evoluti).md","x":-1293,"y":-1180,"width":400,"height":400,"color":"1"},
+		{"id":"4325b065349a2309","type":"file","file":"Gioco/Fazione/I Riciclatori.md","x":-893,"y":-1180,"width":400,"height":400,"color":"1"},
+		{"id":"84a538c70e3d7013","type":"file","file":"Gioco/Fazione/Restauratori.md","x":-493,"y":-1180,"width":400,"height":400,"color":"1"},
+		{"id":"6fe78bea47947143","type":"file","file":"Gioco/Storia.md","x":-2240,"y":-1520,"width":240,"height":400,"color":"1"},
+		{"id":"adc9305fe4ad95a5","type":"file","file":"Gioco/Idee.md","x":320,"y":-260,"width":400,"height":400,"color":"6"},
+		{"id":"64c7cc58d90de961","x":-2222,"y":-467,"width":722,"height":1427,"type":"file","file":"Gioco/TODO PROGETTO.md"}
+	],
+	"edges":[
+		{"id":"d1cec6823ae60544","fromNode":"824d468aea7c5587","fromSide":"right","toNode":"adc9305fe4ad95a5","toSide":"left"},
+		{"id":"149e390467018705","fromNode":"824d468aea7c5587","fromSide":"bottom","toNode":"64d65eac0541657f","toSide":"top"},
+		{"id":"da6a323a927224c1","fromNode":"6fe78bea47947143","fromSide":"right","toNode":"0a265c6fb496aa01","toSide":"left"},
+		{"id":"0217bc35962e1dee","fromNode":"824d468aea7c5587","fromSide":"left","toNode":"ffce7fb5fa4f2c1b","toSide":"right"},
+		{"id":"fd4200146574e215","fromNode":"93d361ffbf59cbb1","fromSide":"right","toNode":"64d65eac0541657f","toSide":"right"}
+	]
+}

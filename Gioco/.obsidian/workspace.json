@@ -1,0 +1,217 @@
+{
+  "main": {
+    "id": "06daa61e81d28d53",
+    "type": "split",
+    "children": [
+      {
+        "id": "7080afb646eab532",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "e4b6406cc523c0df",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "8dbd430dbdaf1522",
+    "type": "split",
+    "children": [
+      {
+        "id": "32691198787cf6bf",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "7664de7ed38eefb7",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "1183eed0ba434dfd",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "99edc0b30f9b6d13",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 200
+  },
+  "right": {
+    "id": "54784160826d3bd8",
+    "type": "split",
+    "children": [
+      {
+        "id": "aa47673060ebc954",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "5cab1659f32c80d4",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Untitled.canvas",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for Untitled"
+            }
+          },
+          {
+            "id": "0b47325cba1efbf9",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Untitled.canvas",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from Untitled"
+            }
+          },
+          {
+            "id": "d1f42cbfe6f88a05",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "ae78912f7cc40b76",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Untitled.canvas",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of Untitled"
+            }
+          },
+          {
+            "id": "b39f76c6afc508f6",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {},
+              "icon": "git-pull-request",
+              "title": "Source Control"
+            }
+          }
+        ],
+        "currentTab": 4
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false,
+      "obsidian-git:Open Git source control": false
+    }
+  },
+  "active": "b39f76c6afc508f6",
+  "lastOpenFiles": [
+    "Gioco/uml.png",
+    "Gioco/Pasted image 20251105230649.png",
+    "Gioco/Untitled.md",
+    "Gioco.zip",
+    "Gioco/Canvas Idea Gioco.canvas",
+    "Gioco/TODO PROGETTO.md",
+    "Pasted image 20251105230649.png",
+    "Gioco/Struttura.md",
+    "Gioco/Logica.md",
+    "Gioco/Idee.md",
+    "Gioco/Gestione dei disegni.md",
+    "Gioco/Prova Prompt.md",
+    "Gioco/Editori.md",
+    "Flutter Projet.md",
+    "Untitled.canvas",
+    "Gioco/Luoghi.md",
+    "Gioco/Nemici.md",
+    "Gioco/Passi.md",
+    "Gioco/Storia.md",
+    "Gioco/Tema Del Gioco.md",
+    "Gioco/Dataset e Modello.md",
+    "Gioco/Idea Gioco (Reigns con AI).md",
+    "Gioco/Achievements.md",
+    "Gioco/Finali/Stile dei finali.md",
+    "Gioco/Finali/Come Generarli.md",
+    "Gioco/Fazione/Cultisti.md",
+    "Gioco/Fazione/Restauratori.md",
+    "Gioco/Fazione/I Riciclatori.md",
+    "Gioco/Fazione/I Figli della Terra (Gli Evoluti).md",
+    "Idea finale crea storia.md",
+    "Gioco/Finali",
+    "Gioco/Untitled.canvas",
+    "Gioco/Fazione",
+    "Gioco",
+    "Welcome.md"
+  ]
+}
