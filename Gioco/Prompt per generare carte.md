@@ -1,0 +1,9 @@
+A vertical game card in dark cartoon style, featuring a physical threat called **“The Flayed.”** Use **the same card frame design previously used for the other cards** — including the distressed, metallic-edged borders, the worn texture, and the distinct empty rectangular areas at the top (for the name) and bottom (for the description text). The frame and proportions must remain consistent with the existing set (e.g., the 'Cultist,' 'Restorer,' 'Whispering Fog,' and 'Voids' cards).
+
+The central illustration depicts a brutal nomadic raider from the faction known as _The Flayed._ The figure wears crudely tanned human skin as clothing — a patchwork of stitched hides, some still bearing faint tattoos or scars from their victims. Their armor is scavenged and asymmetrical, decorated with bones, teeth, and leather straps.
+
+Their expression (if visible) is feral and intense, showing both madness and pride. Their skin may be smeared with blood or ash, and their eyes gleam with fanatic hunger. They carry primitive but effective weapons — such as a cleaver, machete, or bone-handled blade — and their stance suggests both aggression and ritual reverence.
+
+The background hints at a desolate wasteland or a firelit encampment filled with trophies, smoke, and torn banners. The mood should be savage, ritualistic, and deeply unsettling, conveying the philosophy of consuming others to “absorb” their essence.
+
+Emphasize thick outlines, heavy shadows, and a grim, desaturated palette — muted reds, browns, and grays, with touches of pale flesh tones. Subtle lighting should draw attention to the stitched hides and the character’s menacing posture. Ensure the **card’s frame and empty text areas remain perfectly intact and clearly visible.**

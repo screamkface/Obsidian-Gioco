@@ -6,10 +6,10 @@ Certamente. Ecco il riepilogo ufficiale delle Minacce per la nostra Bibbia di Gi
 
 Questo è un elenco dei pericoli noti che affliggono la Zona Contaminata. L'AI userà queste minacce per generare eventi di crisi, dilemmi morali e opportunità di esplorazione.
 
-1. **Gli "Scuoiati" (Minaccia Fisica/Predoni)**
-    
-    - **Descrizione:** Predoni nomadi che hanno abbracciato il cannibalismo filosofico. Credono che divorando i nemici ne assorbano la forza e l'identità. Si vestono con le pelli conciate (spesso male) delle loro vittime.
-        
+	1. **Gli "Scuoiati" (Minaccia Fisica/Predoni)**
+	    
+	    - **Descrizione:** Predoni nomadi che hanno abbracciato il cannibalismo filosofico. Credono che divorando i nemici ne assorbano la forza e l'identità. Si vestono con le pelli conciate (spesso male) delle loro vittime.
+	        
     - **Funzione nel Gioco:** La minaccia primaria alla `Difesa` e ai `Sopravvissuti`. Generano eventi di assedio, rapimenti e richieste di riscatto, rappresentando la violenza e la disperazione più brutali.
         
 2. **I "Vuoti" (Minaccia Radioattiva/Contaminazione)**

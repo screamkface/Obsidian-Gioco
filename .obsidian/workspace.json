@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Gioco/Stile card.md",
+                "file": "Gioco/Prompt per generare carte.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Stile card"
+              "title": "Prompt per generare carte"
             }
           }
         ]
@@ -179,8 +179,12 @@
   },
   "active": "e38f05caacff8306",
   "lastOpenFiles": [
-    "Gioco/Fazione/Cultisti.md",
+    "Gioco/Nemici.md",
+    "Gioco/Prompt per generare carte.md",
+    "Gioco/Fazione/I Riciclatori.md",
+    "Gioco/Fazione/I Figli della Terra (Gli Evoluti).md",
     "Gioco/Stile card.md",
+    "Gioco/Fazione/Cultisti.md",
     "Gioco/Achievements.md",
     "Gioco/Canvas Idea Gioco.canvas",
     "Gioco/uml.png",
