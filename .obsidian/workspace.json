@@ -4,17 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "1da40ebdabfd49b2",
+        "id": "e3432919f95bb86d",
         "type": "tabs",
         "children": [
           {
-            "id": "98419d96796aa770",
+            "id": "e38f05caacff8306",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "Gioco/Stile card.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "Stile card"
             }
           }
         ]
@@ -173,10 +177,14 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "98419d96796aa770",
+  "active": "e38f05caacff8306",
   "lastOpenFiles": [
-    "Gioco/TODO PROGETTO.md",
+    "Gioco/Fazione/Cultisti.md",
+    "Gioco/Stile card.md",
+    "Gioco/Achievements.md",
+    "Gioco/Canvas Idea Gioco.canvas",
     "Gioco/uml.png",
+    "Gioco/TODO PROGETTO.md",
     "Gioco/Finali/Come Generarli.md",
     "README.md"
   ]
