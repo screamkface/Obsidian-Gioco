@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "9dd47a50c82c9957",
+        "id": "1da40ebdabfd49b2",
         "type": "tabs",
         "children": [
           {
-            "id": "01e7cfad43e6022d",
+            "id": "98419d96796aa770",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Gioco/TODO PROGETTO.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "TODO PROGETTO"
+              "title": "New tab"
             }
           }
         ]
@@ -78,7 +74,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 207
   },
   "right": {
     "id": "c376b5663d42f03e",
@@ -177,8 +173,9 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "b5782aa55b556337",
+  "active": "98419d96796aa770",
   "lastOpenFiles": [
+    "Gioco/TODO PROGETTO.md",
     "Gioco/uml.png",
     "Gioco/Finali/Come Generarli.md",
     "README.md"
