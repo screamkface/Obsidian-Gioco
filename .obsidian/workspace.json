@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Gioco/Grafica/Dimensioni.md",
+                "file": "How to Kaggle.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Dimensioni"
+              "title": "How to Kaggle"
             }
           }
         ]
@@ -179,18 +179,22 @@
   },
   "active": "e38f05caacff8306",
   "lastOpenFiles": [
+    "Concetti Analisi 1.md",
+    "How to Kaggle.md",
+    "Flutter Projet.md",
+    "Flutter Intervista.md",
     "Gioco/Logica.md",
+    "Gioco/Canvas Idea Gioco.canvas",
+    "Gioco/Fazione/Cultisti.md",
+    "Gioco/Fazione/I Figli della Terra (Gli Evoluti).md",
+    "Gioco/Fazione/I Riciclatori.md",
+    "Gioco/uml.png",
     "Gioco/Grafica/Dimensioni.md",
     "Gioco/Grafica",
-    "Gioco/Canvas Idea Gioco.canvas",
     "Gioco/Nemici.md",
     "Gioco/Prompt per generare carte.md",
-    "Gioco/Fazione/I Riciclatori.md",
-    "Gioco/Fazione/I Figli della Terra (Gli Evoluti).md",
     "Gioco/Stile card.md",
-    "Gioco/Fazione/Cultisti.md",
     "Gioco/Achievements.md",
-    "Gioco/uml.png",
     "Gioco/TODO PROGETTO.md",
     "Gioco/Finali/Come Generarli.md",
     "README.md"
