@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "e3432919f95bb86d",
+        "id": "17be8b8eb3ff1b63",
         "type": "tabs",
         "children": [
           {
-            "id": "e38f05caacff8306",
+            "id": "d91125dfa92587c9",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Readdit.md",
+                "file": "Machine Learning/Appunti Nicola.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Readdit"
+              "title": "Appunti Nicola"
             }
           }
         ]
@@ -44,7 +44,7 @@
                 "autoReveal": false
               },
               "icon": "lucide-folder-closed",
-              "title": "Files"
+              "title": "Esplora risorse"
             }
           },
           {
@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "tag:#Algoritmi",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -61,7 +61,7 @@
                 "sortOrder": "alphabetical"
               },
               "icon": "lucide-search",
-              "title": "Search"
+              "title": "Ricerca"
             }
           },
           {
@@ -78,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 207
+    "width": 200
   },
   "right": {
     "id": "c376b5663d42f03e",
@@ -163,40 +163,68 @@
       }
     ],
     "direction": "horizontal",
-    "width": 246
+    "width": 200
   },
   "left-ribbon": {
     "hiddenItems": {
-      "switcher:Open quick switcher": false,
-      "graph:Open graph view": false,
-      "canvas:Create new canvas": false,
-      "daily-notes:Open today's daily note": false,
-      "templates:Insert template": false,
-      "command-palette:Open command palette": false,
-      "bases:Create new base": false,
+      "switcher:Apri selezione rapida": false,
+      "graph:Apri vista grafo": false,
+      "canvas:Crea nuova lavagna": false,
+      "daily-notes:Apri nota del giorno": false,
+      "templates:Inserisci modello": false,
+      "command-palette:Apri riquadro comandi": false,
+      "bases:Crea nuova Base": false,
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "e38f05caacff8306",
+  "active": "d91125dfa92587c9",
   "lastOpenFiles": [
-    "How to Kaggle.md",
-    "Concetti Analisi 1.md",
-    "Readdit.md",
-    "Flutter Intervista.md",
-    "Gioco/Logica.md",
-    "Gioco/Canvas Idea Gioco.canvas",
-    "Gioco/Fazione/Cultisti.md",
-    "Gioco/Fazione/I Figli della Terra (Gli Evoluti).md",
-    "Gioco/Fazione/I Riciclatori.md",
-    "Gioco/uml.png",
+    "Machine Learning/Appunti Nicola.synctex(busy)",
+    "Machine Learning/pdflatex21696.fls",
+    "Machine Learning/pdflatex11724.fls",
+    "Machine Learning/pdflatex19680.fls",
+    "Machine Learning/Appunti Nicola.synctex.gz",
+    "Machine Learning/Appunti Nicola.toc",
+    "Machine Learning/Appunti Nicola.pdf",
+    "Machine Learning/pdflatex15028.fls",
+    "Machine Learning/pdflatex944.fls",
+    "Machine Learning/pdflatex18444.fls",
+    "Machine Learning/pdflatex9300.fls",
+    "Gioco/Idea Gioco (Reigns con AI).md",
     "Gioco/Grafica/Dimensioni.md",
-    "Gioco/Grafica",
-    "Gioco/Nemici.md",
+    "Machine Learning/Appunti Nicola.md",
+    "1AAwIlHM8TpAVe4l2FihNUQ.webp",
+    "MNLP Notes.md",
+    "Senza nome 1.md",
+    "Machine Learning/a1205455276678d62b52ba9bfae60302b90314f4.png",
+    "Machine Learning/3681c0d63a8099f6b428903d4cfeed2b8fe818db.png",
+    "Machine Learning/b795c07304c42cc254e12fb250fda72320f1c900.png",
+    "Gemini_Generated_Image_ws4f3sws4f3sws4f.png",
+    "architecture.md",
+    "Discorso Presentazione.md",
+    "Readdit.md",
+    "Senza nome.md",
+    "PDLL.md",
+    "Machine Learning/1740a4fd2a73affaac835db181129fc90fdecf94.webp",
+    "Machine Learning/831eae8f0aaa397e2860ddd151d0901b0f2818f8.png",
+    "Machine Learning/286a41830e443632af7fc39c6ce1d225b2df44c7.png",
+    "Machine Learning/c8ed71f04f4b53b1ef0b1572cd679665917588a0.png",
+    "Machine Learning/761a520db6509eb4fbe522fc4f9b94880c18b9ca.png",
+    "Consigli Produzione Cinematica.md",
+    "Gioco/Passi.md",
     "Gioco/Prompt per generare carte.md",
+    "Discorso Presentazione Laurea.md",
+    "Gioco/IMPORTANTE.md",
+    "Gioco/Luoghi.md",
+    "Gioco/Gestione dei disegni.md",
+    "Gioco/Editori.md",
+    "Gioco/Dataset e Modello.md",
+    "Gioco/Canvas Idea Gioco.canvas",
     "Gioco/Stile card.md",
-    "Gioco/Achievements.md",
+    "Gioco/Nemici.md",
+    "Gioco/Storia.md",
     "Gioco/TODO PROGETTO.md",
-    "Gioco/Finali/Come Generarli.md",
-    "README.md"
+    "Gioco/Tema Del Gioco.md",
+    "Gioco/Struttura.md"
   ]
 }
