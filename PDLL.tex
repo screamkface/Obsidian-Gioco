@@ -1,0 +1,59 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[italian]{babel}
+\usepackage{amsmath, amssymb, booktabs, tcolorbox, geometry}
+
+\geometry{margin=2.5cm}
+
+\title{Algoritmo DPLL: Analisi dello Scheletro Logico}
+\author{Nicola Moscufo}
+\date{5 Marzo 2026}
+
+\begin{document}
+
+\maketitle
+
+L'immagine del codice mostra come un computer trasforma la logica proposizionale in un processo sistematico di \textbf{tentativi ed errori}.
+
+\section{La Fase di Obbligo: \texttt{UnitPropagation}}
+La prima istruzione operativa è:
+\[ (\psi, \mathcal{I}) := \text{UNITPROPAGATION}(\phi, \mathcal{I}') \]
+
+\begin{tcolorbox}[colback=blue!5!white,colframe=blue!75!black,title=Regola 1: La Scelta Forzata]
+In questa fase, il computer cerca le \textbf{clausole unitarie}.
+\begin{itemize}
+    \item Se trova $\{ \lambda \}$, imposta $\lambda = \text{Vero}$.
+    \item Se trova $\{ \neg \lambda \}$, imposta $\lambda = \text{Falso}$.
+\end{itemize}
+\end{tcolorbox}
+
+\section{La Fase di Scelta: \texttt{Splitting Rule}}
+Quando non ci sono più clausole unitarie, il programma arriva alla riga:
+\begin{center}
+    \texttt{else select a literal} $\lambda \in C \in \psi$
+\end{center}
+
+\subsection*{Tentativo A: ``Vero''}
+\[ \text{if DPLL}(\psi \cup \{\{\lambda\}\}, \mathcal{I}) = \dots \]
+\textbf{Significato:} ``Ipotizziamo che $\lambda$ sia Vero.''
+
+\subsection*{Tentativo B: ``Not'' (Backtracking)}
+\[ \text{else return DPLL}(\psi \cup \{\{\neg \lambda\}\}, \mathcal{I}) \]
+\textbf{Significato:} ``Se il tentativo A fallisce, allora $\lambda$ deve essere Falso.''
+
+\section{Sintesi delle Decisioni}
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{lll}
+        \toprule
+        \textbf{Situazione} & \textbf{Azione} & \textbf{Logica} \\
+        \midrule
+        Clausola Unitaria & $\{s\}$ o $\{\neg q\}$ & Decisione Forzata \\
+        Bivio (Split) & Scegli $\lambda$ & Decisione Arbitraria \\
+        Contraddizione & $\emptyset$ & Backtrack \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+\end{document}
