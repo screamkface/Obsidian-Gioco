@@ -36,36 +36,6 @@ header-includes:
   - \usepackage{etoolbox}
   - \AtBeginEnvironment{longtable}{\small}
 ---
-\begin{titlepage}
-    \centering
-    \vspace*{2cm}
-    
-    {\scshape\LARGE La Sapienza \par}
-    \vspace{1cm}
-    {\scshape\Large Facoltà di Ingegneria Informatica e Statistica \par}
-    \vspace{1.5cm}
-    
-    % Se hai un logo, togli il % dalla riga sotto e metti il nome dell'immagine corretta
-    % \includegraphics[width=0.4\textwidth]{images/logo_uni.png}\par\vspace{1.5cm}
-    
-    {\huge\bfseries Machine Learning \par}
-    \vspace{0.5cm}
-    {\Large Machine Learning Notes \par}
-    \vspace{2cm}
-    
-    {\Large\itshape Autore: Nicola Moscufo \par}
-    \vfill
-    
-    Docente:\par
-    \textbf{Prof. Federico Fusco}
-    \textbf{Prof. Fabio Patrizi}
-    
-    \vspace{2cm}
-    {\large Anno Accademico 2025/2026 \par}
-\end{titlepage}
-
-
-\newpage
 
 
 \newpage
@@ -241,7 +211,6 @@ The restriction to a specific class $\mathcal{H}$ is called an **Inductive Bias*
 The simplest type of inductive bias is assuming that the hypothesis class $\mathcal{H}$ has a finite number of elements.
 
 $$ |\mathcal{H}| < \infty $$
-
 ### The Realizability Assumption
 To analyze performance in this setting, we often make the **Realizability Assumption**:
 We assume that the true labeling function $f$ actually exists within our hypothesis class (or effectively, that there is some $h^* \in \mathcal{H}$ that makes no errors).
@@ -359,7 +328,7 @@ $$ \epsilon_{\text{est}} = L_{\mathcal{D}}(h_S) - L_{\mathcal{D}}(h^*) $$
 ## The Bias-Complexity Tradeoff
 
 | Property | Small / Simple $\mathcal{H}$ | Large / Complex $\mathcal{H}$ |
-| :------- | :-------------------------------------------------- | :-------------------------------------------------- |
+| --- | --- | --- |
 | **Example** | Linear Models, Shallow Trees | Deep Neural Networks, High-degree Polynomials |
 | **Approximation Error** | **High** (Underfitting) \newline The model is too rigid to capture reality. | **Low** \newline The model is flexible enough to fit $f$. |
 | **Estimation Error** | **Low** \newline Easy to find the best $h$ with few samples. | **High** (Overfitting) \newline Hard to distinguish signal from noise. |
@@ -452,6 +421,7 @@ Imagine the VC-dimension is $d$.
 ## 5. Examples
 
 | Hypothesis Class | Domain | VC-Dimension | Explanation |
+| --- | --- | --- | --- |
 | : | : | : | : |
 | **Thresholds** | $\mathbb{R}$ | **1** | Can shatter 1 point (can be 0 or 1). Cannot shatter 2 points (cannot label them $1, 0$ if $x_1 < x_2$). |
 | **Intervals** | $\mathbb{R}$ | **2** | Can capture $[a,b]$. Can shatter 2 points. Cannot shatter 3 points (cannot label $1, 0, 1$). |
@@ -763,7 +733,7 @@ $$ x_{ij} \leftarrow \frac{x_{ij} - \mu_j}{\sigma_j} $$
 
 
 | Feature | Ridge Regression (L2) | Lasso Regression (L1) |
-| :------ | :--------------------------------------- | :--------------------------------------- |
+| --- | --- | --- |
 | **Formula** | $\|Xw-y\|^2 + \lambda \|w\|^2$ | $\|Xw-y\|^2 + \lambda \|w\|_1$ |
 | **Solution** | Closed-form: $(X^\top X + \lambda I)^{-1} X^\top y$ | Iterative optimization (no formula) |
 | **Sparsity** | Dense (all $w_j \neq 0$) | **Sparse** (many $w_j = 0$) |
@@ -879,7 +849,8 @@ The cost of approximating $P$ with $Q$ is different from approximating $Q$ with 
 * **Triangle Inequality Fails:** It does not satisfy $D_{KL}(P \| R) \le D_{KL}(P \| Q) + D_{KL}(Q \| R)$.
 
 ## 9.6 Key Takeaways
-* **Sigmoid:** Maps linear outputs to probabilities $(0, 1)$.
+
+* **Sigmoid:** Maps linear outputs to probabilities qwen3.5:0.8b$(0, 1)$.
 * **Loss:** We minimize Cross-Entropy (Log-Loss) because it is convex.
 * **MLE:** ERM on Log-Loss is equivalent to finding the Maximum Likelihood Estimate for a Bernoulli distribution.
 * **KL Divergence:** Minimizing Log-Loss is equivalent to minimizing the information distance between the true labels and predicted probabilities.
@@ -929,14 +900,14 @@ The sharp peak of the Laplace distribution at zero encourages sparsity.
 ![](../Gemini_Generated_Image_ws4f3sws4f3sws4f.png)
 
 
-| Feature               | L2 Regularization (Ridge)                     | L1 Regularization (Lasso)                          |
-| :-------------------- | :-------------------------------------------- | :------------------------------------------------- |
-| **Penalty Term**      | $\lambda \sum w_j^2$                          | $\lambda \sum$                                     |
-| **Solution**          | Non-sparse (weights are small but $\neq 0$)   | Sparse (many weights = $0$)                        |
-| **Feature Selection** | No (keeps all features)                       | Yes (removes irrelevant features)                  |
-| **Differentiability** | Differentiable everywhere.                    | Non-differentiable at $0$ (requires subgradients). |
-| **Outliers**          | More sensitive to outliers (due to squaring). | More robust.                                       |
-| **Prior Belief**      | Weights are normally distributed.             | Weights are Laplace distributed.                   |
+| Feature | L2 Regularization (Ridge) | L1 Regularization (Lasso) |
+| --- | --- | --- |
+| **Penalty Term** | $\lambda \sum w_j^2$ | $\lambda \sum$ |
+| **Solution** | Non-sparse (weights are small but $\neq 0$) | Sparse (many weights = $0$) |
+| **Feature Selection** | No (keeps all features) | Yes (removes irrelevant features) |
+| **Differentiability** | Differentiable everywhere. | Non-differentiable at $0$ (requires subgradients). |
+| **Outliers** | More sensitive to outliers (due to squaring). | More robust. |
+| **Prior Belief** | Weights are normally distributed. | Weights are Laplace distributed. |
 
 ### Key Takeaways
 
@@ -1041,7 +1012,7 @@ While the models $h_t$ are not perfectly independent (they share the original da
 ## Comparison: Boosting vs. Bagging
 
 | Feature | **Boosting** (e.g., AdaBoost, XGBoost) | **Bagging** (e.g., Random Forest) |
-| :------ | :--------------------------------------- | :--------------------------------------- |
+| --- | --- | --- |
 | **Goal** | Reduces **Bias** (and Variance) | Reduces **Variance** |
 | **Base Learner** | Must be **Weak** (high bias, low variance, e.g., shallow tree/stump) | Must be **Strong/Complex** (low bias, high variance, e.g., deep tree) |
 | **Training** | **Sequential** (Model $t$ depends on Model $t-1$) | **Parallel** (Independent training) |
@@ -1116,7 +1087,7 @@ If we need to perform **Model Selection** (hyperparameter tuning), a simple Trai
 ### 1.4 Pros and Cons
 
 | **Pros** | **Cons** |
-| :--------------------------------------- | :--------------------------------------- |
+| --- | --- |
 | Computationally efficient (trains only once). | High variance: Performance estimate depends heavily on exactly which points end up in the test set. |
 | Simple to implement and interpret. | Wasteful: A significant portion of data is withheld from training. |
 | Suitable for very large datasets where $N$ is massive. | Problematic for small datasets (insufficient training data). |
@@ -1375,7 +1346,7 @@ Substituting the derivative back into the general update rule:
 ## 5. Variations of Gradient Descent
 
 | **Variant** | **Data used per step** | **Gradient Accuracy** | **Speed per step** | **Convergence** |
-| :--- | :-------------------------- | :--- | :--- | :------------------------------- |
+| --- | --- | --- | --- | --- |
 | **Batch GD** | Entire dataset ($m$) | Exact | Slow | Stable, direct path to minima |
 | **Stochastic GD (SGD)** | Single random example | Noisy approximation | Very Fast | Fluctuates around minima |
 | **Mini-Batch GD** | Small batch (e.g., 32, 64) | Good approximation | Fast | Stable (Best of both worlds) |
@@ -1624,7 +1595,7 @@ $$\theta_{new} = \theta_{old} - \alpha \cdot \frac{1}{b} \sum_{i=k}^{k+b} \nabla
 ## 4. Comparative Analysis
 
 | **Feature** | **Batch GD** | **Stochastic GD (SGD)** | **Mini-Batch GD** |
-| :--- | :----------------------- | :----------------------- | :----------------------- |
+| --- | --- | --- | --- |
 | **Dataset Usage** | Entire dataset ($m$) | 1 example | Batch size ($b \approx 32-512$) |
 | **Update Frequency** | Once per epoch | $m$ times per epoch | $m/b$ times per epoch |
 | **Speed per Step** | Very Slow | Very Fast | Fast |
@@ -1927,6 +1898,92 @@ We define a **Kernel Function** $K$ such that:
 $$K(x_i, x_j) = \langle \phi(x_i), \phi(x_j) \rangle$$
 
 The Kernel Trick is the ability to compute this inner product directly using the original inputs $x_i, x_j$, without calculating $\phi$.
+
+## 2.3 Why the Dot Product is Everything
+
+The key point of the Kernel Trick is not just that we avoid computing the feature map $\phi(x)$.  
+The deeper reason is that **SVMs only need dot products** between points.
+
+In the dual formulation, every training and prediction step depends on quantities of the form
+
+$$
+\langle x_i, x_j \rangle
+$$
+
+and, after the feature mapping, on
+
+$$
+\langle \phi(x_i), \phi(x_j) \rangle.
+$$
+
+So the algorithm never needs the coordinates of $\phi(x)$ by themselves.  
+It only needs to know how pairs of transformed points interact through their **inner product**.
+
+This is crucial because the dot product already contains geometric information:
+
+- it measures how much two vectors are aligned;
+- it determines their angle;
+- it gives their norm, since
+
+$$
+\|\phi(x)\|^2 = \langle \phi(x), \phi(x) \rangle;
+$$
+
+- it also gives distances, because
+
+$$
+\|\phi(x)-\phi(z)\|^2
+=
+\|\phi(x)\|^2+\|\phi(z)\|^2-2\langle \phi(x),\phi(z)\rangle.
+$$
+
+Therefore, knowing all the inner products between points means knowing the relevant geometry of the data in the feature space $\mathcal H$, even without explicitly knowing the coordinates of the mapped vectors.
+
+This is exactly what the kernel function provides:
+
+$$
+K(x,z)=\langle \phi(x),\phi(z)\rangle.
+$$
+
+So the Kernel Trick works because it gives us direct access to the **geometry of the high-dimensional space through dot products**, without ever constructing that space explicitly.
+
+In other words:
+
+- we do **not** explicitly see the coordinates of the data in $\mathcal H$;
+- but we do know how points relate to each other geometrically in $\mathcal H$;
+- and for SVM, that is enough.
+
+That is why the trick is possible:  
+**the learning algorithm depends on scalar products, and the kernel computes those scalar products directly in the original space.**
+
+\newpage
+
+## 2.4 Geometric Interpretation
+
+A linear separator in the feature space $\mathcal H$ has the form
+
+$$
+f(x)=\langle w,\phi(x)\rangle + b.
+$$
+
+Using the representer form of the solution,
+
+$$
+w=\sum_{i=1}^N \alpha_i y_i \phi(x_i),
+$$
+
+we get
+
+$$
+f(x)=\sum_{i=1}^N \alpha_i y_i \langle \phi(x_i),\phi(x)\rangle + b
+=
+\sum_{i=1}^N \alpha_i y_i K(x_i,x)+b.
+$$
+
+Again, only dot products appear.
+
+So the classifier decides the label of a point $x$ by comparing it, through inner products, with the support vectors in feature space.  
+The kernel therefore lets us compute a non-linear boundary in the original input space $\mathcal X$, while still using a linear separator in $\mathcal H$.
 
 
 
@@ -2646,7 +2703,7 @@ While theoretically we simply pick the $k$ with the **Global Minimum** error, in
 ## 3. Crucial Distinction: KNN vs. K-Means
 
 | **Feature** | **KNN (Supervised)** | **K-Means (Unsupervised)** |
-| :--- | :--------------------------------------- | :--------------------------------------- |
+| --- | --- | --- |
 | **Objective** | Classification / Regression | Clustering (Grouping) |
 | **Y-Axis Metric** | **Validation Error** (Misclassification Rate) | **WCSS** (Within-Cluster Sum of Squares) |
 | **Goal** | Find $k$ that minimizes Error (U-shape curve). | Find $k$ where WCSS stops dropping fast (L-shape/Elbow). |
@@ -2784,7 +2841,7 @@ Minimizes the variance (increase in WCSS) when merging two clusters. This makes 
 ## 3. Performance and Comparison
 
 | **Feature** | **K-Means** | **Hierarchical (Agglomerative)** |
-| :--- | :--------------------------------------- | :--------------------------------------- |
+| --- | --- | --- |
 | **Complexity** | $O(N \cdot K \cdot I)$ (Linear). Very Fast. | $O(N^2 \log N)$ or $O(N^3)$. Very Slow for large $N$. |
 | **Shape Assumption** | Spherical (Convex). | Arbitrary (Single Linkage) or Spherical (Ward/Complete). |
 | **Parameters** | Must define $K$ upfront. | No $K$ needed; cut the dendrogram at any height. |
@@ -3062,7 +3119,7 @@ CNNs introduce three key ideas to solve this:
     
 
 | **Feature** | **FNN (Dense)** | **CNN (Convolutional)** |
-| :--- | :--------------------------------------- | :--------------------------------------- |
+| --- | --- | --- |
 | **Connectivity** | All-to-All (Dense) | Local (Sparse Connectivity) |
 | **Parameters** | Unique weight for every connection | Shared weights (Kernels/Filters) |
 | **Input Structure** | Ignored (Input is flattened) | Preserved (2D/3D Grid Structure) |
@@ -3585,7 +3642,7 @@ Imagine data shaped like a rolled-up carpet (Swiss Roll) in 3D.
     
 
 | **Feature** | **PCA** | **Autoencoder (Deep)** |
-| :--- | :--------------------------------------- | :--------------------------------------- |
+| --- | --- | --- |
 | **Transformation** | Linear ($W^T x$) | Non-Linear (e.g., $f(W x + b)$) |
 | **Optimization** | Convex (Closed-form SVD) | Non-Convex (Gradient Descent) |
 | **Global/Local** | Global optimum guaranteed | Prone to Local Minima |
@@ -3618,7 +3675,7 @@ Imagine data shaped like a rolled-up carpet (Swiss Roll) in 3D.
 # Autoencoders (AE) and the Bottleneck
 
 An Autoencoder is a specific type of **Neural Network** trained to reconstruct its own input.  
-Given an input \(x\), the model produces an output \(\hat{x}\) that should be as close as possible to \(x\).
+Given an input $x$, the model produces an output $\hat{x}$ that should be as close as possible to $x$.
 
 Although Autoencoders are commonly described as **Unsupervised** models, it is often more precise to call them **Self-Supervised**, because the target is automatically derived from the input itself.
 
@@ -3632,32 +3689,32 @@ An Autoencoder consists of two distinct components connected through a latent re
 
 ### 1.1 The Components
 
-1. **The Encoder (\(f_\phi\))**
+1. **The Encoder ($f_\phi$)**
     
-    - A neural network function that maps the input \(x\) into a latent-space representation \(z\).
+    - A neural network function that maps the input $x$ into a latent-space representation $z$.
         
-    - \(z = f_\phi(x)\)
+    - $z = f_\phi(x)$
         
 2. **The Bottleneck (Latent Space)**
     
     - The internal representation where the information is compressed.
         
-    - In the classical setting, the latent dimension \(k\) is smaller than the input dimension \(d\).
+    - In the classical setting, the latent dimension $k$ is smaller than the input dimension $d$.
         
-3. **The Decoder (\(g_\theta\))**
+3. **The Decoder ($g_\theta$)**
     
-    - A neural network function that reconstructs the input from the latent representation \(z\).
+    - A neural network function that reconstructs the input from the latent representation $z$.
         
-    - \(\hat{x} = g_\theta(z)\)
+    - $\hat{x} = g_\theta(z)$
         
 
 ### 1.2 Mathematical Formulation
 
-Let \(x \in \mathbb{R}^d\) be the input.
+Let $x \in \mathbb{R}^d$ be the input.
 
-Let \(z \in \mathbb{R}^k\) be the latent code.
+Let $z \in \mathbb{R}^k$ be the latent code.
 
-Let \(\hat{x} \in \mathbb{R}^d\) be the reconstruction.
+Let $\hat{x} \in \mathbb{R}^d$ be the reconstruction.
 
 The full forward pass is:
 
@@ -3665,13 +3722,13 @@ $$
 \hat{x} = g_\theta(f_\phi(x))
 $$
 
-We train the parameters \(\phi\) (encoder weights) and \(\theta\) (decoder weights) jointly to minimize the reconstruction error.
+We train the parameters $\phi$ (encoder weights) and $\theta$ (decoder weights) jointly to minimize the reconstruction error.
 
 
 
 ## 2. The Bottleneck: The Core Constraint
 
-The **Bottleneck** is the hidden representation with dimension \(k\), typically such that:
+The **Bottleneck** is the hidden representation with dimension $k$, typically such that:
 
 $$
 k < d
@@ -3681,7 +3738,7 @@ This architecture is called an **Undercomplete Autoencoder**.
 
 ### 2.1 Why is the Bottleneck necessary?
 
-If we allowed the latent space to have dimension \(k \ge d\), and the network had enough capacity, the model could simply learn the **Identity Function**:
+If we allowed the latent space to have dimension $k \ge d$, and the network had enough capacity, the model could simply learn the **Identity Function**:
 
 $$
 f(x) = x
@@ -3691,7 +3748,7 @@ In that case, the network would just copy the input to the output without extrac
 
 ### 2.2 Forced Compression
 
-By imposing \(k < d\), we force the network to compress the input.
+By imposing $k < d$, we force the network to compress the input.
 
 To minimize reconstruction error, the model must learn to:
 
@@ -3700,11 +3757,11 @@ To minimize reconstruction error, the model must learn to:
 - **Discard:** redundant information and noise
     
 
-This forces the latent variable \(z\) to capture the most relevant structure of the data.
+This forces the latent variable $z$ to capture the most relevant structure of the data.
 
 ### 2.3 Lossy Compression
 
-Because \(k < d\), the reconstruction is generally not perfect:
+Because $k < d$, the reconstruction is generally not perfect:
 
 $$
 \hat{x} \approx x
@@ -3776,15 +3833,15 @@ So, an Autoencoder can still learn useful features even without a narrow bottlen
 
 ## 5. The Objective Function (Loss)
 
-We train the Autoencoder using Backpropagation and Gradient Descent to minimize the discrepancy between the input \(x\) and its reconstruction \(\hat{x}\).
+We train the Autoencoder using Backpropagation and Gradient Descent to minimize the discrepancy between the input $x$ and its reconstruction $\hat{x}$.
 
-Given a dataset \(\{x^{(i)}\}_{i=1}^N\), we optimize:
+Given a dataset $\{x^{(i)}\}_{i=1}^N$, we optimize:
 
 $$
 \min_{\phi,\theta} \frac{1}{N} \sum_{i=1}^N L\Big(x^{(i)}, g_\theta(f_\phi(x^{(i)}))\Big)
 $$
 
-where \(L\) is the reconstruction loss.
+where $L$ is the reconstruction loss.
 
 
 
@@ -3811,7 +3868,7 @@ This is typical when:
 
 ### 6.2 Binary Cross-Entropy (BCE)
 
-If the input data is binary or normalized to \([0,1]\), we may interpret the output as probabilities:
+If the input data is binary or normalized to $[0,1]$, we may interpret the output as probabilities:
 
 $$
 \mathcal{L}_{\text{BCE}} =
@@ -3825,7 +3882,7 @@ This is common when:
 
 - the data is binary
     
-- image pixels are normalized to \([0,1]\)
+- image pixels are normalized to $[0,1]$
     
 - the output layer uses a **sigmoid**
     
@@ -3836,9 +3893,9 @@ The loss must be consistent with the final output activation:
 
 - **Linear output** + MSE for unconstrained real-valued outputs
     
-- **Sigmoid output** + BCE for values in \([0,1]\)
+- **Sigmoid output** + BCE for values in $[0,1]$
     
-- **Tanh output** in some cases for data scaled to \([-1,1]\)
+- **Tanh output** in some cases for data scaled to $[-1,1]$
     
 
 This consistency is important for stable and meaningful training.
@@ -3899,11 +3956,11 @@ To make the representation more robust, we use **Denoising Autoencoders**.
 
 ### 9.1 The Mechanism
 
-1. **Corrupt:** Start from a clean input \(x\) and add noise to obtain \(\tilde{x}\)
+1. **Corrupt:** Start from a clean input $x$ and add noise to obtain $\tilde{x}$
     
-2. **Feed:** Pass the corrupted input \(\tilde{x}\) into the encoder
+2. **Feed:** Pass the corrupted input $\tilde{x}$ into the encoder
     
-3. **Target:** Force the decoder to reconstruct the original clean input \(x\)
+3. **Target:** Force the decoder to reconstruct the original clean input $x$
     
 
 The loss becomes:
@@ -3936,7 +3993,7 @@ This usually leads to a more robust latent representation.
 
 ## 10. Intuition from Manifold Learning
 
-A useful geometric interpretation is that real-world data does not occupy all of \(\mathbb{R}^d\), but lies near a lower-dimensional **manifold**.
+A useful geometric interpretation is that real-world data does not occupy all of $\mathbb{R}^d$, but lies near a lower-dimensional **manifold**.
 
 The Autoencoder learns:
 
@@ -3960,7 +4017,7 @@ Instead, it imposes that only a few latent units are active for each input.
 
 This is usually done by adding a sparsity regularization term, such as:
 
-- \(L_1\) penalty on activations
+- $L_1$ penalty on activations
     
 - KL-divergence-based sparsity constraints
     
@@ -3988,7 +4045,7 @@ This encourages local robustness and smoother learned representations.
 
 This is a very important extension.
 
-In a **Variational Autoencoder**, the encoder does not map \(x\) to a single deterministic latent vector, but to a probability distribution:
+In a **Variational Autoencoder**, the encoder does not map $x$ to a single deterministic latent vector, but to a probability distribution:
 
 $$
 q_\phi(z \mid x)
@@ -4000,7 +4057,7 @@ $$
 \mu(x), \sigma(x)
 $$
 
-A latent sample \(z\) is then drawn from this distribution and passed to the decoder.
+A latent sample $z$ is then drawn from this distribution and passed to the decoder.
 
 The loss has two components:
 
@@ -4054,25 +4111,25 @@ So, low training reconstruction error alone is not enough to conclude that the m
 
 
 
-## 13. Choosing the Latent Dimension \(k\)
+## 13. Choosing the Latent Dimension $k$
 
-The latent dimension \(k\) is a crucial hyperparameter.
+The latent dimension $k$ is a crucial hyperparameter.
 
-If \(k\) is too small:
+If $k$ is too small:
 
 - too much information is lost
     
 - reconstruction quality becomes poor
     
 
-If \(k\) is too large:
+If $k$ is too large:
 
 - the model may behave almost like the identity function
     
 - the latent representation may be less informative
     
 
-In practice, \(k\) is chosen based on:
+In practice, $k$ is chosen based on:
 
 - validation reconstruction error
     
@@ -4083,7 +4140,7 @@ In practice, \(k\) is chosen based on:
 - desired compression level
     
 
-There is no universal rule for selecting \(k\).
+There is no universal rule for selecting $k$.
 
 
 
@@ -4218,11 +4275,11 @@ In image-related tasks, MSE often encourages average-looking outputs, which may 
 
 Training an Autoencoder follows the usual neural network optimization pipeline, except that the target is the input itself:
 
-1. take an input batch \(x\)
+1. take an input batch $x$
     
-2. compute the latent code \(z = f_\phi(x)\)
+2. compute the latent code $z = f_\phi(x)$
     
-3. reconstruct the input \(\hat{x} = g_\theta(z)\)
+3. reconstruct the input $\hat{x} = g_\theta(z)$
     
 4. compute the reconstruction loss
     
@@ -4258,9 +4315,9 @@ $$
 
 where:
 
-- \(z\) is a compressed or regularized latent representation
+- $z$ is a compressed or regularized latent representation
     
-- \(\hat{x}\) is a reconstruction of the original input
+- $\hat{x}$ is a reconstruction of the original input
     
 
 The **Bottleneck** is one of the main mechanisms that prevents trivial copying and forces the model to learn structure.
@@ -4286,11 +4343,11 @@ At the same time, they have clear limitations, especially in semantic interpreta
 
 ## Key Takeaways
 
-- **Structure:** Encoder (Compress) \(\rightarrow\) Latent Space (Bottleneck) \(\rightarrow\) Decoder (Reconstruct)
+- **Structure:** Encoder (Compress) $\rightarrow$ Latent Space (Bottleneck) $\rightarrow$ Decoder (Reconstruct)
     
 - **Bottleneck:** the central constraint that limits information flow and forces compression
     
-- **Identity Trap:** without constraints, the model may simply learn \(\hat{x} = x\)
+- **Identity Trap:** without constraints, the model may simply learn $\hat{x} = x$
     
 - **Loss:** measures how close the reconstruction is to the original input
     

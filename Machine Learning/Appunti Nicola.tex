@@ -165,36 +165,6 @@
 \tableofcontents
 }
 \setstretch{1.25}
-\begin{titlepage}
-    \centering
-    \vspace*{2cm}
-    
-    {\scshape\LARGE La Sapienza \par}
-    \vspace{1cm}
-    {\scshape\Large Facoltà di Ingegneria Informatica e Statistica \par}
-    \vspace{1.5cm}
-    
-    % Se hai un logo, togli il % dalla riga sotto e metti il nome dell'immagine corretta
-    % \includegraphics[width=0.4\textwidth]{images/logo_uni.png}\par\vspace{1.5cm}
-    
-    {\huge\bfseries Machine Learning \par}
-    \vspace{0.5cm}
-    {\Large Machine Learning Notes \par}
-    \vspace{2cm}
-    
-    {\Large\itshape Autore: Nicola Moscufo \par}
-    \vfill
-    
-    Docente:\par
-    \textbf{Prof. Federico Fusco}
-    \textbf{Prof. Fabio Patrizi}
-    
-    \vspace{2cm}
-    {\large Anno Accademico 2025/2026 \par}
-\end{titlepage}
-
-\newpage
-
 \newpage
 
 \section{The Statistical Learning
@@ -528,12 +498,8 @@ The restriction to a specific class \(\mathcal{H}\) is called an
 The simplest type of inductive bias is assuming that the hypothesis
 class \(\mathcal{H}\) has a finite number of elements.
 
-\[ |\mathcal{H}| < \infty \]
-
-\subsubsection{The Realizability
-Assumption}\label{the-realizability-assumption}
-
-To analyze performance in this setting, we often make the
+\[ |\mathcal{H}| < \infty \] \#\#\# The Realizability Assumption To
+analyze performance in this setting, we often make the
 \textbf{Realizability Assumption}: We assume that the true labeling
 function \(f\) actually exists within our hypothesis class (or
 effectively, that there is some \(h^* \in \mathcal{H}\) that makes no
@@ -792,9 +758,9 @@ Tradeoff}\label{the-bias-complexity-tradeoff}
 
 {\def\LTcaptype{none} % do not increment counter
 \begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.0727}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.4636}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.4636}}@{}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}@{}}
 \toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\raggedright
 Property
@@ -962,25 +928,43 @@ what enables generalization.
 
 \subsection{5. Examples}\label{examples}
 
-Hypothesis Class \textbar{} Domain \textbar{} VC-Dimension \textbar{}
-Explanation \textbar{}\\
-: \textbar{} : \textbar{} : \textbar{} : \textbar{}\\
-\textbf{Thresholds} \textbar{} \(\mathbb{R}\) \textbar{} \textbf{1}
-\textbar{} Can shatter 1 point (can be 0 or 1). Cannot shatter 2 points
-(cannot label them \(1, 0\) if \(x_1 < x_2\)). \textbar{}\\
-\textbf{Intervals} \textbar{} \(\mathbb{R}\) \textbar{} \textbf{2}
-\textbar{} Can capture \([a,b]\). Can shatter 2 points. Cannot shatter 3
-points (cannot label \(1, 0, 1\)). \textbar{}\\
-\textbf{Linear Classifiers} \textbar{} \(\mathbb{R}^2\) \textbar{}
-\textbf{3} \textbar{} Can shatter 3 non-collinear points. Cannot shatter
-4 points (the XOR problem requires non-linear bounds). \textbar{}\\
-\textbf{Linear Classifiers} \textbar{} \(\mathbb{R}^d\) \textbar{}
-\textbf{d + 1} \textbar{} In general, hyperplanes in \(d\) dimensions
-have VC-dim \(d+1\). \textbar{}\\
-\textbf{Sine Function} \textbar{} \(\mathbb{R}\) \textbar{}
-\textbf{\(\infty\)} \textbar{}
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Hypothesis Class
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Domain
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+VC-Dimension
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Explanation
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+: & : & : & : \\
+\textbf{Thresholds} & \(\mathbb{R}\) & \textbf{1} & Can shatter 1 point
+(can be 0 or 1). Cannot shatter 2 points (cannot label them \(1, 0\) if
+\(x_1 < x_2\)). \\
+\textbf{Intervals} & \(\mathbb{R}\) & \textbf{2} & Can capture
+\([a,b]\). Can shatter 2 points. Cannot shatter 3 points (cannot label
+\(1, 0, 1\)). \\
+\textbf{Linear Classifiers} & \(\mathbb{R}^2\) & \textbf{3} & Can
+shatter 3 non-collinear points. Cannot shatter 4 points (the XOR problem
+requires non-linear bounds). \\
+\textbf{Linear Classifiers} & \(\mathbb{R}^d\) & \textbf{d + 1} & In
+general, hyperplanes in \(d\) dimensions have VC-dim \(d+1\). \\
+\textbf{Sine Function} & \(\mathbb{R}\) & \textbf{\(\infty\)} &
 \(h_\theta(x) = \text{sign}(\sin(\theta x))\). Can oscillate infinitely
-fast to fit any binary sequence. \textbar{}
+fast to fit any binary sequence. \\
+\end{longtable}
+}
 
 \subsection{Key Takeaways}\label{key-takeaways-4}
 
@@ -1326,7 +1310,7 @@ The least squares solution has a beautiful geometric interpretation.
   distance.
 \end{enumerate}
 
-\pandocbounded{\includegraphics[keepaspectratio]{C:/Users/nicol/Desktop/Obsidian Gioco/Obsidian-Gioco/Machine Learning/1445268e3ac976688c6da3932b974f1c3d153e21.png}}
+\pandocbounded{\includegraphics[keepaspectratio]{/home/nicola/Documents/Local Obs/Obsidian Locale/Machine Learning/1445268e3ac976688c6da3932b974f1c3d153e21.png}}
 
 \textbf{The Orthogonality Principle:} The distance \(\| \hat{y} - y \|\)
 is minimized when the residual vector \(r = y - \hat{y}\) is
@@ -1383,7 +1367,7 @@ Tradeoff}: we accept a small amount of bias (deviation from the training
 data) to significantly reduce variance (sensitivity to noise), thereby
 lowering the total Generalization Error.
 
-\pandocbounded{\includegraphics[keepaspectratio]{C:/Users/nicol/Desktop/Obsidian Gioco/Obsidian-Gioco/Machine Learning/bdde770ce8e8f43b914101085fac38920270d135.png}}
+\pandocbounded{\includegraphics[keepaspectratio]{/home/nicola/Documents/Local Obs/Obsidian Locale/Machine Learning/bdde770ce8e8f43b914101085fac38920270d135.png}}
 
 \subsection{1. Ridge Regression (L2
 Regularization)}\label{ridge-regression-l2-regularization}
@@ -1487,9 +1471,9 @@ large-scale features.
 
 {\def\LTcaptype{none} % do not increment counter
 \begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.0805}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.4598}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.4598}}@{}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}@{}}
 \toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\raggedright
 Feature
@@ -1707,7 +1691,8 @@ metric in the mathematical sense.
 \begin{itemize}
 \tightlist
 \item
-  \textbf{Sigmoid:} Maps linear outputs to probabilities \((0, 1)\).
+  \textbf{Sigmoid:} Maps linear outputs to probabilities
+  qwen3.5:0.8b\((0, 1)\).
 \item
   \textbf{Loss:} We minimize Cross-Entropy (Log-Loss) because it is
   convex.
@@ -1811,13 +1796,13 @@ Properties}\label{effects-and-properties-1}
 \subsection{10.3 Comparison and Key
 Takeaways}\label{comparison-and-key-takeaways}
 
-\pandocbounded{\includegraphics[keepaspectratio]{C:/Users/nicol/Desktop/Obsidian Gioco/Obsidian-Gioco/Machine Learning/b795c07304c42cc254e12fb250fda72320f1c900.png}}
+\pandocbounded{\includegraphics[keepaspectratio]{/home/nicola/Documents/Local Obs/Obsidian Locale/Machine Learning/b795c07304c42cc254e12fb250fda72320f1c900.png}}
 
 {\def\LTcaptype{none} % do not increment counter
 \begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.1810}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3879}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.4310}}@{}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}@{}}
 \toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\raggedright
 Feature
@@ -1966,7 +1951,7 @@ increases (multiplied by \(e^{\alpha} > 1\)).
   coordinate descent.
 \end{enumerate}
 
-\pandocbounded{\includegraphics[keepaspectratio]{C:/Users/nicol/Desktop/Obsidian Gioco/Obsidian-Gioco/Machine Learning/e9e3c9070bd77dc45e50109e83b8340c8cf50467.jpg}}
+\pandocbounded{\includegraphics[keepaspectratio]{/home/nicola/Documents/Local Obs/Obsidian Locale/Machine Learning/e9e3c9070bd77dc45e50109e83b8340c8cf50467.jpg}}
 
 \subsection{4. Bagging (Bootstrap
 Aggregating)}\label{bagging-bootstrap-aggregating}
@@ -2028,9 +2013,9 @@ vs.~Bagging}\label{comparison-boosting-vs.-bagging}
 
 {\def\LTcaptype{none} % do not increment counter
 \begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.0805}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.4598}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.4598}}@{}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}@{}}
 \toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\raggedright
 Feature
@@ -2220,7 +2205,7 @@ particularly for smaller datasets, we use \(k\)-fold Cross-Validation.
   Cross-Validation Error.
 \end{enumerate}
 
-\pandocbounded{\includegraphics[keepaspectratio]{C:/Users/nicol/Desktop/Obsidian Gioco/Obsidian-Gioco/Machine Learning/3681c0d63a8099f6b428903d4cfeed2b8fe818db.png}}
+\pandocbounded{\includegraphics[keepaspectratio]{/home/nicola/Documents/Local Obs/Obsidian Locale/Machine Learning/3681c0d63a8099f6b428903d4cfeed2b8fe818db.webp}}
 
 \subsubsection{2.2 Mathematical
 Formulation}\label{mathematical-formulation-1}
@@ -2334,7 +2319,7 @@ The model is too simple to capture the underlying structure of the data
   \textbf{will not} help.
 \end{itemize}
 
-\pandocbounded{\includegraphics[keepaspectratio]{C:/Users/nicol/Desktop/Obsidian Gioco/Obsidian-Gioco/Machine Learning/d2bbb46f2611a7c0c546f4bae900263c9737624f.png}}
+\pandocbounded{\includegraphics[keepaspectratio]{/home/nicola/Documents/Local Obs/Obsidian Locale/Machine Learning/d2bbb46f2611a7c0c546f4bae900263c9737624f.png}}
 
 \paragraph{Case B: High Variance
 (Overfitting)}\label{case-b-high-variance-overfitting}
@@ -2445,7 +2430,7 @@ with respect to \emph{each} parameter.
   the direction \textbf{opposite} to the gradient (negative gradient).
 \end{itemize}
 
-\pandocbounded{\includegraphics[keepaspectratio]{C:/Users/nicol/Desktop/Obsidian Gioco/Obsidian-Gioco/Machine Learning/a1205455276678d62b52ba9bfae60302b90314f4.png}}
+\pandocbounded{\includegraphics[keepaspectratio]{/home/nicola/Documents/Local Obs/Obsidian Locale/Machine Learning/a1205455276678d62b52ba9bfae60302b90314f4.webp}}
 
 \subsection{2. The Update Rule}\label{the-update-rule}
 
@@ -2561,11 +2546,11 @@ Descent}\label{variations-of-gradient-descent}
 
 {\def\LTcaptype{none} % do not increment counter
 \begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.0563}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.3803}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.0563}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.0563}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.4507}}@{}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2000}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2000}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2000}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2000}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2000}}@{}}
 \toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\raggedright
 \textbf{Variant}
@@ -2662,7 +2647,7 @@ point \(x\) if for all \(z \in \mathbb{R}^n\):
 
 \[f(z) \geq f(x) + g^T (z - x)\]
 
-\pandocbounded{\includegraphics[keepaspectratio]{C:/Users/nicol/Desktop/Obsidian Gioco/Obsidian-Gioco/Machine Learning/761a520db6509eb4fbe522fc4f9b94880c18b9ca.png}}
+\pandocbounded{\includegraphics[keepaspectratio]{/home/nicola/Documents/Local Obs/Obsidian Locale/Machine Learning/761a520db6509eb4fbe522fc4f9b94880c18b9ca.png}}
 \#\#\# 2.2 Intuitive Explanation
 
 \begin{itemize}
@@ -2934,16 +2919,16 @@ power of 2: 32, 64, 128, 256).
   provides a much more accurate gradient.
 \end{itemize}
 
-\pandocbounded{\includegraphics[keepaspectratio]{C:/Users/nicol/Desktop/Obsidian Gioco/Obsidian-Gioco/Machine Learning/c8ed71f04f4b53b1ef0b1572cd679665917588a0.png}}
+\pandocbounded{\includegraphics[keepaspectratio]{/home/nicola/Documents/Local Obs/Obsidian Locale/Machine Learning/c8ed71f04f4b53b1ef0b1572cd679665917588a0.png}}
 
 \subsection{4. Comparative Analysis}\label{comparative-analysis}
 
 {\def\LTcaptype{none} % do not increment counter
 \begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.0526}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.3158}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.3158}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.3158}}@{}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}@{}}
 \toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\raggedright
 \textbf{Feature}
@@ -3013,7 +2998,7 @@ Instead of using only the current gradient, we use a moving average of
 past gradients to ``gain speed'' in relevant directions and dampen
 oscillations.
 
-\pandocbounded{\includegraphics[keepaspectratio]{C:/Users/nicol/Desktop/Obsidian Gioco/Obsidian-Gioco/Machine Learning/286a41830e443632af7fc39c6ce1d225b2df44c7.png}}
+\pandocbounded{\includegraphics[keepaspectratio]{/home/nicola/Documents/Local Obs/Obsidian Locale/Machine Learning/286a41830e443632af7fc39c6ce1d225b2df44c7.png}}
 
 \[v_t = \gamma v_{t-1} + \eta \nabla J(\theta)\]
 
@@ -3371,6 +3356,126 @@ We define a \textbf{Kernel Function} \(K\) such that:
 
 The Kernel Trick is the ability to compute this inner product directly
 using the original inputs \(x_i, x_j\), without calculating \(\phi\).
+
+\subsection{2.3 Why the Dot Product is
+Everything}\label{why-the-dot-product-is-everything}
+
+The key point of the Kernel Trick is not just that we avoid computing
+the feature map \(\phi(x)\).\\
+The deeper reason is that \textbf{SVMs only need dot products} between
+points.
+
+In the dual formulation, every training and prediction step depends on
+quantities of the form
+
+\[
+\langle x_i, x_j \rangle
+\]
+
+and, after the feature mapping, on
+
+\[
+\langle \phi(x_i), \phi(x_j) \rangle.
+\]
+
+So the algorithm never needs the coordinates of \(\phi(x)\) by
+themselves.\\
+It only needs to know how pairs of transformed points interact through
+their \textbf{inner product}.
+
+This is crucial because the dot product already contains geometric
+information:
+
+\begin{itemize}
+\tightlist
+\item
+  it measures how much two vectors are aligned;
+\item
+  it determines their angle;
+\item
+  it gives their norm, since
+\end{itemize}
+
+\[
+\|\phi(x)\|^2 = \langle \phi(x), \phi(x) \rangle;
+\]
+
+\begin{itemize}
+\tightlist
+\item
+  it also gives distances, because
+\end{itemize}
+
+\[
+\|\phi(x)-\phi(z)\|^2
+=
+\|\phi(x)\|^2+\|\phi(z)\|^2-2\langle \phi(x),\phi(z)\rangle.
+\]
+
+Therefore, knowing all the inner products between points means knowing
+the relevant geometry of the data in the feature space \(\mathcal H\),
+even without explicitly knowing the coordinates of the mapped vectors.
+
+This is exactly what the kernel function provides:
+
+\[
+K(x,z)=\langle \phi(x),\phi(z)\rangle.
+\]
+
+So the Kernel Trick works because it gives us direct access to the
+\textbf{geometry of the high-dimensional space through dot products},
+without ever constructing that space explicitly.
+
+In other words:
+
+\begin{itemize}
+\tightlist
+\item
+  we do \textbf{not} explicitly see the coordinates of the data in
+  \(\mathcal H\);
+\item
+  but we do know how points relate to each other geometrically in
+  \(\mathcal H\);
+\item
+  and for SVM, that is enough.
+\end{itemize}
+
+That is why the trick is possible:\\
+\textbf{the learning algorithm depends on scalar products, and the
+kernel computes those scalar products directly in the original space.}
+
+\newpage
+
+\subsection{2.4 Geometric
+Interpretation}\label{geometric-interpretation}
+
+A linear separator in the feature space \(\mathcal H\) has the form
+
+\[
+f(x)=\langle w,\phi(x)\rangle + b.
+\]
+
+Using the representer form of the solution,
+
+\[
+w=\sum_{i=1}^N \alpha_i y_i \phi(x_i),
+\]
+
+we get
+
+\[
+f(x)=\sum_{i=1}^N \alpha_i y_i \langle \phi(x_i),\phi(x)\rangle + b
+=
+\sum_{i=1}^N \alpha_i y_i K(x_i,x)+b.
+\]
+
+Again, only dot products appear.
+
+So the classifier decides the label of a point \(x\) by comparing it,
+through inner products, with the support vectors in feature space.\\
+The kernel therefore lets us compute a non-linear boundary in the
+original input space \(\mathcal X\), while still using a linear
+separator in \(\mathcal H\).
 
 \subsection{3. Concrete Example: Polynomial
 Kernel}\label{concrete-example-polynomial-kernel}
@@ -4370,9 +4475,9 @@ vs.~K-Means}\label{crucial-distinction-knn-vs.-k-means}
 
 {\def\LTcaptype{none} % do not increment counter
 \begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.0476}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.4762}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.4762}}@{}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}@{}}
 \toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\raggedright
 \textbf{Feature}
@@ -4581,9 +4686,9 @@ Comparison}\label{performance-and-comparison}
 
 {\def\LTcaptype{none} % do not increment counter
 \begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.0476}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.4762}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.4762}}@{}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}@{}}
 \toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\raggedright
 \textbf{Feature}
@@ -4994,9 +5099,9 @@ CNNs introduce three key ideas to solve this:
 
 {\def\LTcaptype{none} % do not increment counter
 \begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.0476}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.4762}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.4762}}@{}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}@{}}
 \toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\raggedright
 \textbf{Feature}
@@ -5760,9 +5865,9 @@ Imagine data shaped like a rolled-up carpet (Swiss Roll) in 3D.
 
 {\def\LTcaptype{none} % do not increment counter
 \begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.0476}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.4762}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.4762}}@{}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}@{}}
 \toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\raggedright
 \textbf{Feature}
@@ -5814,18 +5919,18 @@ topology \\
   \item
     PCA is preferred for simple noise reduction; AEs are preferred for
     complex generative tasks or compression.
-
-    \newpage
   \end{itemize}
 \end{itemize}
+
+\newpage
 
 \section{Autoencoders (AE) and the
 Bottleneck}\label{autoencoders-ae-and-the-bottleneck}
 
 An Autoencoder is a specific type of \textbf{Neural Network} trained to
 reconstruct its own input.\\
-Given an input \(x\), the model produces an output \(\hat{x}\) that should
-be as close as possible to \(x\).
+Given an input \(x\), the model produces an output \(\hat{x}\) that
+should be as close as possible to \(x\).
 
 Although Autoencoders are commonly described as \textbf{Unsupervised}
 models, it is often more precise to call them \textbf{Self-Supervised},
@@ -5891,14 +5996,14 @@ The full forward pass is:
 \hat{x} = g_\theta(f_\phi(x))
 \]
 
-We train the parameters \(\phi\) (encoder weights) and \(\theta\) (decoder
-weights) jointly to minimize the reconstruction error.
+We train the parameters \(\phi\) (encoder weights) and \(\theta\)
+(decoder weights) jointly to minimize the reconstruction error.
 
 \subsection{2. The Bottleneck: The Core
 Constraint}\label{the-bottleneck-the-core-constraint}
 
-The \textbf{Bottleneck} is the hidden representation with dimension \(k\),
-typically such that:
+The \textbf{Bottleneck} is the hidden representation with dimension
+\(k\), typically such that:
 
 \[
 k < d
@@ -5923,8 +6028,7 @@ compression or representation learning.
 
 \subsubsection{2.2 Forced Compression}\label{forced-compression}
 
-By imposing \(k < d\), we force the network to compress the
-input.
+By imposing \(k < d\), we force the network to compress the input.
 
 To minimize reconstruction error, the model must learn to:
 
@@ -6063,8 +6167,8 @@ This is typical when:
 \subsubsection{6.2 Binary Cross-Entropy
 (BCE)}\label{binary-cross-entropy-bce}
 
-If the input data is binary or normalized to ({[}0,1{]}), we may
-interpret the output as probabilities:
+If the input data is binary or normalized to \([0,1]\), we may interpret
+the output as probabilities:
 
 \[
 \mathcal{L}_{\text{BCE}} =
@@ -6080,7 +6184,7 @@ This is common when:
 \item
   the data is binary
 \item
-  image pixels are normalized to ({[}0,1{]})
+  image pixels are normalized to \([0,1]\)
 \item
   the output layer uses a \textbf{sigmoid}
 \end{itemize}
@@ -6094,9 +6198,9 @@ The loss must be consistent with the final output activation:
 \item
   \textbf{Linear output} + MSE for unconstrained real-valued outputs
 \item
-  \textbf{Sigmoid output} + BCE for values in ({[}0,1{]})
+  \textbf{Sigmoid output} + BCE for values in \([0,1]\)
 \item
-  \textbf{Tanh output} in some cases for data scaled to ({[}-1,1{]})
+  \textbf{Tanh output} in some cases for data scaled to \([-1,1]\)
 \end{itemize}
 
 This consistency is important for stable and meaningful training.
@@ -6169,8 +6273,8 @@ Autoencoders}.
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
 \item
-  \textbf{Corrupt:} Start from a clean input \(x\) and add noise to obtain
-  \(\tilde{x}\)
+  \textbf{Corrupt:} Start from a clean input \(x\) and add noise to
+  obtain \(\tilde{x}\)
 \item
   \textbf{Feed:} Pass the corrupted input \(\tilde{x}\) into the encoder
 \item
@@ -6277,8 +6381,8 @@ This encourages local robustness and smoother learned representations.
 
 This is a very important extension.
 
-In a \textbf{Variational Autoencoder}, the encoder does not map \(x\) to a
-single deterministic latent vector, but to a probability distribution:
+In a \textbf{Variational Autoencoder}, the encoder does not map \(x\) to
+a single deterministic latent vector, but to a probability distribution:
 
 \[
 q_\phi(z \mid x)
@@ -6359,8 +6463,8 @@ To reduce overfitting, common strategies include:
 So, low training reconstruction error alone is not enough to conclude
 that the model learned something useful.
 
-\subsection{13. Choosing the Latent Dimension
-(k)}\label{choosing-the-latent-dimension-k}
+\subsection{\texorpdfstring{13. Choosing the Latent Dimension
+\(k\)}{13. Choosing the Latent Dimension k}}\label{choosing-the-latent-dimension-k}
 
 The latent dimension \(k\) is a crucial hyperparameter.
 
@@ -6640,14 +6744,14 @@ interpretability and generative modeling.
 
 \begin{itemize}
 \item
-  \textbf{Structure:} Encoder (Compress) $\rightarrow$ Latent Space
-  (Bottleneck) $\rightarrow$ Decoder (Reconstruct)
+  \textbf{Structure:} Encoder (Compress) \(\rightarrow\) Latent Space
+  (Bottleneck) \(\rightarrow\) Decoder (Reconstruct)
 \item
   \textbf{Bottleneck:} the central constraint that limits information
   flow and forces compression
 \item
   \textbf{Identity Trap:} without constraints, the model may simply
-  learn ($\hat{x} = x$)
+  learn \(\hat{x} = x\)
 \item
   \textbf{Loss:} measures how close the reconstruction is to the
   original input

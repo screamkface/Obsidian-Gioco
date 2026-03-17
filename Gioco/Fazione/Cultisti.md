@@ -1,4 +1,4 @@
-Perfetto. Questo è il cuore pulsante del design narrativo.
+		Perfetto. Questo è il cuore pulsante del design narrativo.
 
 Ecco un approfondimento sulla fazione più complessa e pericolosa: i Cultisti. Questo è il "Dossier Fazione" che useresti sia per scrivere la Bibbia di Gioco, sia (in futuro) per creare il _dataset_ per l'AI.
 
