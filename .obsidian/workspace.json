@@ -11,10 +11,14 @@
             "id": "2b752d604b862689",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "Machine Learning/ML Q&A - Quiz/Q&A Machine Learning.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "Q&A Machine Learning"
             }
           }
         ]
@@ -74,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 489
+    "width": 200
   },
   "right": {
     "id": "c376b5663d42f03e",
@@ -175,6 +179,9 @@
   },
   "active": "2b752d604b862689",
   "lastOpenFiles": [
+    "Machine Learning/ML Q&A - Quiz/QUIZ.md",
+    "Machine Learning/ML Q&A - Quiz/Q&A Machine Learning.md",
+    "Machine Learning/ML Q&A - Quiz",
     "Machine Learning/Latex Exports/#Dimostrazioni Machine Learning.tex#",
     "MNLP Notes.pdf",
     "Machine Learning/Appunti Nicola.md",
@@ -184,11 +191,8 @@
     "Machine Learning/Appunti Nicola.fls",
     "Machine Learning/pdflatex161179.fls",
     "Machine Learning/pdflatex161105.fls",
-    "Machine Learning/QUIZ.md",
     "Machine Learning/Appunti Nicola.pdf",
     "Machine Learning/Dimostrazioni Machine Learning.md",
-    "Machine Learning/Latex Exports/Dimostrazioni Machine Learning.synctex(busy)",
-    "Machine Learning/Latex Exports/Dimostrazioni Machine Learning.log",
     "Gioco/Finali/Stile dei finali.md",
     "Gioco/Finali/Come Generarli.md",
     "Gioco/Fazione/Cultisti.md",
