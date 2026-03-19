@@ -1,0 +1,22 @@
+# LaTeX build artifacts
+*.aux
+*.fdb_latexmk
+*.fls
+*.log
+*.synctex.gz
+*.toc
+
+# pdflatex temporary files
+pdflatex*.fls
+
+# Editor backup/temp files
+#*#
+*~
+*.tmp
+*.temp
+*.bak
+*.orig
+*.rej
+
+# Pandoc guard generated reports
+.pandoc-guard/reports/

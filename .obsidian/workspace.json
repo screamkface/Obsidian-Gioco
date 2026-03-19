@@ -11,14 +11,10 @@
             "id": "2b752d604b862689",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Machine Learning/Appunti Nicola.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "Appunti Nicola"
+              "title": "New tab"
             }
           }
         ]
@@ -78,7 +74,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 489
   },
   "right": {
     "id": "c376b5663d42f03e",
@@ -179,6 +175,9 @@
   },
   "active": "2b752d604b862689",
   "lastOpenFiles": [
+    "Machine Learning/Latex Exports/#Dimostrazioni Machine Learning.tex#",
+    "MNLP Notes.pdf",
+    "Machine Learning/Appunti Nicola.md",
     "Machine Learning/Appunti Nicola.toc",
     "Machine Learning/Appunti Nicola.synctex(busy)",
     "Machine Learning/Appunti Nicola.log",
@@ -186,13 +185,10 @@
     "Machine Learning/pdflatex161179.fls",
     "Machine Learning/pdflatex161105.fls",
     "Machine Learning/QUIZ.md",
-    "Machine Learning/Appunti Nicola.md",
     "Machine Learning/Appunti Nicola.pdf",
     "Machine Learning/Dimostrazioni Machine Learning.md",
     "Machine Learning/Latex Exports/Dimostrazioni Machine Learning.synctex(busy)",
     "Machine Learning/Latex Exports/Dimostrazioni Machine Learning.log",
-    "Machine Learning/Latex Exports/Dimostrazioni Machine Learning.fls",
-    "Machine Learning/Latex Exports/pdflatex230479.fls",
     "Gioco/Finali/Stile dei finali.md",
     "Gioco/Finali/Come Generarli.md",
     "Gioco/Fazione/Cultisti.md",

@@ -642,7 +642,7 @@ The least squares solution has a beautiful geometric interpretation.
 2.  **Target Vector:** The true target vector $y$ generally does not lie in $\text{Col}(X)$ (due to noise or model mismatch).
 3.  **Closest Point:** We want to find the point $\hat{y} \in \text{Col}(X)$ that is closest to $y$ in Euclidean distance.
 
-![](../Pasted%20image%2020260304192401.png)
+![](../images/Pasted%20image%2020260304192401.png)
 
 **The Orthogonality Principle:**
 The distance $\| \hat{y} - y \|$ is minimized when the residual vector $r = y - \hat{y}$ is **orthogonal** (perpendicular) to the subspace $\text{Col}(X)$.
@@ -678,7 +678,7 @@ Standard Linear Regression (Ordinary Least Squares - OLS) minimizes the empirica
 
 To address this, we apply **Regularization**, which constrains the magnitude of the weight vector. This introduces a **Bias-Variance Tradeoff**: we accept a small amount of bias (deviation from the training data) to significantly reduce variance (sensitivity to noise), thereby lowering the total Generalization Error.
 
-![](../Pasted%20image%2020260304192542.png)
+![](../images/Pasted%20image%2020260304192542.png)
 
 ## 1. Ridge Regression (L2 Regularization)
 
@@ -897,7 +897,7 @@ The sharp peak of the Laplace distribution at zero encourages sparsity.
 ## 10.3 Comparison and Key Takeaways
 
 
-![](../Gemini_Generated_Image_ws4f3sws4f3sws4f.png)
+![](../images/Gemini_Generated_Image_ws4f3sws4f3sws4f.png)
 
 
 | Feature | L2 Regularization (Ridge) | L1 Regularization (Lasso) |
@@ -987,7 +987,7 @@ $$ H(x) = \text{sign} \left( \sum_{t=1}^{T} \alpha_t h_t(x) \right) $$
 3.  **Exponential Loss:** It can be shown that AdaBoost minimizes the exponential loss function $L(H) = \sum e^{-y_i H(x_i)}$ via coordinate descent.
 
 
-![](../Pasted%20image%2020260304193114.jpg)
+![](../images/Pasted%20image%2020260304193114.jpg)
 
 ## 4. Bagging (Bootstrap Aggregating)
 
@@ -1111,7 +1111,7 @@ To address the variance and data-wastage issues of the Hold-out method, particul
 3. **Average** the $k$ error estimates to get the final Cross-Validation Error.
 
 
-![](../1AAwIlHM8TpAVe4l2FihNUQ.webp)
+![](../images/1AAwIlHM8TpAVe4l2FihNUQ.webp)
 
 ### 2.2 Mathematical Formulation
 
@@ -1182,7 +1182,7 @@ The model is too simple to capture the underlying structure of the data (e.g., f
         
 - **Solution:** Increase model complexity (add features, increase polynomial degree), decrease regularization. Adding more data **will not** help.
 
-![](../Pasted%20image%2020260304193346.png)
+![](../images/Pasted%20image%2020260304193346.png)
 
 #### Case B: High Variance (Overfitting)
 
@@ -1257,7 +1257,7 @@ $$\nabla_\theta J(\theta) = \begin{bmatrix} \frac{\partial J}{\partial \theta_0}
 - **Goal:** Since we want to _minimize_ $J$, we must move in the direction **opposite** to the gradient (negative gradient).
 
 
-![](../631731_P7z2BKhd0R-9uyn9ThDasA.webp)
+![](../images/631731_P7z2BKhd0R-9uyn9ThDasA.webp)
 
 ## 2. The Update Rule
 
@@ -1402,7 +1402,7 @@ Let $f: \mathbb{R}^n \to \mathbb{R}$ be a **convex** function. A vector $g \in \
 $$f(z) \geq f(x) + g^T (z - x)$$
 
 
-![](../Pasted%20image%2020260304193626.png)
+![](../images/Pasted%20image%2020260304193626.png)
 ### 2.2 Intuitive Explanation
 
 - **Geometric Interpretation:** In standard calculus, the derivative defines a _unique_ tangent line that touches the curve at $x$ and stays below the convex function.
@@ -1590,7 +1590,7 @@ $$\theta_{new} = \theta_{old} - \alpha \cdot \frac{1}{b} \sum_{i=k}^{k+b} \nabla
     
 
 
-![](../Pasted%20image%2020260304193702.png)
+![](../images/Pasted%20image%2020260304193702.png)
 
 ## 4. Comparative Analysis
 
@@ -1628,7 +1628,7 @@ In practice, we use advanced variations of Mini-Batch GD:
 
 Instead of using only the current gradient, we use a moving average of past gradients to "gain speed" in relevant directions and dampen oscillations.
 
-![](../Pasted%20image%2020260304194234.png)
+![](../images/Pasted%20image%2020260304194234.png)
 
 $$v_t = \gamma v_{t-1} + \eta \nabla J(\theta)$$
 
