@@ -78,7 +78,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "c376b5663d42f03e",
@@ -177,7 +178,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "2b752d604b862689",
+  "active": "8a677e238edd53f0",
   "lastOpenFiles": [
     "Machine Learning/ML Q&A - Quiz/QUIZ.md",
     "Machine Learning/ML Q&A - Quiz/Q&A Machine Learning.md",

@@ -97,7 +97,7 @@ Detto in modo più intuitivo:
 
 Esempio mentale:
 
-se hai 3 punti, ogni punto può essere etichettato in 2 modi, quindi ci sono $2^3 = 8$ etichettature possibili.
+se hai 3 punti, ogni punto può essere etichettato in 2 modi, quindi ci sono \$2^3 = 8$ etichettature possibili.
 
 Se la classe $H$ riesce a realizzare tutte e 8, allora *shatters* quei 3 punti.
 
@@ -119,12 +119,23 @@ la vc dimension misura la capacità o la complessità di un learning model.
 
 **Risposta:**
 
-........................................................................................................
-........................................................................................................
-........................................................................................................
-........................................................................................................
-........................................................................................................
-........................................................................................................
+Nell’algoritmo del perceptron, l’aggiornamento dei pesi avviene quando viene trovato un campione di training misclassificato dal vettore dei pesi corrente. La condizione di misclassificazione è
+
+$$
+\operatorname{sign}(\langle w^{(t)}, x_i \rangle) \neq y_i
+$$
+
+oppure, equivalentemente,
+
+$$
+y_i \langle w^{(t)}, x_i \rangle \le 0.
+$$
+
+Quando questa condizione si verifica, il vettore dei pesi viene aggiornato per correggere la classificazione del punto.
+
+
+
+
 
 ---
 
@@ -132,12 +143,7 @@ la vc dimension misura la capacità o la complessità di un learning model.
 
 **Risposta:**
 
-........................................................................................................
-........................................................................................................
-........................................................................................................
-........................................................................................................
-........................................................................................................
-........................................................................................................
+
 
 ---
 
