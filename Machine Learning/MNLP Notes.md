@@ -1564,9 +1564,9 @@ For the target word `apricot`:
 - positive samples include `(apricot, tablespoon)`, `(apricot, jam)`, `(apricot, of)`;
 - negative samples include `(apricot, burger)`, `(apricot, Tolstoj)`, `(apricot, zebra)`.
 
-![](../Pasted%20image%2020260320115041.png)
+![](../images/Pasted%20image%2020260320115041.png)
 
-![](../Pasted%20image%2020260320115433.png)
+![](../images/Pasted%20image%2020260320115433.png)
 
 ### Training Objective
 
