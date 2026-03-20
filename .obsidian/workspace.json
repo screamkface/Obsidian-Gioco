@@ -78,8 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "c376b5663d42f03e",
@@ -180,6 +179,9 @@
   },
   "active": "2b752d604b862689",
   "lastOpenFiles": [
+    "Pasted image 20260320115433.png",
+    "Pasted image 20260320115041.png",
+    "images/Pasted image 20260320114036.png",
     "Machine Learning/ML Q&A - Quiz/Q&A Machine Learning.md",
     "Machine Learning/ML Q&A - Quiz/QUIZ.md",
     "Machine Learning/ML Q&A - Quiz",
@@ -222,10 +224,7 @@
     "Pasted image 20260304193626.png",
     "Pasted image 20260304193346.png",
     "Pasted image 20260304193114.jpg",
-    "Pasted image 20260304193055.jpg",
-    "Pasted image 20260304192926.png",
     "PDLL.md",
-    "MNLP Notes.md",
-    "Discorso Presentazione.md"
+    "MNLP Notes.md"
   ]
 }

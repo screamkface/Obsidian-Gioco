@@ -1503,7 +1503,7 @@ $$
 
 ### From Similarity to Probability
 
-The dot product is not a probability, so we apply the sigmoid function:
+The dot product is **not** a probability, so we apply the sigmoid function:
 
 $$
 P(+ \mid w, c) = \sigma(c \cdot w) = \frac{1}{1 + \exp(-c \cdot w)}
@@ -1525,19 +1525,24 @@ $$
 \log P(+ \mid w, c_{1:L}) = \sum_{i=1}^{L} \log \sigma(c_i \cdot w)
 $$
 
+**Instead of taking a linear combination (Logistic Regression) as input, here we take the dot product to transorm it in a probability.**
+
+
 ### Model Parameters
 
 Each word has two embeddings:
 
-- a **target embedding**;
-- a **context embedding**.
+- **target embedding**;
+- **context embedding**.
 
-These are learned as two matrices:
+These are learned as two **matrices**:
 
 - $W$ for target embeddings;
 - $C$ for context embeddings.
 
 Each matrix contains embeddings for all words in the vocabulary $V$.
+
+![](../images/Pasted%20image%2020260320114036.png)
 
 ---
 
@@ -1558,6 +1563,10 @@ For the target word `apricot`:
 
 - positive samples include `(apricot, tablespoon)`, `(apricot, jam)`, `(apricot, of)`;
 - negative samples include `(apricot, burger)`, `(apricot, Tolstoj)`, `(apricot, zebra)`.
+
+![](../Pasted%20image%2020260320115041.png)
+
+![](../Pasted%20image%2020260320115433.png)
 
 ### Training Objective
 
