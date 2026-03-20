@@ -1376,3 +1376,439 @@ This chain is not limited to logistic regression. It is the conceptual backbone 
 
 \newpage
 
+# Word2Vec — Complete Lecture Notes
+
+## 1. Introduction
+
+### Sparse vs. Dense Representations
+
+Until now, we have introduced **sparse word embedding representations**.
+
+- Sparse vectors have a very high number of dimensions, equal to the vocabulary size $|V|$.
+- Most entries in each word vector are zero.
+- In count-based representations, a word co-occurs with only a limited number of neighboring words, while all other dimensions remain zero.
+
+In this lecture we introduce **dense representations**.
+
+- Dense vectors have many fewer dimensions.
+- Their dimensionality is typically $d \ll |V|$.
+- They can encode lexical-semantic properties in a geometric space.
+
+### Why Dense Representations Matter
+
+Dense vectors are useful because they:
+
+- use fewer parameters;
+- support better learning and generalization;
+- reduce overfitting;
+- make training faster and more efficient;
+- encode similarity between words directly in vector space.
+
+---
+
+## 2. Core Concepts of Word2Vec
+
+### What Word2Vec Is
+
+**Word2Vec** is a method that produces **dense embedding vectors** for a given word.
+
+- It is a machine learning approach.
+- It is based on **self-supervised learning**.
+- It does not require annotated data, only raw text.
+
+### Self-Supervision from Raw Text
+
+The idea is simple:
+
+- raw text is used as training data;
+- nearby words act as the “correct answers”;
+- the context is automatically derived from the corpus.
+
+The model learns embeddings by solving a simple prediction task:
+
+- predicting words using the surrounding context;
+- using a word-level binary classification objective based on logistic regression.
+
+> The prediction task is only a means to an end: the learned weights are the embeddings.
+
+---
+
+## 3. Architectures: Skip-gram vs. CBOW
+
+### Continuous Bag-of-Words (CBOW)
+
+CBOW is one possible way to implement Word2Vec.
+
+- **Task:** predict the target word given a context word.
+- The learned weights are used to compute embeddings.
+
+### Skip-gram
+
+Skip-gram is the second main architecture.
+
+- **Task:** predict a context word given the target word.
+- The learned weights are used to compute embeddings.
+
+### Comparison
+
+Both are valid solutions for learning dense embeddings.
+
+- Skip-gram is slower than CBOW.
+- CBOW is less accurate than Skip-gram for rare words.
+
+In these notes, the focus is on **Skip-gram**.
+
+---
+
+## 4. Deep Dive into Skip-gram
+
+### Binary Classification Task
+
+Our goal is to train a classifier that, given:
+
+- a focus word $w$,
+- a context word $c$,
+
+computes the probability that $c$ is a possible context word of $w$ for a certain context window size.
+
+We formalize the task as:
+
+$$
+P(+ \mid w, c)
+$$
+
+The negative probability is:
+
+$$
+P(- \mid w, c) = 1 - P(+ \mid w, c)
+$$
+
+This corresponds to learning a **binary logistic regression model** that, given a pair of words (target and context), predicts the probability that they co-occur in the same context.
+
+### Similarity Intuition
+
+The intuition behind the classifier is that the probability of a context word given a target word is based on the **similarity** between their embeddings.
+
+Two vectors are similar if they have a high dot product:
+
+$$
+\operatorname{Similarity}(w, c) \approx c \cdot w
+$$
+
+where $c$ and $w$ are embedding vectors of dimension:
+
+$$
+d \ll |V|
+$$
+
+### From Similarity to Probability
+
+The dot product is not a probability, so we apply the sigmoid function:
+
+$$
+P(+ \mid w, c) = \sigma(c \cdot w) = \frac{1}{1 + \exp(-c \cdot w)}
+$$
+
+### Probability over the Whole Context
+
+Assuming that, given the target word, each context word is independent of the others, we can multiply the probabilities.
+
+If $L$ is the number of words in the context, then:
+
+$$
+P(+ \mid w, c_{1:L}) = \prod_{i=1}^{L} \sigma(c_i \cdot w)
+$$
+
+To avoid numerical instability, we use the logarithm:
+
+$$
+\log P(+ \mid w, c_{1:L}) = \sum_{i=1}^{L} \log \sigma(c_i \cdot w)
+$$
+
+### Model Parameters
+
+Each word has two embeddings:
+
+- a **target embedding**;
+- a **context embedding**.
+
+These are learned as two matrices:
+
+- $W$ for target embeddings;
+- $C$ for context embeddings.
+
+Each matrix contains embeddings for all words in the vocabulary $V$.
+
+---
+
+## 5. Training Process
+
+### Positive and Negative Samples
+
+For each word $w$ in the text:
+
+- words that occur nearby are treated as **positive samples**;
+- words that do not occur nearby are treated as **negative samples**.
+
+Example from the slides:
+
+> `... lemon, a [ tablespoon of apricot jam, a ] pinch each ...`
+
+For the target word `apricot`:
+
+- positive samples include `(apricot, tablespoon)`, `(apricot, jam)`, `(apricot, of)`;
+- negative samples include `(apricot, burger)`, `(apricot, Tolstoj)`, `(apricot, zebra)`.
+
+### Training Objective
+
+Given positive and negative examples, the model should:
+
+- maximize the similarity of positive pairs $(w, c^+)$;
+- minimize the similarity of negative pairs $(w, c^-)$. 
+
+### Loss Function
+
+Let $c_{\text{pos}}$ be a positive context word and let $\{c_{\text{neg}_1}, \dots, c_{\text{neg}_k}\}$ be the set of $k$ negative samples.
+
+The skip-gram loss function is the negative log-likelihood:
+
+$$
+L(w, c_{\text{pos}}, c_{\text{neg}*}) = - \log \left[
+P(+ \mid w, c_{\text{pos}})
+\prod_{i=1}^{k} P(- \mid w, c_{\text{neg}_i})
+\right]
+$$
+
+By substituting the sigmoid-based probabilities, we obtain:
+
+$$
+L(w, c_{\text{pos}}, c_{\text{neg}*}) = - \left[
+\log \sigma(c_{\text{pos}} \cdot w)
++ \sum_{i=1}^{k} \log \sigma(-c_{\text{neg}_i} \cdot w)
+\right]
+$$
+
+### Sigmoid and Its Derivative
+
+$$
+\sigma(x) = \frac{1}{1 + e^{-x}}
+$$
+
+$$
+\sigma'(x) = \sigma(x)(1 - \sigma(x))
+$$
+
+### Gradients
+
+#### Derivative with respect to the positive element
+
+$$
+\frac{\partial L}{\partial c_{\text{pos}}}
+= [\sigma(c_{\text{pos}} \cdot w) - 1] \, w
+$$
+
+#### Derivative with respect to the $i$-th negative element
+
+$$
+\frac{\partial L}{\partial c_{\text{neg}_i}}
+= \sigma(c_{\text{neg}_i} \cdot w) \, w
+$$
+
+#### Derivative with respect to the target word element
+
+$$
+\frac{\partial L}{\partial w}
+= (\sigma(c_{\text{pos}} \cdot w) - 1)c_{\text{pos}}
++ \sum_{i=1}^{k} \sigma(c_{\text{neg}_i} \cdot w) c_{\text{neg}_i}
+$$
+
+### Parameter Update Rules
+
+Let $\eta$ be the learning rate.
+
+#### Update for the positive context vector
+
+$$
+c_{\text{pos}}^{t+1}
+= c_{\text{pos}}^{t}
+- \eta \left[\sigma(c_{\text{pos}}^{t} \cdot w^{t}) - 1\right] w^{t}
+$$
+
+#### Update for the $i$-th negative context vector
+
+$$
+c_{\text{neg}_i}^{t+1}
+= c_{\text{neg}_i}^{t}
+- \eta \left[\sigma(c_{\text{neg}_i}^{t} \cdot w^{t})\right] w^{t}
+$$
+
+#### Update for the target word vector
+
+$$
+w^{t+1}
+= w^{t}
+- \eta \left[
+(\sigma(c_{\text{pos}}^{t} \cdot w^{t}) - 1)c_{\text{pos}}^{t}
++ \sum_{i=1}^{k} \sigma(c_{\text{neg}_i}^{t} \cdot w^{t}) c_{\text{neg}_i}^{t}
+\right]
+$$
+
+---
+
+## 6. Properties and Limitations
+
+### Benefits of Dense Vectors
+
+Dense vectors provide several advantages.
+
+- They use fewer parameters than sparse vectors.
+- They improve learning and generalization.
+- They reduce overfitting.
+- They allow faster and more efficient training.
+- They capture semantic similarity directly in vector space.
+
+Example:
+
+- `car` is close to `automobile`.
+
+### Semantic and Relational Properties
+
+Once Word2Vec is trained, we can inspect the semantics of a word embedding by looking at its most similar words.
+
+- Similarity is computed using cosine similarity.
+- Embeddings can reveal semantic neighbors.
+- Embeddings can capture relational structure and analogies.
+
+A well-known relational pattern is:
+
+$$
+\text{king} - \text{man} + \text{woman} \approx \text{queen}
+$$
+
+This reflects the parallelogram-style analogy intuition discussed in the slides.
+
+### Static Embeddings
+
+Word2Vec learns **one fixed vector per word**.
+
+- Each word has the same representation in all contexts.
+- It cannot capture context-dependent meanings.
+- Example: `bank` has one meaning regardless of the sentence.
+
+### Out-of-Vocabulary Words and Subword Embeddings
+
+A further limitation is the reliance on a fixed vocabulary.
+
+- New or unseen words are problematic.
+- One solution is to use **subword embeddings**.
+- In this case, a word embedding is computed from the embeddings of its subwords.
+
+The slides introduce **fastText** as the model that uses character $n$-gram splitting to address this issue.
+
+---
+
+## 7. Evaluation
+
+### Intrinsic Evaluation
+
+Intrinsic evaluation measures how well the vector space agrees with human judgments of similarity or relatedness.
+
+Common datasets mentioned in the slides are:
+
+- RG-65
+- MC-30
+- MEN
+- WordSim-353
+- SimLex-999
+
+### Extrinsic Evaluation
+
+Extrinsic evaluation measures how useful the embeddings are in downstream NLP tasks.
+
+Examples from the slides include:
+
+- Sentiment Analysis
+- Named Entity Recognition (NER)
+- Part-of-Speech Tagging
+
+---
+
+## 8. Compact Formula Summary
+
+For quick review in Obsidian:
+
+$$
+P(+ \mid w, c)
+$$
+
+$$
+P(- \mid w, c) = 1 - P(+ \mid w, c)
+$$
+
+$$
+\operatorname{Similarity}(w, c) \approx c \cdot w
+$$
+
+$$
+P(+ \mid w, c) = \sigma(c \cdot w) = \frac{1}{1 + \exp(-c \cdot w)}
+$$
+
+$$
+P(+ \mid w, c_{1:L}) = \prod_{i=1}^{L} \sigma(c_i \cdot w)
+$$
+
+$$
+\log P(+ \mid w, c_{1:L}) = \sum_{i=1}^{L} \log \sigma(c_i \cdot w)
+$$
+
+$$
+L(w, c_{\text{pos}}, c_{\text{neg}*}) = - \left[
+\log \sigma(c_{\text{pos}} \cdot w)
++ \sum_{i=1}^{k} \log \sigma(-c_{\text{neg}_i} \cdot w)
+\right]
+$$
+
+$$
+\sigma(x) = \frac{1}{1 + e^{-x}}
+$$
+
+$$
+\sigma'(x) = \sigma(x)(1 - \sigma(x))
+$$
+
+$$
+\frac{\partial L}{\partial c_{\text{pos}}}
+= [\sigma(c_{\text{pos}} \cdot w) - 1] \, w
+$$
+
+$$
+\frac{\partial L}{\partial c_{\text{neg}_i}}
+= \sigma(c_{\text{neg}_i} \cdot w) \, w
+$$
+
+$$
+\frac{\partial L}{\partial w}
+= (\sigma(c_{\text{pos}} \cdot w) - 1)c_{\text{pos}}
++ \sum_{i=1}^{k} \sigma(c_{\text{neg}_i} \cdot w) c_{\text{neg}_i}
+$$
+
+$$
+c_{\text{pos}}^{t+1}
+= c_{\text{pos}}^{t}
+- \eta \left[\sigma(c_{\text{pos}}^{t} \cdot w^{t}) - 1\right] w^{t}
+$$
+
+$$
+c_{\text{neg}_i}^{t+1}
+= c_{\text{neg}_i}^{t}
+- \eta \left[\sigma(c_{\text{neg}_i}^{t} \cdot w^{t})\right] w^{t}
+$$
+
+$$
+w^{t+1}
+= w^{t}
+- \eta \left[
+(\sigma(c_{\text{pos}}^{t} \cdot w^{t}) - 1)c_{\text{pos}}^{t}
++ \sum_{i=1}^{k} \sigma(c_{\text{neg}_i}^{t} \cdot w^{t}) c_{\text{neg}_i}^{t}
+\right]
+$$

@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Machine Learning/ML Q&A - Quiz/Q&A Machine Learning.md",
+                "file": "Machine Learning/MNLP Notes.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Q&A Machine Learning"
+              "title": "MNLP Notes"
             }
           }
         ]
@@ -178,10 +178,10 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "8a677e238edd53f0",
+  "active": "2b752d604b862689",
   "lastOpenFiles": [
-    "Machine Learning/ML Q&A - Quiz/QUIZ.md",
     "Machine Learning/ML Q&A - Quiz/Q&A Machine Learning.md",
+    "Machine Learning/ML Q&A - Quiz/QUIZ.md",
     "Machine Learning/ML Q&A - Quiz",
     "Machine Learning/Latex Exports/#Dimostrazioni Machine Learning.tex#",
     "MNLP Notes.pdf",
