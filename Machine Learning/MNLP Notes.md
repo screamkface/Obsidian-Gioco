@@ -1821,3 +1821,4 @@ w^{t+1}
 + \sum_{i=1}^{k} \sigma(c_{\text{neg}_i}^{t} \cdot w^{t}) c_{\text{neg}_i}^{t}
 \right]
 $$
+---
