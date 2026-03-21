@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Machine Learning/Appunti Nicola.md",
+                "file": "Machine Learning/ML Q&A - Quiz/Q&A Machine Learning.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Appunti Nicola"
+              "title": "Q&A Machine Learning"
             }
           }
         ]
@@ -78,7 +78,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 229.00043487548828
+    "width": 229.00043487548828,
+    "collapsed": true
   },
   "right": {
     "id": "c376b5663d42f03e",
@@ -179,6 +180,7 @@
   },
   "active": "d43fff89fd100155",
   "lastOpenFiles": [
+    "Machine Learning/Appunti Nicola.md",
     "Machine Learning/pdf/MNLP Notes.pdf",
     "Machine Learning/MNLP Notes.md",
     "images/Pasted image 20260320115041.png",
@@ -189,14 +191,12 @@
     "Machine Learning/ML Q&A - Quiz",
     "Machine Learning/Latex Exports/#Dimostrazioni Machine Learning.tex#",
     "MNLP Notes.pdf",
-    "Machine Learning/Appunti Nicola.md",
     "Machine Learning/Appunti Nicola.toc",
     "Machine Learning/Appunti Nicola.synctex(busy)",
     "Machine Learning/Appunti Nicola.log",
     "Machine Learning/Appunti Nicola.fls",
     "Machine Learning/pdflatex161179.fls",
     "Machine Learning/pdflatex161105.fls",
-    "Machine Learning/Appunti Nicola.pdf",
     "Machine Learning/Dimostrazioni Machine Learning.md",
     "Gioco/Finali/Stile dei finali.md",
     "Gioco/Finali/Come Generarli.md",
