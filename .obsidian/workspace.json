@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "65283ed923967ada",
+        "id": "17be8b8eb3ff1b63",
         "type": "tabs",
         "children": [
           {
-            "id": "d43fff89fd100155",
+            "id": "d91125dfa92587c9",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -44,7 +44,7 @@
                 "autoReveal": false
               },
               "icon": "lucide-folder-closed",
-              "title": "Files"
+              "title": "Esplora risorse"
             }
           },
           {
@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "tag:#Algoritmi",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -61,7 +61,7 @@
                 "sortOrder": "alphabetical"
               },
               "icon": "lucide-search",
-              "title": "Search"
+              "title": "Ricerca"
             }
           },
           {
@@ -78,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 229.00043487548828,
+    "width": 200,
     "collapsed": true
   },
   "right": {
@@ -113,11 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Machine Learning/ML Q&A - Quiz/Q&A Machine Learning.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links"
+              "title": "Collegamenti in uscita da Q&A Machine Learning"
             }
           },
           {
@@ -168,63 +169,63 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "switcher:Open quick switcher": false,
-      "graph:Open graph view": false,
-      "canvas:Create new canvas": false,
-      "daily-notes:Open today's daily note": false,
-      "templates:Insert template": false,
-      "command-palette:Open command palette": false,
-      "bases:Create new base": false,
+      "switcher:Apri selezione rapida": false,
+      "graph:Apri vista grafo": false,
+      "canvas:Crea nuova lavagna": false,
+      "daily-notes:Apri nota del giorno": false,
+      "templates:Inserisci modello": false,
+      "command-palette:Apri riquadro comandi": false,
+      "bases:Crea nuova Base": false,
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "d43fff89fd100155",
+  "active": "8a677e238edd53f0",
   "lastOpenFiles": [
     "Machine Learning/Appunti Nicola.md",
+    "images/uml.png",
+    "images/graph-of-a-sigmoid-function.webp",
+    "images/e9e3c9070bd77dc45e50109e83b8340c8cf50467.jpg",
+    "images/d2bbb46f2611a7c0c546f4bae900263c9737624f.png",
+    "images/c8ed71f04f4b53b1ef0b1572cd679665917588a0.png",
+    "images/bdde770ce8e8f43b914101085fac38920270d135.png",
+    "images/b795c07304c42cc254e12fb250fda72320f1c900.png",
+    "images/ai_58-1536x864.webp",
+    "images/a1205455276678d62b52ba9bfae60302b90314f4.webp",
+    "images/a1205455276678d62b52ba9bfae60302b90314f4.png",
+    "Progetti/Mars Habitat/Discorso Presentazione.md",
+    "Progetti/Mars Habitat/Senza nome.md",
+    "Progetti/Mars Habitat/architecture.md",
+    "Progetti/Readdit.md",
+    "Progetti/Mars Habitat",
+    "Progetti",
+    "Presentazioni/Discorso Presentazione Laurea.md",
+    "Presentazioni",
     "Machine Learning/pdf/MNLP Notes.pdf",
+    "Machine Learning/pdf/PDLL.pdf",
+    "Machine Learning/pdf/dimostrazioni_ml_riorganizzate.pdf",
+    "Machine Learning/pdf/Dimostrazioni Machine Learning.pdf",
+    "Machine Learning/pdf/Appunti Nicola.pdf",
+    "Machine Learning/pdf",
+    "Machine Learning/dimostrazioni_ml_riorganizzate.tex",
+    "Machine Learning/PDLL.md",
+    "Machine Learning/Musica/Consigli Produzione Cinematica.md",
     "Machine Learning/MNLP Notes.md",
-    "images/Pasted image 20260320115041.png",
-    "images/Pasted image 20260320115433.png",
-    "images/Pasted image 20260320114036.png",
-    "Machine Learning/ML Q&A - Quiz/Q&A Machine Learning.md",
     "Machine Learning/ML Q&A - Quiz/QUIZ.md",
-    "Machine Learning/ML Q&A - Quiz",
-    "Machine Learning/Latex Exports/#Dimostrazioni Machine Learning.tex#",
-    "MNLP Notes.pdf",
-    "Machine Learning/Appunti Nicola.toc",
-    "Machine Learning/Appunti Nicola.synctex(busy)",
-    "Machine Learning/Appunti Nicola.log",
-    "Machine Learning/Appunti Nicola.fls",
-    "Machine Learning/pdflatex161179.fls",
-    "Machine Learning/pdflatex161105.fls",
+    "Machine Learning/ML Q&A - Quiz/Q&A Machine Learning.md",
+    "Machine Learning/How to Kaggle.md",
     "Machine Learning/Dimostrazioni Machine Learning.md",
-    "Gioco/Finali/Stile dei finali.md",
-    "Gioco/Finali/Come Generarli.md",
-    "Gioco/Fazione/Cultisti.md",
-    "Gioco/Storia.md",
-    "Gioco/Logica.md",
+    "Inbox/Senza nome 1.md",
+    "Gioco/Idea finale crea storia.md",
     "Gioco/Flutter Game Dev/Untitled.md",
-    "Gioco/IMPORTANTE.md",
-    "Gioco/Luoghi.md",
-    "Gioco/Nemici.md",
-    "Gioco/Struttura.md",
-    "Gioco/Idee.md",
-    "Gioco/Idea Gioco (Reigns con AI).md",
-    "Gioco/Dataset e Modello.md",
-    "Gioco/Canvas Idea Gioco.canvas",
     "Gen AI/Gen AI Notes.md",
-    "conflict-files-obsidian-git.md",
-    "Hackaton IBM.md",
-    "graph-of-a-sigmoid-function.webp",
-    "architecture.md",
-    "ai_58-1536x864.webp",
-    "Senza nome.md",
+    "Gen AI/Hackaton IBM.md",
+    "Gioco/Idea Gioco (Reigns con AI).md",
+    "Gioco/Grafica/Dimensioni.md",
+    "MNLP Notes.md",
     "Senza nome 1.md",
-    "Pasted image 20260304194314.png",
-    "Pasted image 20260304194234.png",
-    "Pasted image 20260304193702.png",
-    "Pasted image 20260304193626.png",
-    "Pasted image 20260304193346.png",
-    "PDLL.md"
+    "architecture.md",
+    "Discorso Presentazione.md",
+    "Readdit.md",
+    "Gioco/Canvas Idea Gioco.canvas"
   ]
 }
