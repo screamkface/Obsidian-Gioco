@@ -25,7 +25,7 @@ Ecco come devi dividere il codice nel tuo Google Colab. Crea una cella separata 
 
 Python
 
-```
+```python
 # ==========================================
 # BLOCK 1: SETUP AND DATA LOADING
 # ==========================================
@@ -63,7 +63,7 @@ print(f"Correct answer index: {example['answer_pos']}")
 
 Python
 
-```
+```python
 # ==========================================
 # BLOCK 2: CORE UTILITY FUNCTIONS
 # ==========================================
@@ -116,7 +116,7 @@ def evaluate_model(model, dataset, device, is_raw_transformer=False, tokenizer=N
 
 Python
 
-```
+```python
 # ==========================================
 # BLOCK 3: BASELINE 1 (RAW DISTILBERT)
 # ==========================================
@@ -155,7 +155,7 @@ print(f"Hit@1: {h1:.4f} | Hit@3: {h3:.4f} | Hit@5: {h5:.4f}")
 
 Python
 
-```
+```python
 # ==========================================
 # BLOCK 4: BASELINE 2 & HARD NEGATIVES MINING
 # ==========================================
@@ -219,7 +219,7 @@ train_examples = prepare_hard_triplets_optimized(train_data_list, model_base, de
 
 Python
 
-```
+```python
 # ==========================================
 # BLOCK 5: HYPERPARAMETER TUNING
 # ==========================================
@@ -274,7 +274,7 @@ print(df_results.to_markdown())
 
 Python
 
-```
+```python
 # ==========================================
 # BLOCK 6: FINAL TRAINING & EXPORT
 # ==========================================
