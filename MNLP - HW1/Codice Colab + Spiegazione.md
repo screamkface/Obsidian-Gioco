@@ -6,7 +6,7 @@ Hai fatto un'ottima osservazione! Analizziamo subito cosa è successo alle funzi
     
     - **Stato:** _Obsolete per il Fine-Tuning, ma necessarie per la Baseline 1._
         
-    - **Perché:** La libreria `sentence-transformers` fa esattamente l'operazione di tokenizzazione e mean pooling "dietro le quinte" quando chiami `.encode()`. Tuttavia, per il requisito **[B1]**, il professore vuole vedere che hai capito come funziona un Transformer "nudo e crudo". Quindi manterremo queste funzioni **solo** per la Baseline 1, per dimostrare che sai cosa succede sotto il cofano.
+    - **Perché:** La libreria `sentence-transformers` fa esattamente l'operazione di tokenizzazione e mean pooling "dietro le quinte" quando chiami `.encode()`. Tuttavia, per il requisito **[B1]**, il professore vuole vedere che hai capito come funziona un Transformer "nudo e crudo". Quindi manterremo queste funzioni **solo** per la Baseline 1, per dimostrare che sai cosa succede sotto il cofano.    
         
 2. **`cosine_similarity`**:
     
