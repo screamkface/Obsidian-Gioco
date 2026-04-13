@@ -39,6 +39,6 @@ Nella pratica industriale moderna (come nei motori di ricerca avanzati o nei sis
 
 Per aiutarti a visualizzare come i dati fluiscono in queste due architetture, ho creato questo schema interattivo:
 
-![](../download%20(1).png)
+![](../images/download%20(1).png)
 
-![](../download.png)
+![](../images/download.png)
