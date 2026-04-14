@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "MNLP - HW1/Bi encoder vs Cross Encoder.md",
+                "file": "MNLP - HW1/Code Explanation.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Bi encoder vs Cross Encoder"
+              "title": "Code Explanation"
             }
           }
         ]
@@ -178,16 +178,18 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "b5782aa55b556337",
+  "active": "13a0ac9f836789df",
   "lastOpenFiles": [
+    "MNLP - HW1/Bi encoder vs Cross Encoder.md",
+    "MNLP - HW1/Code Explanation.md",
+    "MNLP - HW1.rar",
+    "MNLP - HW1/Codice Colab + Spiegazione.md",
+    "MNLP - HW1/DistilBERT vs. all-MiniLM-L6-v2.md",
+    "MNLP - HW1/Last Hidden State (Spiegazione).md",
+    "MNLP - HW1/Mini Report Cosa e' stato fatto.md",
+    "MNLP - HW1/Report HW-1.md",
     "images/download (1).png",
     "images/download.png",
-    "MNLP - HW1/Bi encoder vs Cross Encoder.md",
-    "MNLP - HW1/Codice Colab + Spiegazione.md",
-    "MNLP - HW1/Report HW-1.md",
-    "MNLP - HW1/Mini Report Cosa e' stato fatto.md",
-    "MNLP - HW1/Last Hidden State (Spiegazione).md",
-    "MNLP - HW1/DistilBERT vs. all-MiniLM-L6-v2.md",
     "Sentence Transformers.md",
     "Machine Learning/ML Q&A - Quiz/Q&A Machine Learning.md",
     "MNLP - HW1",
@@ -213,7 +215,6 @@
     "Machine Learning/pdf/dimostrazioni_ml_riorganizzate.pdf",
     "Machine Learning/pdf/Dimostrazioni Machine Learning.pdf",
     "Machine Learning/pdf/Appunti Nicola.pdf",
-    "Machine Learning/pdf",
     "Machine Learning/PDLL.md",
     "Machine Learning/Musica/Consigli Produzione Cinematica.md",
     "Machine Learning/MNLP Notes.md",
