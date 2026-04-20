@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "2dbcf5763463da2a",
+        "id": "5e8222f4f1e9bd3b",
         "type": "tabs",
         "children": [
           {
-            "id": "13a0ac9f836789df",
+            "id": "ac51ef9a8ef22053",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "MNLP - HW1/Code Explanation.md",
+                "file": "MNLP/Transformers and Attention.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Code Explanation"
+              "title": "Transformers and Attention"
             }
           }
         ]
@@ -44,7 +44,7 @@
                 "autoReveal": false
               },
               "icon": "lucide-folder-closed",
-              "title": "Esplora risorse"
+              "title": "Files"
             }
           },
           {
@@ -164,68 +164,69 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 375
   },
   "left-ribbon": {
     "hiddenItems": {
-      "switcher:Apri selezione rapida": false,
-      "graph:Apri vista grafo": false,
-      "canvas:Crea nuova lavagna": false,
-      "daily-notes:Apri nota del giorno": false,
-      "templates:Inserisci modello": false,
-      "command-palette:Apri riquadro comandi": false,
-      "bases:Crea nuova Base": false,
-      "obsidian-git:Open Git source control": false
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false,
+      "obsidian-git:Open Git source control": false,
+      "bmo-chatbot:BMO Chatbot": false
     }
   },
-  "active": "13a0ac9f836789df",
+  "active": "ac51ef9a8ef22053",
   "lastOpenFiles": [
-    "MNLP - HW1/Bi encoder vs Cross Encoder.md",
+    "Pasted image 20260420163834.png",
+    "Pasted image 20260420162928.png",
+    "Pasted image 20260420162115.png",
+    "Pasted image 20260420161028.png",
+    "Pasted image 20260420121628.png",
+    "Pasted image 20260420121026.png",
+    "Pasted image 20260420120838.png",
+    "Pasted image 20260420120652.png",
+    "Pasted image 20260420114406.png",
+    "Pasted image 20260420114310.png",
+    "MNLP/MNLP Notes.md",
+    "MNLP/Transformers and Attention.md",
+    "Senza nome 1.base",
+    "Senza nome.base",
+    "README.md",
+    "Sentence Transformers.md",
+    "Pasted image 20260420110913.png",
+    "MNLP/Instruction following and Post Training.md",
+    "BMO/Prompts/Notes Helper.md",
+    "Gen AI/Gen Ai - Alignment Lecture 11.md",
+    "BMO/Prompts",
+    "BMO/Nuova cartella",
+    "Gen AI/Gen AI Notes.md",
+    "Rag and llm knowledge.md",
+    "MNLP",
+    "Generative AI",
+    "Algorithm Design/Algoritmi Greedy.md",
+    "Algorithm Design/Notes.md",
     "MNLP - HW1/Code Explanation.md",
-    "MNLP - HW1.rar",
-    "MNLP - HW1/Codice Colab + Spiegazione.md",
+    "Algorithm Design",
+    "BMO/Profiles/BMO.md",
+    "BMO/Profiles",
+    "BMO",
+    "MNLP - HW1/Bi encoder vs Cross Encoder.md",
     "MNLP - HW1/DistilBERT vs. all-MiniLM-L6-v2.md",
     "MNLP - HW1/Last Hidden State (Spiegazione).md",
-    "MNLP - HW1/Mini Report Cosa e' stato fatto.md",
     "MNLP - HW1/Report HW-1.md",
-    "images/download (1).png",
-    "images/download.png",
-    "Sentence Transformers.md",
+    "MNLP - HW1/Scelte efettuate.md",
+    "MNLP - HW1/Codice Colab + Spiegazione.md",
+    "__rar_12200.19343.rartemp",
+    "MNLP - HW1/Mini Report Cosa e' stato fatto.md",
     "Machine Learning/ML Q&A - Quiz/Q&A Machine Learning.md",
-    "MNLP - HW1",
     "Machine Learning/Appunti Nicola.md",
-    "images/uml.png",
-    "images/graph-of-a-sigmoid-function.webp",
-    "images/e9e3c9070bd77dc45e50109e83b8340c8cf50467.jpg",
-    "images/d2bbb46f2611a7c0c546f4bae900263c9737624f.png",
-    "images/c8ed71f04f4b53b1ef0b1572cd679665917588a0.png",
-    "images/bdde770ce8e8f43b914101085fac38920270d135.png",
-    "images/b795c07304c42cc254e12fb250fda72320f1c900.png",
-    "images/ai_58-1536x864.webp",
     "Progetti/Mars Habitat/Discorso Presentazione.md",
     "Progetti/Mars Habitat/Senza nome.md",
     "Progetti/Mars Habitat/architecture.md",
-    "Progetti/Readdit.md",
-    "Progetti/Mars Habitat",
-    "Progetti",
-    "Presentazioni/Discorso Presentazione Laurea.md",
-    "Presentazioni",
-    "Machine Learning/pdf/MNLP Notes.pdf",
-    "Machine Learning/pdf/PDLL.pdf",
-    "Machine Learning/pdf/dimostrazioni_ml_riorganizzate.pdf",
-    "Machine Learning/pdf/Dimostrazioni Machine Learning.pdf",
-    "Machine Learning/pdf/Appunti Nicola.pdf",
-    "Machine Learning/PDLL.md",
-    "Machine Learning/Musica/Consigli Produzione Cinematica.md",
-    "Machine Learning/MNLP Notes.md",
-    "Machine Learning/ML Q&A - Quiz/QUIZ.md",
-    "Machine Learning/How to Kaggle.md",
-    "Machine Learning/Dimostrazioni Machine Learning.md",
-    "Inbox/Senza nome 1.md",
-    "Gioco/Idea finale crea storia.md",
-    "Gioco/Flutter Game Dev/Untitled.md",
-    "Gen AI/Gen AI Notes.md",
-    "Gen AI/Hackaton IBM.md",
     "Gioco/Canvas Idea Gioco.canvas"
   ]
 }
