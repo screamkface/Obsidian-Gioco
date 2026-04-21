@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "MNLP/Transformers and Attention.md",
+                "file": "MNLP - HW1/DistilBERT vs. all-MiniLM-L6-v2.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Transformers and Attention"
+              "title": "DistilBERT vs. all-MiniLM-L6-v2"
             }
           }
         ]
@@ -78,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 320.0026054382324
   },
   "right": {
     "id": "c376b5663d42f03e",
@@ -94,6 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "MNLP - HW1/DistilBERT vs. all-MiniLM-L6-v2.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks"
+              "title": "Backlinks for DistilBERT vs. all-MiniLM-L6-v2"
             }
           },
           {
@@ -112,12 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Machine Learning/ML Q&A - Quiz/Q&A Machine Learning.md",
+                "file": "MNLP - HW1/DistilBERT vs. all-MiniLM-L6-v2.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Collegamenti in uscita da Q&A Machine Learning"
+              "title": "Outgoing links from DistilBERT vs. all-MiniLM-L6-v2"
             }
           },
           {
@@ -141,12 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "MNLP - HW1/DistilBERT vs. all-MiniLM-L6-v2.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline"
+              "title": "Outline of DistilBERT vs. all-MiniLM-L6-v2"
             }
           },
           {
@@ -179,8 +181,13 @@
       "bmo-chatbot:BMO Chatbot": false
     }
   },
-  "active": "ac51ef9a8ef22053",
+  "active": "b5782aa55b556337",
   "lastOpenFiles": [
+    "Gen AI/Lecture 12 - RAG and Agentic AI.md",
+    "Pasted image 20260421115440.png",
+    "Gen AI/Gen Ai - Alignment Lecture 11.md",
+    "Gen AI/Gen AI Notes.md",
+    "MNLP/Transformers and Attention.md",
     "Pasted image 20260420163834.png",
     "Pasted image 20260420162928.png",
     "Pasted image 20260420162115.png",
@@ -190,20 +197,15 @@
     "Pasted image 20260420120838.png",
     "Pasted image 20260420120652.png",
     "Pasted image 20260420114406.png",
-    "Pasted image 20260420114310.png",
     "MNLP/MNLP Notes.md",
-    "MNLP/Transformers and Attention.md",
     "Senza nome 1.base",
     "Senza nome.base",
     "README.md",
     "Sentence Transformers.md",
-    "Pasted image 20260420110913.png",
     "MNLP/Instruction following and Post Training.md",
     "BMO/Prompts/Notes Helper.md",
-    "Gen AI/Gen Ai - Alignment Lecture 11.md",
     "BMO/Prompts",
     "BMO/Nuova cartella",
-    "Gen AI/Gen AI Notes.md",
     "Rag and llm knowledge.md",
     "MNLP",
     "Generative AI",
@@ -226,7 +228,6 @@
     "Machine Learning/Appunti Nicola.md",
     "Progetti/Mars Habitat/Discorso Presentazione.md",
     "Progetti/Mars Habitat/Senza nome.md",
-    "Progetti/Mars Habitat/architecture.md",
     "Gioco/Canvas Idea Gioco.canvas"
   ]
 }
