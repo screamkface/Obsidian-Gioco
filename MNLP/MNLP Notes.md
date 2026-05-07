@@ -74,25 +74,25 @@ While there are approximately 7,000 distinct languages spoken globally, contempo
 
 ## Tokenization
 
-Tokenization is the computational process of segmenting a continuous stream of raw input text into discrete units known as **tokens**. These tokens serve as the fundamental input units for subsequent NLP tasks, such as vectorization, syntactic parsing, and machine translation.
+Tokenization is the process of segmenting a **continuous stream** of **raw** input text into discrete units known as **tokens**. These tokens serve as the fundamental input units for subsequent NLP tasks, such as **vectorization**, **syntactic parsing**, and **machine translation**.
 
 ### Objectives of Tokenization
-The primary goal is to map unstructured character sequences into meaningful discrete units that capture enough semantic information while maintaining a computationally manageable vocabulary size.
+We are transforming continuous streams of characters—*which mean nothing by themselves*—into **discrete semantic units.** Think of it like turning a river into countable packets of water. Each 'packet' must carry enough meaning (semantic information), but we also have to **keep** the total number of these packets small so that our system doesn't become too large or slow
 
 ### Challenges in Multilingual Tokenization
 Tokenization strategies vary significantly across languages due to differences in orthography and morphology:
 
 *   **White-space Tokenization:** Simple splitting by spaces (common in English). This approach fails in languages like Chinese, Japanese, or Thai, which do not use spaces as word boundaries.
-*   **Morphological Complexity:** In agglutinative languages (e.g., Turkish, Finnish), a single word can be composed of many concatenated morphemes. Tokenizing at the word level leads to an excessively large $|V|$ and the "out-of-vocabulary" (OOV) problem.
-*   **Subword Tokenization:** Modern approaches (e.g., Byte Pair Encoding (BPE), WordPiece) decompose words into smaller sub-units. This balances the representation of rare words while keeping the total vocabulary size $|V|$ restricted, effectively mitigating OOV issues.
+*   **Morphological Complexity:** In agglutinative languages (e.g., Turkish, Finnish), a single word can be composed of many concatenated morphemes. Tokenizing at the word level leads to an excessively large $|V|$ and the "**out-of-vocabulary**" (OOV) problem.
+*   **Subword Tokenization:** Modern approaches (e.g., Byte Pair Encoding (BPE), WordPiece) decompose words into **smaller sub-units**. This balances the representation of rare words while keeping the total vocabulary size $|V|$ restricted, effectively mitigating OOV issues.
 
 ### Summary of Tokenization Approaches
 
-| Method | Mechanism | Primary Use Case |
-| :--- | :--- | :--- |
-| **Word-based** | Split by whitespace/punctuation | Simple English pipelines |
-| **Character-based** | Split every character | Models with very small $|V|$ |
-| **Subword-based** | Split by frequent n-grams | Multilingual/General-purpose |
+| Method              | Mechanism                       | Primary Use Case             |
+| :------------------ | :------------------------------ | :--------------------------- |
+| **Word-based**      | Split by whitespace/punctuation | Simple English pipelines     |
+| **Character-based** | Split every character           | Models with very small $     |
+| **Subword-based**   | Split by frequent n-grams       | Multilingual/General-purpose |
 
 ### Key Takeaways
 
