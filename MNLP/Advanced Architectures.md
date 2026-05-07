@@ -22,11 +22,11 @@ A MoE is defined by two main components:
 
 In each layer of an LLM with a MoE, we find somewhat specialized experts
 
-![](../Pasted%20image%2020260507095308.png)
+![](../images/Pasted%20image%2020260507095308.png)
 
 An expert might learn syntatic information on a word level:
 
-![](../Pasted%20image%2020260507095403.png)
+![](../images/Pasted%20image%2020260507095403.png)
 
 ### Sparsity & Routing
 
@@ -52,4 +52,4 @@ The **router** is a small, **dense neural network** that sits right before the r
 5. **Recombination:** The outputs from the chosen experts are multiplied by the router's confidence scores and added together to form the final output for that layer.
 
 Aactive Params 30b of 80b, sparsity 63%, token seen 10
- ![](../download.png)
+ ![](../images/download%201.png)

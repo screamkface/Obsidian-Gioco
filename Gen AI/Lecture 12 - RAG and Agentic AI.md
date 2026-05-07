@@ -69,7 +69,7 @@ The generator's function is to synthesize a coherent and accurate answer by leve
 *   **Function:** The generator conditions its entire output on two inputs: the initial query ($Q$) and the retrieved document passages ($\{D_i\}$). It then produces the final answer token-by-token in an abstractive manner.
 *   **Implementation:** Lewis et al. implemented this component using a **BART sequence-to-sequence (seq2seq) model**. Seq2seq models are ideally suited for generative tasks, transforming an input sequence (the query plus context) into a target output sequence (the answer).
 
-![](../Pasted%20image%2020260421115440.png)
+![](../images/Pasted%20image%2020260421115440.png)
 
 ### 🔗 Architectural Flow Summary
 The end-to-end RAG process flows as follows:

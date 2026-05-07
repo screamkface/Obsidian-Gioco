@@ -34,7 +34,7 @@ $$a_i = \sum_{j} \alpha_{ij} x_j$$**How shall we compute this α weighting?**
 With the attention mechanism, **weight** each prior representation proportionally
 to **how similar** it is to the current representation i. *So the output of attention is a sum of the representation of prior tokens weighted by their similarity with the current token embedding.*
 
-![](../Pasted%20image%2020260420114310.png)
+![](../images/Pasted%20image%2020260420114310.png)
 
 
 ## Encoder
@@ -64,10 +64,10 @@ A method to compute a vector representation for a token at a particular
 layer, by selectively attending to information from contextual tokens at
 the previous layer
 
-![](../Pasted%20image%2020260420120652.png)
-![](../Pasted%20image%2020260420120838.png)
-![](../Pasted%20image%2020260420121026.png)
-![](../Pasted%20image%2020260420121628.png)
+![](../images/Pasted%20image%2020260420120652.png)
+![](../images/Pasted%20image%2020260420120838.png)
+![](../images/Pasted%20image%2020260420121026.png)
+![](../images/Pasted%20image%2020260420121628.png)
 
 This diagram illustrates the crucial first stage of how transformers process input tokens—specifically, how they transform a simple word meaning into three specialized vector representations required for the Self-Attention mechanism: **Query (Q)**, **Key (K)**, and **Value (V)**.
 
@@ -219,7 +219,7 @@ $$\text{Attention}(Q, K, V) = \text{softmax}\left(\frac{QK^T}{\sqrt{d_k}}\right)
 
 **Note on Multi-Head Attention:** While this describes a single attention head ($\text{head}_i$), full transformer models employ Multi-Head Attention. This involves running several independent attention heads in parallel, allowing the model to simultaneously focus on different relationships (e.g., one head focuses on syntax, another on semantic similarity) before concatenating and combining their outputs.
 
-![](../Pasted%20image%2020260420161028.png)
+![](../images/Pasted%20image%2020260420161028.png)
 
 
 ## Multi Head Attention
@@ -244,7 +244,7 @@ After the computation of $A$ attention heads:
 
 $$\mathbf{W}^O \in \mathbb{R}^{d_vA \times d}$$
 
-![](../Pasted%20image%2020260420162928.png)
+![](../images/Pasted%20image%2020260420162928.png)
 
 Here is an explanation of the concepts presented in the slides, followed by organized notes transcribing the key information and mathematical formulas.
 
@@ -258,7 +258,7 @@ Think of the residual stream as the central highway running from the beginning t
 
 Instead of passing the data completely through a sequence of transformations where the original input gets completely overwritten, Transformers use **residual connections** (also known as skip connections). The model takes the current representation, computes some complex function on it (like Attention or a Feed forward network), and then **adds the result back** to the original representation.
 
-![](../Pasted%20image%2020260420163834.png)
+![](../images/Pasted%20image%2020260420163834.png)
 
 This is incredibly important for two reasons:
 
