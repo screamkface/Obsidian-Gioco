@@ -8,17 +8,17 @@
         "type": "tabs",
         "children": [
           {
-            "id": "5e4b1ad5e7219553",
+            "id": "f4a949cf544cd735",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Agreeo - Cosa fare.md",
+                "file": "Rag and llm knowledge.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Agreeo - Cosa fare"
+              "title": "Rag and llm knowledge"
             }
           }
         ]
@@ -181,9 +181,17 @@
       "bmo-chatbot:BMO Chatbot": false
     }
   },
-  "active": "5e4b1ad5e7219553",
+  "active": "f4a949cf544cd735",
   "lastOpenFiles": [
+    "Senza nome 1.base",
+    "Senza nome.base",
+    "Observer Notes.md",
     "Agreeo - Cosa fare.md",
+    "conflict-files-obsidian-git.md",
+    "download.png",
+    "Pasted image 20260507095403.png",
+    "Pasted image 20260507095308.png",
+    "MNLP/Advanced Architectures.md",
     "MNLP/MNLP Notes.md",
     "MNLP - HW1/DistilBERT vs. all-MiniLM-L6-v2.md",
     "Gen AI/Lecture 12 - RAG and Agentic AI.md",
@@ -197,11 +205,6 @@
     "Pasted image 20260420161028.png",
     "Pasted image 20260420121628.png",
     "Pasted image 20260420121026.png",
-    "Pasted image 20260420120838.png",
-    "Pasted image 20260420120652.png",
-    "Pasted image 20260420114406.png",
-    "Senza nome 1.base",
-    "Senza nome.base",
     "README.md",
     "Sentence Transformers.md",
     "MNLP/Instruction following and Post Training.md",
@@ -225,10 +228,6 @@
     "MNLP - HW1/Codice Colab + Spiegazione.md",
     "__rar_12200.19343.rartemp",
     "MNLP - HW1/Mini Report Cosa e' stato fatto.md",
-    "Machine Learning/ML Q&A - Quiz/Q&A Machine Learning.md",
-    "Machine Learning/Appunti Nicola.md",
-    "Progetti/Mars Habitat/Discorso Presentazione.md",
-    "Progetti/Mars Habitat/Senza nome.md",
     "Gioco/Canvas Idea Gioco.canvas"
   ]
 }

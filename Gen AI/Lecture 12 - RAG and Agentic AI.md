@@ -41,6 +41,7 @@ The subsequent journey of Agentic AI is defined by generalizing this one tool in
 
 # The Original RAG Paper - Lewis et al,. NeruIPS 2020
 ## Thesis
+
 Combine a pre-trained seq2seq generator with a neural retriever, and train them end-to-end on knowledge-intensive downstream tasks (open-domain QA, fact
 verification, abstractive QA).
 
@@ -79,3 +80,56 @@ This decoupling is the critical innovation, allowing for a knowledge-intensive s
 
 ---
 
+### **Note su RAG-Sequence vs RAG-Token**
+
+Il modello RAG (Retrieval-Augmented Generation) di Lewis et al. considera due modalità diverse per gestire la "marginalizzazione" (il calcolo della probabilità combinata) dei documenti $z$ recuperati dal sistema di retrieval:
+
+- **RAG-Sequence (Approccio a livello di intera sequenza)**:
+    - **Funzionamento**: Il sistema seleziona i primi $k$ documenti **rilevanti** una sola volta per l'intera query.
+    - **Generazione**: Il modello genera una risposta completa condizionandola separatamente su ciascun documento recuperato. In pratica, il modello "si impegna" con un singolo documento per tutta la durata della generazione della sequenza.
+    - **Formula**: La probabilità della risposta $y$ data la query $x$ è la somma delle probabilità generate per ogni documento $z$ nel set top-k, pesate dalla probabilità di pertinenza del documento stesso:
+        $$p_{RAG-Seq}(y|x) = \sum_{z \in top-k(x)} p_{\eta}(z|x) p_{\theta}(y|x,z)$$
+- **RAG-Token (Approccio a livello di singolo token)**:
+    - **Funzionamento**: Anche in questo caso i primi $k$ documenti vengono selezionati una sola volta all'inizio.
+    - **Generazione**: A differenza del metodo precedente, la marginalizzazione avviene ad ogni singolo passaggio di generazione del token. Questo significa che ogni parola (token) della risposta può attingere informazioni da un documento diverso tra quelli recuperati.
+    - **Formula**: La probabilità della sequenza completa è il prodotto delle probabilità di ogni singolo token $y_t$, calcolato come somma pesata sulle probabilità fornite dai diversi documenti $z$:
+        $$p_{RAG-Tok}(y|x) = \prod_{t=1}^{T} \sum_{z \in top-k(x)} p_{\eta}(z|x) p_{\theta}(y_t|x, z, y_{<t})$$
+
+### **Confronto e Risultati Empirici**
+
+- **Prestazioni Generali**: Entrambi i metodi producono risultati complessivamente simili.
+- **Punto di Forza RAG-Token**: Risulta superiore nei compiti che richiedono risposte **composizionali**, ovvero quando la risposta corretta deve integrare frammenti di informazione sparsi in più documenti diversi.
+
+---
+
+- **Massima Verosimiglianza Marginale**: Il modello RAG viene addestrato ottimizzando la probabilità logaritmica delle coppie osservate di input (query $x$) e output (risposta $y$). La funzione di perdita è definita come:
+    $$\mathcal{L}_{RAG}(\theta,\eta) = -\sum_{(x,y) \in \mathcal{D}} \log p(y|x)$$
+- **Flusso del Gradiente**: Durante l'addestramento, il gradiente fluisce attraverso entrambi i componenti principali: il generatore ($p_\theta$) e, cosa più importante, il codificatore dei documenti del retriever ($p_\eta$).
+- **Efficienza nell'addestramento**: Per rendere il processo fattibile, Lewis et al. hanno mantenuto **congelato** l'indice dei documenti (evitando di ricodificare milioni di passaggi a ogni passo) e hanno effettuato il fine-tuning solo del codificatore della query.
+- **Contributo Principale**: Il vero valore di questo lavoro è stato l'addestramento **end-to-end**. Mentre sistemi precedenti (come REALM o ORQA) avevano esplorato il pre-addestramento consapevole del recupero, RAG ha dimostrato come farlo funzionare efficacemente per compiti di generazione a valle.
+
+---
+
+# Fusion-In-Decoder
+
+### **Architecture (Slide 24)**
+
+The FiD approach follows three main stages to process a query $q$ and $k$ retrieved passages ${p_i}$:
+
+1. **Per-passage encoding**: Each pair of (query, passage) is encoded **independently** using a shared T5 encoder. This stage is parallelizable, making it efficient for large numbers of documents.
+2. **Concatenation**: The outputs from all $k$ encoders are stacked into a single long sequence.
+3. **Joint decoding**: A T5 decoder performs **cross-attention** over this entire concatenated sequence at once to generate the final answer.
+
+### **The Math and Efficiency (Slide 25)**
+
+FiD is designed to overcome the quadratic cost of self-attention when many documents are prepended to a query.
+
+- **Encoding Formula**: For each retrieved passage $i$, the encoder produces a representation $E_i$:
+    $$E_i = Enc_{\theta}([q; title_i; p_i]) \in \mathbb{R}^{L \times d}$$
+- **Full Encoding**: These individual representations are concatenated to form the complete input for the decoder:
+    $$E = [E_1; E_2; ...; E_k] \in \mathbb{R}^{kL \times d}$$
+- **Decoder Generation**: The decoder generates the answer $y$ while cross-attending over $E$.
+
+**Key Benefit**: Because passages do not "meet" during the encoding phase, the encoder cost stays **linear** in $k$ ($O(kL^2)$) rather than quadratic ($O((kL)^2)$). This allows the model to scale to a very high number of retrieved passages (e.g., $k=100$).
+
+---

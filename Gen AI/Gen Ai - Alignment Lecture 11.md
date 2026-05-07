@@ -438,3 +438,4 @@ The text explicitly pivots the focus to the mathematical concept that solves the
 The excerpt describes the transition from **Policy Gradient methods (REINFORCE)**, which are simple but suffer from poor credit assignment over long sequences, to **Actor-Critic methods**, which leverage a learned value function ($V(s)$) to provide a more informative, lower-variance signal (the advantage) for policy updates.
 
 ---
+# The Policy Gradient Theorem

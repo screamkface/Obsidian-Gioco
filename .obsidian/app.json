@@ -1,5 +1,5 @@
 {
-  "spellcheck": true,
+  "spellcheck": false,
   "promptDelete": false,
   "useMarkdownLinks": true,
   "newLinkFormat": "relative",
@@ -9,6 +9,6 @@
     "pageSize": "Letter",
     "landscape": false,
     "margin": "0",
-    "downscalePercent": 100
+    "downscalePercent": 80
   }
 }
