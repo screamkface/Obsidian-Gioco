@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Rag and llm knowledge.md",
+                "file": "Clin Diary/Google Form - Clin Diary per medici.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Rag and llm knowledge"
+              "title": "Google Form - Clin Diary per medici"
             }
           }
         ]
@@ -183,9 +183,13 @@
   },
   "active": "f4a949cf544cd735",
   "lastOpenFiles": [
+    "Clin Diary/Google Form - Clin Diary per giovani.md",
+    "Clin Diary/Google Form - Clin Diary per medici.md",
+    "Clin Diary",
+    "Clin Diary/Codici ateco.md",
+    "Rag and llm knowledge.md",
     "images/Pasted image 20260507095308.png",
     "images/Pasted image 20260507095403.png",
-    "Rag and llm knowledge.md",
     "Senza nome 1.base",
     "Senza nome.base",
     "Observer Notes.md",
@@ -225,9 +229,6 @@
     "MNLP - HW1/Last Hidden State (Spiegazione).md",
     "MNLP - HW1/Report HW-1.md",
     "MNLP - HW1/Scelte efettuate.md",
-    "MNLP - HW1/Codice Colab + Spiegazione.md",
-    "__rar_12200.19343.rartemp",
-    "MNLP - HW1/Mini Report Cosa e' stato fatto.md",
     "Gioco/Canvas Idea Gioco.canvas"
   ]
 }
