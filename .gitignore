@@ -20,3 +20,5 @@ pdflatex*.fls
 
 # Pandoc guard generated reports
 .pandoc-guard/reports/
+
+/.obsidian/workspace.json

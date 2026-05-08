@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "5e8222f4f1e9bd3b",
+        "id": "9fe25b05d2a51a79",
         "type": "tabs",
         "children": [
           {
-            "id": "f4a949cf544cd735",
+            "id": "2fa9b7e4b7aee508",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Clin Diary/Google Form - Clin Diary per giovani.md",
+                "file": "Clin Diary/Codici ateco.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Google Form - Clin Diary per giovani"
+              "title": "Codici ateco"
             }
           }
         ]
@@ -166,7 +166,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 375
+    "width": 200
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -181,41 +181,42 @@
       "bmo-chatbot:BMO Chatbot": false
     }
   },
-  "active": "f4a949cf544cd735",
+  "active": "2fa9b7e4b7aee508",
   "lastOpenFiles": [
+    "MNLP/HW2.md",
+    "Messaggi Linkedin.md",
     "Clin Diary/Google Form - Clin Diary per medici.md",
-    "Clin Diary/Google Form - Clin Diary per giovani.md",
-    "Agreeo - Cosa fare.md",
-    "Clin Diary",
-    "Clin Diary/Codici ateco.md",
-    "Rag and llm knowledge.md",
-    "images/Pasted image 20260507095308.png",
-    "images/Pasted image 20260507095403.png",
-    "Senza nome 1.base",
-    "Senza nome.base",
-    "Observer Notes.md",
-    "conflict-files-obsidian-git.md",
-    "images/download 1.png",
     "MNLP/Advanced Architectures.md",
-    "MNLP/MNLP Notes.md",
-    "MNLP - HW1/DistilBERT vs. all-MiniLM-L6-v2.md",
-    "Gen AI/Lecture 12 - RAG and Agentic AI.md",
+    "images/download 1.png",
+    "images/Pasted image 20260507095403.png",
+    "images/Pasted image 20260507095308.png",
     "images/Pasted image 20260421115440.png",
-    "Gen AI/Gen Ai - Alignment Lecture 11.md",
-    "Gen AI/Gen AI Notes.md",
-    "MNLP/Transformers and Attention.md",
     "images/Pasted image 20260420163834.png",
     "images/Pasted image 20260420162928.png",
     "images/Pasted image 20260420162115.png",
     "images/Pasted image 20260420161028.png",
     "images/Pasted image 20260420121628.png",
     "images/Pasted image 20260420121026.png",
+    "Clin Diary/Google Form - Clin Diary per giovani.md",
+    "Clin Diary/Codici ateco.md",
+    "Clin Diary",
+    "Agreeo - Cosa fare.md",
+    "Observer Notes.md",
+    "Gen AI/Gen Ai - Alignment Lecture 11.md",
+    "Gen AI/Lecture 12 - RAG and Agentic AI.md",
+    "MNLP - HW1/DistilBERT vs. all-MiniLM-L6-v2.md",
+    "Gen AI/Gen AI Notes.md",
+    "MNLP/Transformers and Attention.md",
+    "MNLP/MNLP Notes.md",
+    "Senza nome 1.base",
+    "Senza nome.base",
     "README.md",
     "Sentence Transformers.md",
     "MNLP/Instruction following and Post Training.md",
     "BMO/Prompts/Notes Helper.md",
     "BMO/Prompts",
     "BMO/Nuova cartella",
+    "Clin Diary/Rag and llm knowledge.md",
     "MNLP",
     "Generative AI",
     "Algorithm Design/Algoritmi Greedy.md",
@@ -228,7 +229,6 @@
     "MNLP - HW1/Bi encoder vs Cross Encoder.md",
     "MNLP - HW1/Last Hidden State (Spiegazione).md",
     "MNLP - HW1/Report HW-1.md",
-    "MNLP - HW1/Scelte efettuate.md",
     "Gioco/Canvas Idea Gioco.canvas"
   ]
 }
