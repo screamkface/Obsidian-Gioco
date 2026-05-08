@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Clin Diary/Google Form - Clin Diary per medici.md",
+                "file": "Clin Diary/Google Form - Clin Diary per giovani.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Google Form - Clin Diary per medici"
+              "title": "Google Form - Clin Diary per giovani"
             }
           }
         ]
@@ -183,8 +183,9 @@
   },
   "active": "f4a949cf544cd735",
   "lastOpenFiles": [
-    "Clin Diary/Google Form - Clin Diary per giovani.md",
     "Clin Diary/Google Form - Clin Diary per medici.md",
+    "Clin Diary/Google Form - Clin Diary per giovani.md",
+    "Agreeo - Cosa fare.md",
     "Clin Diary",
     "Clin Diary/Codici ateco.md",
     "Rag and llm knowledge.md",
@@ -193,7 +194,6 @@
     "Senza nome 1.base",
     "Senza nome.base",
     "Observer Notes.md",
-    "Agreeo - Cosa fare.md",
     "conflict-files-obsidian-git.md",
     "images/download 1.png",
     "MNLP/Advanced Architectures.md",
