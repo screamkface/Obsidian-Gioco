@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Messaggi Linkedin.md",
+                "file": "Clin Diary/Codici ateco.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Messaggi Linkedin"
+              "title": "Codici ateco"
             }
           }
         ]
@@ -181,10 +181,11 @@
       "bmo-chatbot:BMO Chatbot": false
     }
   },
-  "active": "8a677e238edd53f0",
+  "active": "2fa9b7e4b7aee508",
   "lastOpenFiles": [
-    "Clin Diary/Google Form - Clin Diary per medici.md",
+    "MNLP/HW2.md",
     "Messaggi Linkedin.md",
+    "Clin Diary/Google Form - Clin Diary per medici.md",
     "MNLP/Advanced Architectures.md",
     "images/download 1.png",
     "images/Pasted image 20260507095403.png",
@@ -228,7 +229,6 @@
     "MNLP - HW1/Bi encoder vs Cross Encoder.md",
     "MNLP - HW1/Last Hidden State (Spiegazione).md",
     "MNLP - HW1/Report HW-1.md",
-    "MNLP - HW1/Scelte efettuate.md",
     "Gioco/Canvas Idea Gioco.canvas"
   ]
 }
