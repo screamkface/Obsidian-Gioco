@@ -11,10 +11,14 @@
             "id": "2fa9b7e4b7aee508",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "MNLP/minerva_hackathon_prompt_pack_bilingue_checklist.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "minerva_hackathon_prompt_pack_bilingue_checklist"
             }
           }
         ]
@@ -74,7 +78,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 320.0026054382324
+    "width": 320.0026054382324,
+    "collapsed": true
   },
   "right": {
     "id": "c376b5663d42f03e",
@@ -177,8 +182,9 @@
       "bmo-chatbot:BMO Chatbot": false
     }
   },
-  "active": "8a677e238edd53f0",
+  "active": "2fa9b7e4b7aee508",
   "lastOpenFiles": [
+    "MNLP/minerva_hackathon_prompt_pack_bilingue_checklist.md",
     "Clippings/New Writeup.md",
     "images/Pasted image 20260508160734.png",
     "images/Pasted image 20260508160710.png",
