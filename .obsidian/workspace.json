@@ -11,14 +11,10 @@
             "id": "2fa9b7e4b7aee508",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Agreeo/Agreeo - Cosa fare.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "Agreeo - Cosa fare"
+              "title": "New tab"
             }
           }
         ]
@@ -181,33 +177,36 @@
       "bmo-chatbot:BMO Chatbot": false
     }
   },
-  "active": "2fa9b7e4b7aee508",
+  "active": "8a677e238edd53f0",
   "lastOpenFiles": [
-    "Pasted image 20260508152947.png",
-    "Pasted image 20260508154731.png",
-    "Pasted image 20260508160710.png",
+    "Clippings/New Writeup.md",
+    "images/Pasted image 20260508160734.png",
+    "images/Pasted image 20260508160710.png",
+    "images/Pasted image 20260508154731.png",
+    "images/Pasted image 20260508152947.png",
+    "Clippings/The Gemma 4 Good Hackathon.md",
+    "Clippings",
     "Pasted image 20260508160734.png",
+    "Pasted image 20260508160710.png",
+    "Pasted image 20260508154731.png",
+    "Pasted image 20260508152947.png",
     "Open Code/Configurazione Ottimale.md",
-    "Agreeo/Prompt.md",
     "Open Code",
-    "Agreeo/Agreeo - Cosa fare.md",
-    "Clin Diary/Forms.md",
-    "Algorithm Design/Notes.md",
-    "Algorithm Design/Algoritmi Greedy.md",
-    "Clin Diary/Codici ateco.md",
-    "Agreeo",
-    "MNLP/HW2.md",
     "Clin Diary/Messaggi Linkedin.md",
+    "Clin Diary/Forms.md",
+    "Agreeo/Prompt.md",
+    "Agreeo/Agreeo - Cosa fare.md",
+    "Agreeo",
+    "Clin Diary/Codici ateco.md",
+    "MNLP/HW2.md",
+    "Messaggi Linkedin.md",
     "Clin Diary/Google Form - Clin Diary per medici.md",
     "MNLP/Advanced Architectures.md",
     "images/download 1.png",
     "images/Pasted image 20260507095403.png",
-    "images/Pasted image 20260507095308.png",
-    "images/Pasted image 20260421115440.png",
-    "images/Pasted image 20260420163834.png",
-    "images/Pasted image 20260420162928.png",
     "Clin Diary/Google Form - Clin Diary per giovani.md",
     "Clin Diary",
+    "Agreeo - Cosa fare.md",
     "Observer Notes.md",
     "Gen AI/Gen Ai - Alignment Lecture 11.md",
     "Gen AI/Lecture 12 - RAG and Agentic AI.md",
@@ -223,11 +222,8 @@
     "BMO/Prompts/Notes Helper.md",
     "BMO/Prompts",
     "BMO/Nuova cartella",
-    "Clin Diary/Rag and llm knowledge.md",
     "MNLP",
     "Generative AI",
-    "MNLP - HW1/Code Explanation.md",
-    "Algorithm Design",
     "Gioco/Canvas Idea Gioco.canvas"
   ]
 }
