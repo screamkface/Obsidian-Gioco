@@ -93,6 +93,12 @@ body {
   --interactive-accent: #667d6c;
   --interactive-accent-hover: #556e5d;
 
+  --writer-yellow: #896219;
+  --writer-red: #a95447;
+  --writer-blue: #3f7085;
+  --writer-green: #507159;
+  --writer-purple: #765f8c;
+
   --icon-color: #817769;
   --icon-color-hover: #514a41;
   --icon-color-active: #526b5b;
@@ -152,6 +158,12 @@ body {
   --interactive-hover: #353630;
   --interactive-accent: #91a995;
   --interactive-accent-hover: #a9bca9;
+
+  --writer-yellow: #d0a955;
+  --writer-red: #d38374;
+  --writer-blue: #78a9bd;
+  --writer-green: #8db395;
+  --writer-purple: #ae94c3;
 
   --icon-color: #777970;
   --icon-color-hover: #c5c0b4;
@@ -335,6 +347,26 @@ body {
   letter-spacing: -0.012em;
 }
 
+.markdown-rendered h2,
+.cm-header-2 {
+  color: var(--writer-blue);
+}
+
+.markdown-rendered h3,
+.cm-header-3 {
+  color: var(--writer-red);
+}
+
+.markdown-rendered h4,
+.cm-header-4 {
+  color: var(--writer-green);
+}
+
+.markdown-rendered h5,
+.cm-header-5 {
+  color: var(--writer-purple);
+}
+
 .markdown-rendered h1,
 .markdown-rendered h2 {
   border-bottom: none;
@@ -373,9 +405,78 @@ body {
   padding: 0.1em 0 0.1em 1.1em;
 }
 
+/* Color cycles make long and deeply nested lists easier to scan. */
+
+.markdown-rendered ol > li::marker {
+  color: var(--writer-yellow);
+  font-weight: 650;
+}
+
+.markdown-rendered ol ol > li::marker {
+  color: var(--writer-red);
+}
+
+.markdown-rendered ol ol ol > li::marker {
+  color: var(--writer-blue);
+}
+
+.markdown-rendered ol ol ol ol > li::marker {
+  color: var(--writer-yellow);
+}
+
+.markdown-rendered ul > li > .list-bullet::after {
+  background: var(--writer-yellow);
+}
+
+.markdown-rendered ul ul > li > .list-bullet::after {
+  background: var(--writer-red);
+}
+
+.markdown-rendered ul ul ul > li > .list-bullet::after {
+  background: var(--writer-blue);
+}
+
+.markdown-rendered ul ul ul ul > li > .list-bullet::after {
+  background: var(--writer-yellow);
+}
+
+.markdown-source-view.mod-cm6 .HyperMD-list-line-1 .cm-formatting-list,
+.markdown-source-view.mod-cm6 .HyperMD-list-line-1 .list-bullet {
+  color: var(--writer-yellow);
+}
+
+.markdown-source-view.mod-cm6 .HyperMD-list-line-2 .cm-formatting-list,
+.markdown-source-view.mod-cm6 .HyperMD-list-line-2 .list-bullet {
+  color: var(--writer-red);
+}
+
+.markdown-source-view.mod-cm6 .HyperMD-list-line-3 .cm-formatting-list,
+.markdown-source-view.mod-cm6 .HyperMD-list-line-3 .list-bullet {
+  color: var(--writer-blue);
+}
+
+.markdown-source-view.mod-cm6 .HyperMD-list-line-4 .cm-formatting-list,
+.markdown-source-view.mod-cm6 .HyperMD-list-line-4 .list-bullet {
+  color: var(--writer-yellow);
+}
+
+.markdown-source-view.mod-cm6 .HyperMD-list-line-5 .cm-formatting-list,
+.markdown-source-view.mod-cm6 .HyperMD-list-line-5 .list-bullet {
+  color: var(--writer-red);
+}
+
+.markdown-source-view.mod-cm6 .HyperMD-list-line-6 .cm-formatting-list,
+.markdown-source-view.mod-cm6 .HyperMD-list-line-6 .list-bullet {
+  color: var(--writer-blue);
+}
+
+.markdown-source-view.mod-cm6 .cm-formatting-list {
+  font-weight: 650;
+}
+
 .markdown-rendered code,
 .cm-inline-code {
-  color: var(--code-normal);
+  color: var(--writer-purple);
   background: var(--code-background);
   border-radius: 4px;
   padding: 0.12em 0.32em;
@@ -432,9 +533,9 @@ body {
 
 .tag,
 a.tag {
-  color: var(--text-muted);
+  color: var(--writer-purple);
   background: var(--background-primary-alt);
-  border: 1px solid var(--background-modifier-border);
+  border: 1px solid color-mix(in srgb, var(--writer-purple) 30%, var(--background-modifier-border));
   border-radius: 999px;
   font-size: 0.82em;
 }
@@ -445,8 +546,8 @@ input[type="checkbox"] {
 }
 
 input[type="checkbox"]:checked {
-  background: var(--interactive-accent);
-  border-color: var(--interactive-accent);
+  background: var(--writer-green);
+  border-color: var(--writer-green);
 }
 
 .task-list-item.is-checked,
@@ -501,6 +602,18 @@ button:hover,
 .workspace-ribbon .clickable-icon:hover,
 .side-dock-actions .clickable-icon:hover {
   opacity: 1;
+}
+
+.workspace-ribbon .clickable-icon:nth-child(3n + 1):hover {
+  color: var(--writer-yellow);
+}
+
+.workspace-ribbon .clickable-icon:nth-child(3n + 2):hover {
+  color: var(--writer-red);
+}
+
+.workspace-ribbon .clickable-icon:nth-child(3n + 3):hover {
+  color: var(--writer-blue);
 }
 
 @media (max-width: 700px) {
