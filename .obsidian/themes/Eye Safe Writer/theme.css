@@ -424,50 +424,44 @@ body {
   color: var(--writer-yellow);
 }
 
-.markdown-rendered ul > li > .list-bullet::after {
-  background: var(--writer-yellow);
+.markdown-rendered ul > li {
+  --list-marker-color: var(--writer-yellow);
 }
 
-.markdown-rendered ul ul > li > .list-bullet::after {
-  background: var(--writer-red);
+.markdown-rendered ul ul > li {
+  --list-marker-color: var(--writer-red);
 }
 
-.markdown-rendered ul ul ul > li > .list-bullet::after {
-  background: var(--writer-blue);
+.markdown-rendered ul ul ul > li {
+  --list-marker-color: var(--writer-blue);
 }
 
-.markdown-rendered ul ul ul ul > li > .list-bullet::after {
-  background: var(--writer-yellow);
+.markdown-rendered ul ul ul ul > li {
+  --list-marker-color: var(--writer-yellow);
 }
 
-.markdown-source-view.mod-cm6 .HyperMD-list-line-1 .cm-formatting-list,
-.markdown-source-view.mod-cm6 .HyperMD-list-line-1 .list-bullet {
-  color: var(--writer-yellow);
+.markdown-source-view.mod-cm6 .HyperMD-list-line-1 {
+  --list-marker-color: var(--writer-yellow);
 }
 
-.markdown-source-view.mod-cm6 .HyperMD-list-line-2 .cm-formatting-list,
-.markdown-source-view.mod-cm6 .HyperMD-list-line-2 .list-bullet {
-  color: var(--writer-red);
+.markdown-source-view.mod-cm6 .HyperMD-list-line-2 {
+  --list-marker-color: var(--writer-red);
 }
 
-.markdown-source-view.mod-cm6 .HyperMD-list-line-3 .cm-formatting-list,
-.markdown-source-view.mod-cm6 .HyperMD-list-line-3 .list-bullet {
-  color: var(--writer-blue);
+.markdown-source-view.mod-cm6 .HyperMD-list-line-3 {
+  --list-marker-color: var(--writer-blue);
 }
 
-.markdown-source-view.mod-cm6 .HyperMD-list-line-4 .cm-formatting-list,
-.markdown-source-view.mod-cm6 .HyperMD-list-line-4 .list-bullet {
-  color: var(--writer-yellow);
+.markdown-source-view.mod-cm6 .HyperMD-list-line-4 {
+  --list-marker-color: var(--writer-yellow);
 }
 
-.markdown-source-view.mod-cm6 .HyperMD-list-line-5 .cm-formatting-list,
-.markdown-source-view.mod-cm6 .HyperMD-list-line-5 .list-bullet {
-  color: var(--writer-red);
+.markdown-source-view.mod-cm6 .HyperMD-list-line-5 {
+  --list-marker-color: var(--writer-red);
 }
 
-.markdown-source-view.mod-cm6 .HyperMD-list-line-6 .cm-formatting-list,
-.markdown-source-view.mod-cm6 .HyperMD-list-line-6 .list-bullet {
-  color: var(--writer-blue);
+.markdown-source-view.mod-cm6 .HyperMD-list-line-6 {
+  --list-marker-color: var(--writer-blue);
 }
 
 .markdown-source-view.mod-cm6 .cm-formatting-list {
