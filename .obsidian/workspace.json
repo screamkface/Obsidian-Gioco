@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "MNLP/minerva_hackathon_prompt_pack_bilingue_checklist.md",
+                "file": "Data Management/Introduction.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "minerva_hackathon_prompt_pack_bilingue_checklist"
+              "title": "Introduction"
             }
           }
         ]
@@ -78,8 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 320.0026054382324,
-    "collapsed": true
+    "width": 320.0026054382324
   },
   "right": {
     "id": "c376b5663d42f03e",
@@ -167,7 +166,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -182,54 +182,54 @@
       "bmo-chatbot:BMO Chatbot": false
     }
   },
-  "active": "2fa9b7e4b7aee508",
+  "active": "b5782aa55b556337",
   "lastOpenFiles": [
-    "MNLP/minerva_hackathon_prompt_pack_bilingue_checklist.md",
-    "Clippings/New Writeup.md",
     "images/Pasted image 20260508160734.png",
     "images/Pasted image 20260508160710.png",
     "images/Pasted image 20260508154731.png",
     "images/Pasted image 20260508152947.png",
+    "MNLP/minerva_hackathon_prompt_pack_bilingue_checklist.md",
     "Clippings/The Gemma 4 Good Hackathon.md",
+    "Clippings/New Writeup.md",
+    "Clippings/WhatsApp Ptt 2026-05-11 at 22.28.25.md",
+    "Data Management/Introduction.md",
+    "Data Management",
+    "Mapped/Presentazione.md",
+    "Clippings/Hai detto Aiutami a seguire la lezione.md",
+    "Algorithm Design/Appunti Lezione Aproximation Algorithms.md",
     "Clippings",
-    "Pasted image 20260508160734.png",
-    "Pasted image 20260508160710.png",
-    "Pasted image 20260508154731.png",
-    "Pasted image 20260508152947.png",
-    "Open Code/Configurazione Ottimale.md",
-    "Open Code",
+    "Algorithm Design/Definizione  e Appunti.md",
+    "Mapped",
+    "Algorithm Design/Notes.md",
+    "Algorithm Design/Appunti in classe.md",
+    "Pasted image 20260509163450.png",
+    "Pasted image 20260509161338.png",
     "Clin Diary/Messaggi Linkedin.md",
-    "Clin Diary/Forms.md",
-    "Agreeo/Prompt.md",
+    "Clin Diary/Storia Instragram.md",
+    "Open Code/Configurazione Ottimale.md",
+    "Algorithm Design/Algoritmi Greedy.md",
     "Agreeo/Agreeo - Cosa fare.md",
-    "Agreeo",
+    "Pasted image 20260508152947.png",
+    "Pasted image 20260508154731.png",
+    "Pasted image 20260508160710.png",
+    "Pasted image 20260508160734.png",
+    "Agreeo/Prompt.md",
+    "Open Code",
+    "Clin Diary/Forms.md",
     "Clin Diary/Codici ateco.md",
+    "Agreeo",
     "MNLP/HW2.md",
-    "Messaggi Linkedin.md",
     "Clin Diary/Google Form - Clin Diary per medici.md",
     "MNLP/Advanced Architectures.md",
     "images/download 1.png",
-    "images/Pasted image 20260507095403.png",
     "Clin Diary/Google Form - Clin Diary per giovani.md",
     "Clin Diary",
-    "Agreeo - Cosa fare.md",
     "Observer Notes.md",
     "Gen AI/Gen Ai - Alignment Lecture 11.md",
-    "Gen AI/Lecture 12 - RAG and Agentic AI.md",
-    "MNLP - HW1/DistilBERT vs. all-MiniLM-L6-v2.md",
-    "Gen AI/Gen AI Notes.md",
-    "MNLP/Transformers and Attention.md",
-    "MNLP/MNLP Notes.md",
     "Senza nome 1.base",
     "Senza nome.base",
-    "README.md",
-    "Sentence Transformers.md",
-    "MNLP/Instruction following and Post Training.md",
-    "BMO/Prompts/Notes Helper.md",
     "BMO/Prompts",
     "BMO/Nuova cartella",
-    "MNLP",
-    "Generative AI",
     "Gioco/Canvas Idea Gioco.canvas"
   ]
 }

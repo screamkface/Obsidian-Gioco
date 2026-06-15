@@ -14,13 +14,13 @@ La ringrazio per il tempo e l’attenzione.
 
 **Naturale**
 
-Buongiorno,  
+Salve,  
 mi chiamo Nicola Moscufo e studio Ingegneria presso La Sapienza.
 
 Sto raccogliendo feedback su ClinDiary, un’app pensata per aiutare i pazienti a tenere traccia nel tempo di sintomi, parametri e documenti sanitari, generando un riepilogo chiaro e utile.
 
 Se ha 5 minuti, le sarei molto grato se potesse compilare questo breve questionario:  
-https://forms.gle/dwtbWqdwNaEM8KYX6
+https://forms.gle/rgkgQ2MyErQXNsjj6
 
 La ringrazio molto per la disponibilità.
 
