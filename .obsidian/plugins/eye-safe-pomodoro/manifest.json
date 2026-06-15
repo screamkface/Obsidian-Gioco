@@ -1,0 +1,9 @@
+{
+  "id": "eye-safe-pomodoro",
+  "name": "Eye Safe Pomodoro",
+  "version": "1.1.0",
+  "minAppVersion": "1.6.0",
+  "description": "Minimal configurable Pomodoro timer for Eye Safe Writer.",
+  "author": "Nicola",
+  "isDesktopOnly": false
+}

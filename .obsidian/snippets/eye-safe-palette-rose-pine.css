@@ -1,0 +1,75 @@
+/* Eye Safe Writer palette: Rose Pine. Enable only one Eye Safe palette snippet at a time. */
+
+body.theme-light {
+  --background-primary: #faf4ed;
+  --background-primary-alt: #fffaf3;
+  --background-secondary: #f2e9e1;
+  --background-secondary-alt: #eadfd6;
+  --background-modifier-border: #dfdad9;
+  --background-modifier-border-hover: #cecacd;
+  --background-modifier-border-focus: #286983;
+  --text-normal: #575279;
+  --text-muted: #797593;
+  --text-faint: #9893a5;
+  --text-on-accent: #fffaf3;
+  --text-accent: #286983;
+  --text-accent-hover: #1f5d73;
+  --text-selection: rgba(40, 105, 131, 0.2);
+  --text-highlight-bg: rgba(234, 157, 52, 0.26);
+  --interactive-accent: #286983;
+  --interactive-accent-hover: #1f5d73;
+  --writer-yellow: #ea9d34;
+  --writer-red: #b4637a;
+  --writer-blue: #286983;
+  --writer-green: #56949f;
+  --writer-purple: #907aa9;
+  --writer-berry: #d7827e;
+  --writer-orange: #ea9d34;
+  --paper-fiber-color: rgba(87, 82, 121, 0.07);
+  --paper-grain-blend: multiply;
+  --paper-surface: #fffaf3;
+  --paper-edge-color: rgba(87, 82, 121, 0.1);
+  --paper-shadow: rgba(87, 82, 121, 0.08);
+  --code-background: #f2e9e1;
+  --code-normal: #56949f;
+  --blockquote-border-color: #56949f;
+  --table-border-color: #dfdad9;
+  --table-header-background: #f2e9e1;
+}
+
+body.theme-dark {
+  --background-primary: #191724;
+  --background-primary-alt: #1f1d2e;
+  --background-secondary: #13111d;
+  --background-secondary-alt: #0f0d17;
+  --background-modifier-border: #26233a;
+  --background-modifier-border-hover: #403d52;
+  --background-modifier-border-focus: #9ccfd8;
+  --text-normal: #e0def4;
+  --text-muted: #908caa;
+  --text-faint: #6e6a86;
+  --text-on-accent: #191724;
+  --text-accent: #9ccfd8;
+  --text-accent-hover: #c4a7e7;
+  --text-selection: rgba(156, 207, 216, 0.22);
+  --text-highlight-bg: rgba(246, 193, 119, 0.22);
+  --interactive-accent: #9ccfd8;
+  --interactive-accent-hover: #c4a7e7;
+  --writer-yellow: #f6c177;
+  --writer-red: #eb6f92;
+  --writer-blue: #9ccfd8;
+  --writer-green: #31748f;
+  --writer-purple: #c4a7e7;
+  --writer-berry: #ebbcba;
+  --writer-orange: #f6c177;
+  --paper-fiber-color: rgba(224, 222, 244, 0.07);
+  --paper-grain-blend: screen;
+  --paper-surface: #1f1d2e;
+  --paper-edge-color: rgba(0, 0, 0, 0.26);
+  --paper-shadow: rgba(0, 0, 0, 0.26);
+  --code-background: #1f1d2e;
+  --code-normal: #9ccfd8;
+  --blockquote-border-color: #31748f;
+  --table-border-color: #26233a;
+  --table-header-background: #1f1d2e;
+}

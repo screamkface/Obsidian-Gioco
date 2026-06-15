@@ -1,0 +1,75 @@
+/* Eye Safe Writer palette: Solarized. Enable only one Eye Safe palette snippet at a time. */
+
+body.theme-light {
+  --background-primary: #fdf6e3;
+  --background-primary-alt: #eee8d5;
+  --background-secondary: #eee8d5;
+  --background-secondary-alt: #e5ddc8;
+  --background-modifier-border: #d6cfba;
+  --background-modifier-border-hover: #b8ad95;
+  --background-modifier-border-focus: #2aa198;
+  --text-normal: #586e75;
+  --text-muted: #657b83;
+  --text-faint: #93a1a1;
+  --text-on-accent: #fdf6e3;
+  --text-accent: #2aa198;
+  --text-accent-hover: #268bd2;
+  --text-selection: rgba(42, 161, 152, 0.2);
+  --text-highlight-bg: rgba(181, 137, 0, 0.25);
+  --interactive-accent: #2aa198;
+  --interactive-accent-hover: #268bd2;
+  --writer-yellow: #b58900;
+  --writer-red: #dc322f;
+  --writer-blue: #268bd2;
+  --writer-green: #859900;
+  --writer-purple: #6c71c4;
+  --writer-berry: #d33682;
+  --writer-orange: #cb4b16;
+  --paper-fiber-color: rgba(88, 110, 117, 0.07);
+  --paper-grain-blend: multiply;
+  --paper-surface: #fff9ea;
+  --paper-edge-color: rgba(88, 110, 117, 0.1);
+  --paper-shadow: rgba(88, 110, 117, 0.08);
+  --code-background: #eee8d5;
+  --code-normal: #859900;
+  --blockquote-border-color: #859900;
+  --table-border-color: #d6cfba;
+  --table-header-background: #eee8d5;
+}
+
+body.theme-dark {
+  --background-primary: #002b36;
+  --background-primary-alt: #073642;
+  --background-secondary: #00212b;
+  --background-secondary-alt: #001b23;
+  --background-modifier-border: #073642;
+  --background-modifier-border-hover: #28535c;
+  --background-modifier-border-focus: #2aa198;
+  --text-normal: #93a1a1;
+  --text-muted: #839496;
+  --text-faint: #657b83;
+  --text-on-accent: #002b36;
+  --text-accent: #2aa198;
+  --text-accent-hover: #268bd2;
+  --text-selection: rgba(42, 161, 152, 0.24);
+  --text-highlight-bg: rgba(181, 137, 0, 0.25);
+  --interactive-accent: #2aa198;
+  --interactive-accent-hover: #268bd2;
+  --writer-yellow: #b58900;
+  --writer-red: #dc322f;
+  --writer-blue: #268bd2;
+  --writer-green: #859900;
+  --writer-purple: #6c71c4;
+  --writer-berry: #d33682;
+  --writer-orange: #cb4b16;
+  --paper-fiber-color: rgba(147, 161, 161, 0.07);
+  --paper-grain-blend: screen;
+  --paper-surface: #073642;
+  --paper-edge-color: rgba(0, 0, 0, 0.24);
+  --paper-shadow: rgba(0, 0, 0, 0.26);
+  --code-background: #073642;
+  --code-normal: #859900;
+  --blockquote-border-color: #859900;
+  --table-border-color: #073642;
+  --table-header-background: #073642;
+}
