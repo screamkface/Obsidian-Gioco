@@ -69,7 +69,7 @@
 
 # Exam exercises
 
-![](Pasted%20image%2020260611112511.png)
+![](../images/Pasted%20image%2020260611112511.png)
 
 ## **Describe ALL the basic elements of SCRUM**
 
@@ -286,7 +286,7 @@ The student should see notifications
 
 # Exercise IMMUNI Scrum
 
-![](Pasted%20image%2020260612113626.png)
+![](../images/Pasted%20image%2020260612113626.png)
 
 ## **Architecture**
 
@@ -380,5 +380,4 @@ After the third sprint THE mvp should be complete and full working
 
 ---
 
-![](Pasted%20image%2020260612153302.png)
-
+![](../images/Pasted%20image%2020260612153302.png)

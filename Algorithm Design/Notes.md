@@ -379,3 +379,257 @@ Per visualizzare questa trasformazione e capire perché il nodo "mid" costringe 
 
 ![](../Pasted%20image%2020260508160710.png)
 ![](../Pasted%20image%2020260508160734.png)
+
+
+---
+### **Numerical Problems**
+ 
+ I **Problemi Numerici** formano una categoria a sé stante nella teoria della complessità.
+
+La loro caratteristica principale è che l'input non è fatto di nodi o archi, ma di **numeri interi codificati in binario**. Questo significa che la "dimensione" del problema può crescere in modo esponenziale molto rapidamente rispetto ai dati di partenza.
+
+Le tue slide presentano tre problemi numerici fondamentali e mostrano come siano tutti collegati tra loro. Eccoli spiegati in modo semplice.
+
+### 1. Il Capostipite: SUBSET-SUM (Somma di Sottoinsiemi)
+
+Come abbiamo visto poco fa con il trucco dello "scontrino", questo è il problema da cui derivano tutti gli altri problemi numerici complessi.
+
+- **Il Problema:** Ti vengono dati dei numeri interi naturali ($w_1, w_2, \dots, w_n$) e un numero bersaglio $W$. Esiste un sottoinsieme di questi numeri che, sommati tra loro, dia _esattamente_ $W$?
+    
+- **Esempio:** Hai i numeri {1, 4, 16, 64, 256, 1040, 1041, 1093, 1284, 1344} e vuoi raggiungere $W = 3754$. La risposta è sì (1 + 16 + 64 + 256 + 1040 + 1093 + 1284 = 3754).
+    
+- **La Difficoltà:** Non puoi semplicemente prendere i numeri più grandi, devi provare combinazioni precise. È il classico problema dello zaino (Knapsack) nella sua forma più pura.
+    
+
+---
+
+### 2. PARTITION (La Bilancia Perfetta)
+
+Dato che il Subset Sum è NP-Completo, il professore lo usa per dimostrare che un altro problema simile è altrettanto difficile: il problema della Partizione.
+
+- **Il Problema:** Hai un mucchio di numeri naturali ($v_1, \dots, v_m$). Puoi dividerli in due gruppi separati in modo che la somma del Gruppo A sia _identica_ alla somma del Gruppo B?
+    
+
+**La Riduzione ($SUBSET\text{-}SUM \le_p PARTITION$):** Come trasformi il problema "trova una somma $W$" nel problema "dividi tutto a metà"? Con un trucco geniale che usa dei "pesi fittizi" per truccare la bilancia. Se la somma di tutti i tuoi numeri originali è $\Sigma$, aggiungi al mucchio due nuovi blocchi giganteschi:
+
+1. Un blocco che pesa $v_{n+1} = 2\Sigma - W$.
+    
+2. Un blocco che pesa $v_{n+2} = \Sigma + W$.
+    
+
+Questi due blocchi sono talmente grandi che non potranno mai stare sullo stesso piatto della bilancia (altrimenti peserebbe troppo). Devono per forza separarsi. Per far sì che la bilancia torni in perfetto equilibrio, il piatto che ha ricevuto il blocco più leggero avrà un "buco" che misura _esattamente_ $W$. L'unico modo per pareggiare i conti è riempire quel buco con una combinazione dei tuoi numeri originali che dia esattamente $W$ (risolvendo di fatto il Subset Sum!).
+
+---
+
+### 3. SCHEDULE-RELEASE-TIMES (Il Tetris del Tempo)
+
+I problemi numerici non servono solo a fare addizioni, ma sono alla base di tutti i software di pianificazione (come assegnare i turni o ottimizzare i server).
+
+- **Il Problema:** Hai $n$ lavori (jobs). Ognuno richiede un tempo di esecuzione $t_i$, non può iniziare prima di un certo orario (release time $r_i$) e deve finire entro una certa scadenza (deadline $d_i$). Puoi programmarli tutti su una singola macchina senza farli accavallare e senza interruzioni?
+    
+
+**La Riduzione ($SUBSET\text{-}SUM \le_p SCHEDULE\text{-}RELEASE\text{-}TIMES$):** Questa riduzione trasforma il calcolo matematico in un incastro temporale.
+
+1. I numeri del tuo Subset Sum ($w_1, \dots, w_n$) diventano lavori che durano esattamente quel numero di ore ($t_i = w_i$). Possono iniziare quando vogliono ($r_i = 0$) e finire quando vogliono ($d_i$ è enorme).
+    
+2. **La Trappola:** Crei un lavoro "Dittatore" (Job 0) che dura 1 ora ($t_0 = 1$). Questo lavoro _deve_ iniziare esattamente all'ora $W$ e finire all'ora $W+1$.
+    
+
+Questo Job 0 spacca la tua giornata lavorativa in due blocchi: prima di $W$ e dopo $W+1$. Se riesci a incastrare i lavori rimanenti in modo che non ci sia nemmeno un minuto vuoto prima che inizi il Job 0, significa che hai trovato un gruppo di lavori la cui durata somma _esattamente_ $W$!
+
+Per farti capire quanto sia intuitivo questo incastro temporale, ho preparato una timeline interattiva della riduzione.
+
+
+
+Le slide mostrano in modo eccellente come tutti questi problemi numerici non siano altro che lo stesso "gioco a incastri" visto da angolazioni diverse. Quale di queste due trasformazioni (la bilancia di Partition o la timeline di Scheduling) ti affascina di più e vorresti approfondire matematicamente?
+
+---
+
+**SUBSET-SUM**. Given natural numbers $w_{1}, \dots, w_{n}$ and an integer W, is there a subset that adds up to exactly W?
+
+Ex: { 1, 4, 16, 64, 256, 1040, 1041, 1093, 1284, 1344 }, $W=3754.$
+Yes. $1+16+64+256+1040+1093+1284=3754.$
+**Remark**. With arithmetic problems, input integers are encoded in binary. Polynomial reduction must be polynomial in binary encoding.
+
+**Claim**. $3-SAT \leq_{P} SUBSET-SUM.$
+Pf. Given an instance $\Phi$ of 3-SAT, we construct an instance of SUBSET-SUM that has solution iff $\Phi$ is satisfiable.
+
+
+![](../Pasted%20image%2020260509161338.png)
+
+# Riduzione da 3-SAT a Subset Sum
+
+Questa è la riduzione classica per dimostrare che **Subset Sum** è NP-hard. L'idea è costruire dei numeri in modo che la scelta di un sottoinsieme corrisponda a una valutazione booleana che soddisfa tutte le clausole.
+
+## 1. Definizione dell'Istanza
+Consideriamo un esempio con $n=3$ variabili e $k=3$ clausole:
+*   $C_1 = \bar{x} \lor y \lor z$
+*   $C_2 = x \lor \bar{y} \lor z$
+*   $C_3 = \bar{x} \lor \bar{y} \lor \bar{z}$
+
+La riduzione crea numeri con $n + k = 6$ cifre. Ogni numero è diviso in due parti:
+1.  **Parte Variabili:** (prime $n$ cifre) per forzare la scelta di un valore di verità.
+2.  **Parte Clausole:** (ultime $k$ cifre) per verificare la soddisfazione delle clausole.
+
+### Obiettivo
+Vogliamo che la formula $\Phi$ sia soddisfacibile se e solo se esiste un sottoinsieme che somma al target $W$:
+$$W = 111,444$$
+Questo significa ottenere $1$ per ogni colonna variabile e $4$ per ogni colonna clausola.
+
+---
+
+## 2. Costruzione dei Numeri
+
+### I Numeri delle Variabili
+Per ogni variabile $x_i$, creiamo due numeri: uno per il letterale positivo ($x_i$) e uno per il letterale negato ($\bar{x}_i$). 
+
+| Letterale | $x$ | $y$ | $z$ | $C_1$ | $C_2$ | $C_3$ |
+| :--- | :---: | :---: | :---: | :---: | :---: | :---: |
+| $x$ | 1 | 0 | 0 | 0 | 1 | 0 |
+| $\bar{x}$ | 1 | 0 | 0 | 1 | 0 | 1 |
+| $y$ | 0 | 1 | 0 | 1 | 0 | 0 |
+| $\bar{y}$ | 0 | 1 | 0 | 0 | 1 | 1 |
+| $z$ | 0 | 0 | 1 | 1 | 1 | 0 |
+| $\bar{z}$ | 0 | 0 | 1 | 0 | 0 | 1 |
+
+> [!IMPORTANT]
+> Nelle colonne variabili ($x, y, z$), il target è **1**. Poiché sia $x$ che $\bar{x}$ hanno un 1 in quella posizione, siamo obbligati a sceglierne **esattamente uno**. Questa scelta definisce l'assegnazione di verità.
+
+### I Numeri "Dummy" (Riempitivi)
+Per ogni clausola, aggiungiamo due numeri per permettere alla somma di raggiungere il target 4, indipendentemente dal fatto che la clausola sia soddisfatta da 1, 2 o 3 letterali.
+
+| Dummy | $x$ | $y$ | $z$ | $C_1$ | $C_2$ | $C_3$ |
+| :--- | :---: | :---: | :---: | :---: | :---: | :---: |
+| $D_{1,a}$ | 0 | 0 | 0 | 1 | 0 | 0 |
+| $D_{1,b}$ | 0 | 0 | 0 | 2 | 0 | 0 |
+| $D_{2,a}$ | 0 | 0 | 0 | 0 | 1 | 0 |
+| $D_{2,b}$ | 0 | 0 | 0 | 0 | 2 | 0 |
+| $D_{3,a}$ | 0 | 0 | 0 | 0 | 0 | 1 |
+| $D_{3,b}$ | 0 | 0 | 0 | 0 | 0 | 2 |
+
+---
+
+## 3. Perché il Target delle Clausole è 4?
+
+I dummy di una clausola (valori 1 e 2) possono sommare al massimo $1 + 2 = 3$. 
+Se una clausola è soddisfatta, riceve dai letterali scelti un contributo di 1, 2 o 3. 
+
+| Letterali veri | Dummy da scegliere | Somma Finale |
+| :---: | :---: | :---: |
+| **1** | 1 e 2 | $1 + 3 = 4$ |
+| **2** | 2 | $2 + 2 = 4$ |
+| **3** | 1 | $3 + 1 = 4$ |
+| **0** | Max 3 dai dummy | **Impossibile arrivare a 4** |
+
+**Conclusione:** Una clausola può raggiungere il valore 4 solo se almeno un letterale al suo interno è vero.
+
+---
+
+## 4. Assenza di Riporti (No Carries)
+La riduzione funziona perché la somma si comporta in modo "indipendente" per ogni colonna:
+*   **Colonne variabili:** Somma massima $= 1+1=2$ (ma il target è 1).
+*   **Colonne clausole:** Somma massima $= 3 \text{ (letterali)} + 1 + 2 \text{ (dummy)} = 6$.
+
+Poiché nessuna colonna supera mai il valore 9, **non ci sono riporti**. Questo garantisce che la soddisfazione di una clausola non influenzi "matematicamente" la colonna vicina.
+
+---
+
+## 5. Sintesi della Dimostrazione
+*   **Soddisfacibilità $\implies$ Subset Sum:** Se la formula è vera, scegliamo i letterali corrispondenti. Le colonne variabili sommano a 1. Ogni clausola ha somma $\ge 1$, quindi usiamo i dummy per arrivare a 4.
+*   **Subset Sum $\implies$ Soddisfacibilità:** Se esiste un sottoinsieme, la parte "variabili" del target (111) ci costringe a una scelta coerente di letterali. La parte "clausole" (444) ci garantisce che ogni clausola sia soddisfatta da almeno un letterale, poiché i dummy non bastano da soli a raggiungere 4.
+
+$$\Phi \text{ è soddisfacibile} \iff \exists S' \subseteq S \text{ tale che } \sum_{a \in S'} a = W$$
+
+---
+
+
+![](../Pasted%20image%2020260509163450.png)
+
+# Riduzione: SUBSET-SUM $\leq_P$ Scheduling con Release Times
+
+Questa riduzione mostra come trasformare un'istanza del problema **Subset Sum** in un'istanza di **Scheduling** (con $r_i$ e $d_i$). L'idea centrale è l'uso di un "job barriera" per forzare la partizione del tempo.
+
+---
+
+## 1. Definizione dei Problemi
+
+### SUBSET-SUM (Partenza)
+Dati $n$ numeri e un target $W$:
+*   **Input:** $w_1, w_2, \dots, w_n$ e $W$.
+*   **Domanda:** $\exists A \subseteq \{1, \dots, n\}$ tale che $\sum_{i \in A} w_i = W$?
+
+### Scheduling con Release Times (Arrivo)
+Ogni job $i$ è definito da una tripla $(t_i, r_i, d_i)$:
+*   $t_i$: Processing time (durata).
+*   $r_i$: Release time (inizio minimo).
+*   $d_i$: Deadline (fine massima).
+*   **Vincolo:** I job non possono essere interrotti (no preemption) e la macchina esegue un job alla volta.
+
+---
+
+## 2. La Costruzione della Riduzione
+
+Sia $S = \sum_{j=1}^{n} w_j$ la somma totale di tutti i pesi. Costruiamo $n+1$ job:
+
+### I Job Variabile ($i = 1 \dots n$)
+Per ogni peso $w_i$, creiamo un job corrispondente:
+*   $t_i = w_i$
+*   $r_i = 0$
+*   $d_i = S + 1$
+
+### Il Job Speciale (Job 0)
+Creiamo un job "muro" che agisce come barriera temporale:
+*   $t_0 = 1$
+*   $r_0 = W$
+*   $d_0 = W + 1$
+
+> [!NOTE] Analisi dello Spazio
+> Il **Job 0** è forzato a occupare l'intervallo $[W, W+1]$ perché la sua durata è pari alla finestra temporale disponibile ($d_0 - r_0 = 1$).
+
+---
+
+## 3. Visualizzazione della Timeline
+
+La presenza del Job 0 divide il tempo totale $[0, S+1]$ in due slot distinti:
+
+| Slot | Intervallo | Lunghezza | Destinazione |
+| :--- | :--- | :--- | :--- |
+| **Prima** | $[0, W]$ | $W$ | Sottoinsieme $A$ |
+| **Muro** | $[W, W+1]$ | $1$ | **Job 0** |
+| **Dopo** | $[W+1, S+1]$ | $S-W$ | Sottoinsieme complementare |
+
+**Schema grafico:**
+`0 [--- Spazio W ---] W [Job 0] W+1 [--- Spazio S-W ---] S+1`
+
+---
+
+## 4. Dimostrazione della Correttezza
+
+### Direzione ($\implies$): Se SUBSET-SUM ha soluzione
+Se esiste un insieme $A$ tale che $\sum_{i \in A} w_i = W$:
+1.  Scheduliamo i job in $A$ nell'intervallo $[0, W]$. Poiché la loro durata totale è esattamente $W$, riempiono lo spazio perfettamente.
+2.  Il **Job 0** occupa $[W, W+1]$.
+3.  Tutti i restanti job (che sommano a $S-W$) vengono schedulati in $[W+1, S+1]$.
+4.  **Risultato:** Esiste una schedulazione valida senza sovrapposizioni.
+
+### Direzione ($\impliedby$): Se esiste lo Scheduling
+Se esiste una schedulazione valida:
+1.  Il **Job 0** deve trovarsi necessariamente in $[W, W+1]$.
+2.  Poiché la durata totale di tutti i job è $S+1$ e il tempo totale disponibile è $S+1$, **non possono esserci buchi** (idle time).
+3.  Sia $A$ l'insieme dei job eseguiti prima del Job 0.
+4.  Poiché devono riempire esattamente l'intervallo $[0, W]$, la loro somma deve essere:
+    $$\sum_{i \in A} t_i = W \implies \sum_{i \in A} w_i = W$$
+5.  **Risultato:** $A$ è una soluzione per SUBSET-SUM.
+
+---
+
+## 5. Complessità e Conclusione
+La riduzione è **polinomiale** poiché:
+*   Creiamo $n+1$ job partendo da $n$ numeri.
+*   Il calcolo di $S$ e la definizione dei parametri $(t, r, d)$ richiedono tempo lineare rispetto all'input.
+
+$$ \text{SUBSET-SUM} \leq_P \text{SCHEDULE-RELEASE-TIMES} $$
+
+Questo dimostra che il problema di scheduling con release times e deadline è **NP-completo**.
+
+---
