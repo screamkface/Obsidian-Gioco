@@ -1,3 +1,7 @@
 {
-  "cssTheme": "Eye Safe Writer"
+  "cssTheme": "Eye Safe Writer",
+  "accentColor": "",
+  "enabledCssSnippets": [
+    "eye-safe-palette-gruvbox"
+  ]
 }
