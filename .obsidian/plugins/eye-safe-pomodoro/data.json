@@ -1,0 +1,13 @@
+{
+  "workMinutes": 25,
+  "shortBreakMinutes": 5,
+  "longBreakMinutes": 15,
+  "pomodorosBeforeLongBreak": 4,
+  "autoStartBreak": true,
+  "autoStartWork": true,
+  "alertEnabled": true,
+  "soundEnabled": true,
+  "soundVolume": 70,
+  "soundRepeats": 3,
+  "noticeEnabled": true
+}

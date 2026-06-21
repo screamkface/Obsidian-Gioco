@@ -1,0 +1,3 @@
+Ciao a tutti, sto sviluppando un'app per aiutare le persone a tenere traccia della propria salute. L’idea è usare AI direttamente sul telefono per creare riepiloghi chiari e utili prima di una visita o per seguire l’andamento nel tempo. I dati restano in locale e non vengono inviati a server esterni. Mi aiuti con un feedback? Il questionario dura 3 minuti ed è anonimo. 
+
+https://forms.gle/ouoegpkpatWraH3PA

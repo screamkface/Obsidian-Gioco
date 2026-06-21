@@ -89,9 +89,9 @@ Metti 👎 se la risposta:
 
 ## Turno 2
 
-- [ ] Turno inviato a ChatMinerva
-- [ ] Risposta di ChatMinerva valutata con 👍 / 👎
-- [ ] Risposta controllata dal Gem
+- [x] Turno inviato a ChatMinerva
+- [x] Risposta di ChatMinerva valutata con 👍 / 👎
+- [x] Risposta controllata dal Gem
 
 **Risposta / giudizio del Gem per questo turno:** ________________________________
 
@@ -102,9 +102,9 @@ Metti 👎 se la risposta:
 
 ## Turno 3
 
-- [ ] Turno inviato a ChatMinerva
-- [ ] Risposta di ChatMinerva valutata con 👍 / 👎
-- [ ] Risposta controllata dal Gem
+- [x] Turno inviato a ChatMinerva
+- [x] Risposta di ChatMinerva valutata con 👍 / 👎
+- [x] Risposta controllata dal Gem
 
 **Risposta / giudizio del Gem per questo turno:** ________________________________
 
@@ -128,9 +128,9 @@ Metti 👎 se la risposta:
 
 ## Turno 5
 
-- [ ] Turno inviato a ChatMinerva
-- [ ] Risposta di ChatMinerva valutata con 👍 / 👎
-- [ ] Risposta controllata dal Gem
+- [x] Turno inviato a ChatMinerva
+- [x] Risposta di ChatMinerva valutata con 👍 / 👎
+- [x] Risposta controllata dal Gem
 
 **Risposta / giudizio del Gem per questo turno:** ________________________________
 
@@ -154,9 +154,9 @@ Metti 👎 se la risposta:
 
 ## Turno 7
 
-- [ ] Turno inviato a ChatMinerva
-- [ ] Risposta di ChatMinerva valutata con 👍 / 👎
-- [ ] Risposta controllata dal Gem
+- [x] Turno inviato a ChatMinerva
+- [x] Risposta di ChatMinerva valutata con 👍 / 👎
+- [x] Risposta controllata dal Gem
 
 **Risposta / giudizio del Gem per questo turno:** ________________________________
 
@@ -182,9 +182,9 @@ Metti 👎 se la risposta:
 
 ## Turno 1
 
-- [ ] Turno inviato a ChatMinerva
-- [ ] Risposta di ChatMinerva valutata con 👍 / 👎
-- [ ] Risposta controllata dal Gem
+- [x] Turno inviato a ChatMinerva
+- [x] Risposta di ChatMinerva valutata con 👍 / 👎
+- [x] Risposta controllata dal Gem
 
 **Risposta / giudizio del Gem per questo turno:** ________________________________
 
@@ -195,9 +195,9 @@ Metti 👎 se la risposta:
 
 ## Turno 2
 
-- [ ] Turno inviato a ChatMinerva
-- [ ] Risposta di ChatMinerva valutata con 👍 / 👎
-- [ ] Risposta controllata dal Gem
+- [x] Turno inviato a ChatMinerva
+- [x] Risposta di ChatMinerva valutata con 👍 / 👎
+- [x] Risposta controllata dal Gem
 
 **Risposta / giudizio del Gem per questo turno:** ________________________________
 
@@ -208,9 +208,9 @@ Metti 👎 se la risposta:
 
 ## Turno 3
 
-- [ ] Turno inviato a ChatMinerva
-- [ ] Risposta di ChatMinerva valutata con 👍 / 👎
-- [ ] Risposta controllata dal Gem
+- [x] Turno inviato a ChatMinerva
+- [x] Risposta di ChatMinerva valutata con 👍 / 👎
+- [x] Risposta controllata dal Gem
 
 **Risposta / giudizio del Gem per questo turno:** ________________________________
 
@@ -221,9 +221,9 @@ Metti 👎 se la risposta:
 
 ## Turno 4
 
-- [ ] Turno inviato a ChatMinerva
-- [ ] Risposta di ChatMinerva valutata con 👍 / 👎
-- [ ] Risposta controllata dal Gem
+- [x] Turno inviato a ChatMinerva
+- [x] Risposta di ChatMinerva valutata con 👍 / 👎
+- [x] Risposta controllata dal Gem
 
 **Risposta / giudizio del Gem per questo turno:** ________________________________
 
@@ -234,9 +234,9 @@ Metti 👎 se la risposta:
 
 ## Turno 5
 
-- [ ] Turno inviato a ChatMinerva
-- [ ] Risposta di ChatMinerva valutata con 👍 / 👎
-- [ ] Risposta controllata dal Gem
+- [x] Turno inviato a ChatMinerva
+- [x] Risposta di ChatMinerva valutata con 👍 / 👎
+- [x] Risposta controllata dal Gem
 
 **Risposta / giudizio del Gem per questo turno:** ________________________________
 
@@ -247,9 +247,9 @@ Metti 👎 se la risposta:
 
 ## Turno 6
 
-- [ ] Turno inviato a ChatMinerva
-- [ ] Risposta di ChatMinerva valutata con 👍 / 👎
-- [ ] Risposta controllata dal Gem
+- [x] Turno inviato a ChatMinerva
+- [x] Risposta di ChatMinerva valutata con 👍 / 👎
+- [x] Risposta controllata dal Gem
 
 **Risposta / giudizio del Gem per questo turno:** ________________________________
 
@@ -260,9 +260,9 @@ Metti 👎 se la risposta:
 
 ## Turno 7
 
-- [ ] Turno inviato a ChatMinerva
-- [ ] Risposta di ChatMinerva valutata con 👍 / 👎
-- [ ] Risposta controllata dal Gem
+- [x] Turno inviato a ChatMinerva
+- [x] Risposta di ChatMinerva valutata con 👍 / 👎
+- [x] Risposta controllata dal Gem
 
 **Risposta / giudizio del Gem per questo turno:** ________________________________
 
@@ -301,9 +301,9 @@ Metti 👎 se la risposta:
 
 ## Turno 2
 
-- [ ] Turno inviato a ChatMinerva
-- [ ] Risposta di ChatMinerva valutata con 👍 / 👎
-- [ ] Risposta controllata dal Gem
+- [x] Turno inviato a ChatMinerva
+- [x] Risposta di ChatMinerva valutata con 👍 / 👎
+- [x] Risposta controllata dal Gem
 
 **Risposta / giudizio del Gem per questo turno:** ________________________________
 
@@ -314,9 +314,9 @@ Metti 👎 se la risposta:
 
 ## Turno 3
 
-- [ ] Turno inviato a ChatMinerva
-- [ ] Risposta di ChatMinerva valutata con 👍 / 👎
-- [ ] Risposta controllata dal Gem
+- [x] Turno inviato a ChatMinerva
+- [x] Risposta di ChatMinerva valutata con 👍 / 👎
+- [x] Risposta controllata dal Gem
 
 **Risposta / giudizio del Gem per questo turno:** ________________________________
 
@@ -327,9 +327,9 @@ Metti 👎 se la risposta:
 
 ## Turno 4
 
-- [ ] Turno inviato a ChatMinerva
-- [ ] Risposta di ChatMinerva valutata con 👍 / 👎
-- [ ] Risposta controllata dal Gem
+- [x] Turno inviato a ChatMinerva
+- [x] Risposta di ChatMinerva valutata con 👍 / 👎
+- [x] Risposta controllata dal Gem
 
 **Risposta / giudizio del Gem per questo turno:** ________________________________
 
@@ -340,9 +340,9 @@ Metti 👎 se la risposta:
 
 ## Turno 5
 
-- [ ] Turno inviato a ChatMinerva
-- [ ] Risposta di ChatMinerva valutata con 👍 / 👎
-- [ ] Risposta controllata dal Gem
+- [x] Turno inviato a ChatMinerva
+- [x] Risposta di ChatMinerva valutata con 👍 / 👎
+- [x] Risposta controllata dal Gem
 
 **Risposta / giudizio del Gem per questo turno:** ________________________________
 
@@ -353,9 +353,9 @@ Metti 👎 se la risposta:
 
 ## Turno 6
 
-- [ ] Turno inviato a ChatMinerva
-- [ ] Risposta di ChatMinerva valutata con 👍 / 👎
-- [ ] Risposta controllata dal Gem
+- [x] Turno inviato a ChatMinerva
+- [x] Risposta di ChatMinerva valutata con 👍 / 👎
+- [x] Risposta controllata dal Gem
 
 **Risposta / giudizio del Gem per questo turno:** ________________________________
 
@@ -366,9 +366,9 @@ Metti 👎 se la risposta:
 
 ## Turno 7
 
-- [ ] Turno inviato a ChatMinerva
-- [ ] Risposta di ChatMinerva valutata con 👍 / 👎
-- [ ] Risposta controllata dal Gem
+- [x] Turno inviato a ChatMinerva
+- [x] Risposta di ChatMinerva valutata con 👍 / 👎
+- [x] Risposta controllata dal Gem
 
 **Risposta / giudizio del Gem per questo turno:** ________________________________
 
@@ -394,9 +394,9 @@ Metti 👎 se la risposta:
 
 ## Turno 1
 
-- [ ] Turno inviato a ChatMinerva
-- [ ] Risposta di ChatMinerva valutata con 👍 / 👎
-- [ ] Risposta controllata dal Gem
+- [x] Turno inviato a ChatMinerva
+- [x] Risposta di ChatMinerva valutata con 👍 / 👎
+- [x] Risposta controllata dal Gem
 
 **Risposta / giudizio del Gem per questo turno:** ________________________________
 
@@ -407,9 +407,9 @@ Metti 👎 se la risposta:
 
 ## Turno 2
 
-- [ ] Turno inviato a ChatMinerva
-- [ ] Risposta di ChatMinerva valutata con 👍 / 👎
-- [ ] Risposta controllata dal Gem
+- [x] Turno inviato a ChatMinerva
+- [x] Risposta di ChatMinerva valutata con 👍 / 👎
+- [x] Risposta controllata dal Gem
 
 **Risposta / giudizio del Gem per questo turno:** ________________________________
 
@@ -420,9 +420,9 @@ Metti 👎 se la risposta:
 
 ## Turno 3
 
-- [ ] Turno inviato a ChatMinerva
-- [ ] Risposta di ChatMinerva valutata con 👍 / 👎
-- [ ] Risposta controllata dal Gem
+- [x] Turno inviato a ChatMinerva
+- [x] Risposta di ChatMinerva valutata con 👍 / 👎
+- [x] Risposta controllata dal Gem
 
 **Risposta / giudizio del Gem per questo turno:** ________________________________
 
@@ -433,9 +433,9 @@ Metti 👎 se la risposta:
 
 ## Turno 4
 
-- [ ] Turno inviato a ChatMinerva
-- [ ] Risposta di ChatMinerva valutata con 👍 / 👎
-- [ ] Risposta controllata dal Gem
+- [x] Turno inviato a ChatMinerva
+- [x] Risposta di ChatMinerva valutata con 👍 / 👎
+- [x] Risposta controllata dal Gem
 
 **Risposta / giudizio del Gem per questo turno:** ________________________________
 
@@ -446,9 +446,9 @@ Metti 👎 se la risposta:
 
 ## Turno 5
 
-- [ ] Turno inviato a ChatMinerva
-- [ ] Risposta di ChatMinerva valutata con 👍 / 👎
-- [ ] Risposta controllata dal Gem
+- [x] Turno inviato a ChatMinerva
+- [x] Risposta di ChatMinerva valutata con 👍 / 👎
+- [x] Risposta controllata dal Gem
 
 **Risposta / giudizio del Gem per questo turno:** ________________________________
 
@@ -459,9 +459,9 @@ Metti 👎 se la risposta:
 
 ## Turno 6
 
-- [ ] Turno inviato a ChatMinerva
-- [ ] Risposta di ChatMinerva valutata con 👍 / 👎
-- [ ] Risposta controllata dal Gem
+- [x] Turno inviato a ChatMinerva
+- [x] Risposta di ChatMinerva valutata con 👍 / 👎
+- [x] Risposta controllata dal Gem
 
 **Risposta / giudizio del Gem per questo turno:** ________________________________
 
@@ -472,9 +472,9 @@ Metti 👎 se la risposta:
 
 ## Turno 7
 
-- [ ] Turno inviato a ChatMinerva
-- [ ] Risposta di ChatMinerva valutata con 👍 / 👎
-- [ ] Risposta controllata dal Gem
+- [x] Turno inviato a ChatMinerva
+- [x] Risposta di ChatMinerva valutata con 👍 / 👎
+- [x] Risposta controllata dal Gem
 
 **Risposta / giudizio del Gem per questo turno:** ________________________________
 
@@ -500,9 +500,9 @@ Metti 👎 se la risposta:
 
 ## Turno 1
 
-- [ ] Turno inviato a ChatMinerva
-- [ ] Risposta di ChatMinerva valutata con 👍 / 👎
-- [ ] Risposta controllata dal Gem
+- [x] Turno inviato a ChatMinerva
+- [x] Risposta di ChatMinerva valutata con 👍 / 👎
+- [x] Risposta controllata dal Gem
 
 **Risposta / giudizio del Gem per questo turno:** ________________________________
 
@@ -513,9 +513,9 @@ Metti 👎 se la risposta:
 
 ## Turno 2
 
-- [ ] Turno inviato a ChatMinerva
-- [ ] Risposta di ChatMinerva valutata con 👍 / 👎
-- [ ] Risposta controllata dal Gem
+- [x] Turno inviato a ChatMinerva
+- [x] Risposta di ChatMinerva valutata con 👍 / 👎
+- [x] Risposta controllata dal Gem
 
 **Risposta / giudizio del Gem per questo turno:** ________________________________
 
@@ -526,9 +526,9 @@ Metti 👎 se la risposta:
 
 ## Turno 3
 
-- [ ] Turno inviato a ChatMinerva
-- [ ] Risposta di ChatMinerva valutata con 👍 / 👎
-- [ ] Risposta controllata dal Gem
+- [x] Turno inviato a ChatMinerva
+- [x] Risposta di ChatMinerva valutata con 👍 / 👎
+- [x] Risposta controllata dal Gem
 
 **Risposta / giudizio del Gem per questo turno:** ________________________________
 
@@ -539,9 +539,9 @@ Metti 👎 se la risposta:
 
 ## Turno 4
 
-- [ ] Turno inviato a ChatMinerva
-- [ ] Risposta di ChatMinerva valutata con 👍 / 👎
-- [ ] Risposta controllata dal Gem
+- [x] Turno inviato a ChatMinerva
+- [x] Risposta di ChatMinerva valutata con 👍 / 👎
+- [x] Risposta controllata dal Gem
 
 **Risposta / giudizio del Gem per questo turno:** ________________________________
 
@@ -552,9 +552,9 @@ Metti 👎 se la risposta:
 
 ## Turno 5
 
-- [ ] Turno inviato a ChatMinerva
-- [ ] Risposta di ChatMinerva valutata con 👍 / 👎
-- [ ] Risposta controllata dal Gem
+- [x] Turno inviato a ChatMinerva
+- [x] Risposta di ChatMinerva valutata con 👍 / 👎
+- [x] Risposta controllata dal Gem
 
 **Risposta / giudizio del Gem per questo turno:** ________________________________
 
@@ -565,9 +565,9 @@ Metti 👎 se la risposta:
 
 ## Turno 6
 
-- [ ] Turno inviato a ChatMinerva
-- [ ] Risposta di ChatMinerva valutata con 👍 / 👎
-- [ ] Risposta controllata dal Gem
+- [x] Turno inviato a ChatMinerva
+- [x] Risposta di ChatMinerva valutata con 👍 / 👎
+- [x] Risposta controllata dal Gem
 
 **Risposta / giudizio del Gem per questo turno:** ________________________________
 
@@ -578,9 +578,9 @@ Metti 👎 se la risposta:
 
 ## Turno 7
 
-- [ ] Turno inviato a ChatMinerva
-- [ ] Risposta di ChatMinerva valutata con 👍 / 👎
-- [ ] Risposta controllata dal Gem
+- [x] Turno inviato a ChatMinerva
+- [x] Risposta di ChatMinerva valutata con 👍 / 👎
+- [x] Risposta controllata dal Gem
 
 **Risposta / giudizio del Gem per questo turno:** ________________________________
 
@@ -606,9 +606,9 @@ Metti 👎 se la risposta:
 
 ## Turno 1
 
-- [ ] Turno inviato a ChatMinerva
-- [ ] Risposta di ChatMinerva valutata con 👍 / 👎
-- [ ] Risposta controllata dal Gem
+- [x] Turno inviato a ChatMinerva
+- [x] Risposta di ChatMinerva valutata con 👍 / 👎
+- [x] Risposta controllata dal Gem
 
 **Risposta / giudizio del Gem per questo turno:** ________________________________
 
@@ -619,9 +619,9 @@ Metti 👎 se la risposta:
 
 ## Turno 2
 
-- [ ] Turno inviato a ChatMinerva
-- [ ] Risposta di ChatMinerva valutata con 👍 / 👎
-- [ ] Risposta controllata dal Gem
+- [x] Turno inviato a ChatMinerva
+- [x] Risposta di ChatMinerva valutata con 👍 / 👎
+- [x] Risposta controllata dal Gem
 
 **Risposta / giudizio del Gem per questo turno:** ________________________________
 
@@ -632,9 +632,9 @@ Metti 👎 se la risposta:
 
 ## Turno 3
 
-- [ ] Turno inviato a ChatMinerva
-- [ ] Risposta di ChatMinerva valutata con 👍 / 👎
-- [ ] Risposta controllata dal Gem
+- [x] Turno inviato a ChatMinerva
+- [x] Risposta di ChatMinerva valutata con 👍 / 👎
+- [x] Risposta controllata dal Gem
 
 **Risposta / giudizio del Gem per questo turno:** ________________________________
 
@@ -645,9 +645,9 @@ Metti 👎 se la risposta:
 
 ## Turno 4
 
-- [ ] Turno inviato a ChatMinerva
-- [ ] Risposta di ChatMinerva valutata con 👍 / 👎
-- [ ] Risposta controllata dal Gem
+- [x] Turno inviato a ChatMinerva
+- [x] Risposta di ChatMinerva valutata con 👍 / 👎
+- [x] Risposta controllata dal Gem
 
 **Risposta / giudizio del Gem per questo turno:** ________________________________
 
@@ -658,9 +658,9 @@ Metti 👎 se la risposta:
 
 ## Turno 5
 
-- [ ] Turno inviato a ChatMinerva
-- [ ] Risposta di ChatMinerva valutata con 👍 / 👎
-- [ ] Risposta controllata dal Gem
+- [x] Turno inviato a ChatMinerva
+- [x] Risposta di ChatMinerva valutata con 👍 / 👎
+- [x] Risposta controllata dal Gem
 
 **Risposta / giudizio del Gem per questo turno:** ________________________________
 
@@ -671,9 +671,9 @@ Metti 👎 se la risposta:
 
 ## Turno 6
 
-- [ ] Turno inviato a ChatMinerva
-- [ ] Risposta di ChatMinerva valutata con 👍 / 👎
-- [ ] Risposta controllata dal Gem
+- [x] Turno inviato a ChatMinerva
+- [x] Risposta di ChatMinerva valutata con 👍 / 👎
+- [x] Risposta controllata dal Gem
 
 **Risposta / giudizio del Gem per questo turno:** ________________________________
 
@@ -684,9 +684,9 @@ Metti 👎 se la risposta:
 
 ## Turno 7
 
-- [ ] Turno inviato a ChatMinerva
-- [ ] Risposta di ChatMinerva valutata con 👍 / 👎
-- [ ] Risposta controllata dal Gem
+- [x] Turno inviato a ChatMinerva
+- [x] Risposta di ChatMinerva valutata con 👍 / 👎
+- [x] Risposta controllata dal Gem
 
 **Risposta / giudizio del Gem per questo turno:** ________________________________
 
@@ -702,19 +702,19 @@ Metti 👎 se la risposta:
 **Obiettivo di test:** Complex instruction following and constraint preservation.
 
 **Checklist Chat:**
-- [ ] Chat creata su ChatMinerva con **new chat**
-- [ ] Tutti i turni della chat sono stati inviati
-- [ ] Tutte le risposte di ChatMinerva sono state valutate con thumbs up/down
-- [ ] La chat è stata controllata dal Gem valutatore
+- [x] Chat creata su ChatMinerva con **new chat**
+- [x] Tutti i turni della chat sono stati inviati
+- [x] Tutte le risposte di ChatMinerva sono state valutate con thumbs up/down
+- [x] La chat è stata controllata dal Gem valutatore
 
 **Risposta / giudizio complessivo del Gem sulla chat:** ________________________________
 
 
 ## Turno 1
 
-- [ ] Turno inviato a ChatMinerva
-- [ ] Risposta di ChatMinerva valutata con 👍 / 👎
-- [ ] Risposta controllata dal Gem
+- [x] Turno inviato a ChatMinerva
+- [x] Risposta di ChatMinerva valutata con 👍 / 👎
+- [x] Risposta controllata dal Gem
 
 **Risposta / giudizio del Gem per questo turno:** ________________________________
 
@@ -725,9 +725,9 @@ Metti 👎 se la risposta:
 
 ## Turno 2
 
-- [ ] Turno inviato a ChatMinerva
-- [ ] Risposta di ChatMinerva valutata con 👍 / 👎
-- [ ] Risposta controllata dal Gem
+- [x] Turno inviato a ChatMinerva
+- [x] Risposta di ChatMinerva valutata con 👍 / 👎
+- [x] Risposta controllata dal Gem
 
 **Risposta / giudizio del Gem per questo turno:** ________________________________
 
@@ -738,9 +738,9 @@ Metti 👎 se la risposta:
 
 ## Turno 3
 
-- [ ] Turno inviato a ChatMinerva
-- [ ] Risposta di ChatMinerva valutata con 👍 / 👎
-- [ ] Risposta controllata dal Gem
+- [x] Turno inviato a ChatMinerva
+- [x] Risposta di ChatMinerva valutata con 👍 / 👎
+- [x] Risposta controllata dal Gem
 
 **Risposta / giudizio del Gem per questo turno:** ________________________________
 
@@ -751,9 +751,9 @@ Metti 👎 se la risposta:
 
 ## Turno 4
 
-- [ ] Turno inviato a ChatMinerva
-- [ ] Risposta di ChatMinerva valutata con 👍 / 👎
-- [ ] Risposta controllata dal Gem
+- [x] Turno inviato a ChatMinerva
+- [x] Risposta di ChatMinerva valutata con 👍 / 👎
+- [x] Risposta controllata dal Gem
 
 **Risposta / giudizio del Gem per questo turno:** ________________________________
 
@@ -764,9 +764,9 @@ Metti 👎 se la risposta:
 
 ## Turno 5
 
-- [ ] Turno inviato a ChatMinerva
-- [ ] Risposta di ChatMinerva valutata con 👍 / 👎
-- [ ] Risposta controllata dal Gem
+- [x] Turno inviato a ChatMinerva
+- [x] Risposta di ChatMinerva valutata con 👍 / 👎
+- [x] Risposta controllata dal Gem
 
 **Risposta / giudizio del Gem per questo turno:** ________________________________
 
@@ -777,9 +777,9 @@ Metti 👎 se la risposta:
 
 ## Turno 6
 
-- [ ] Turno inviato a ChatMinerva
-- [ ] Risposta di ChatMinerva valutata con 👍 / 👎
-- [ ] Risposta controllata dal Gem
+- [x] Turno inviato a ChatMinerva
+- [x] Risposta di ChatMinerva valutata con 👍 / 👎
+- [x] Risposta controllata dal Gem
 
 **Risposta / giudizio del Gem per questo turno:** ________________________________
 
@@ -790,9 +790,9 @@ Metti 👎 se la risposta:
 
 ## Turno 7
 
-- [ ] Turno inviato a ChatMinerva
-- [ ] Risposta di ChatMinerva valutata con 👍 / 👎
-- [ ] Risposta controllata dal Gem
+- [x] Turno inviato a ChatMinerva
+- [x] Risposta di ChatMinerva valutata con 👍 / 👎
+- [x] Risposta controllata dal Gem
 
 **Risposta / giudizio del Gem per questo turno:** ________________________________
 
@@ -818,9 +818,9 @@ Metti 👎 se la risposta:
 
 ## Turno 1
 
-- [ ] Turno inviato a ChatMinerva
-- [ ] Risposta di ChatMinerva valutata con 👍 / 👎
-- [ ] Risposta controllata dal Gem
+- [x] Turno inviato a ChatMinerva
+- [x] Risposta di ChatMinerva valutata con 👍 / 👎
+- [x] Risposta controllata dal Gem
 
 **Risposta / giudizio del Gem per questo turno:** ________________________________
 
@@ -831,9 +831,9 @@ Metti 👎 se la risposta:
 
 ## Turno 2
 
-- [ ] Turno inviato a ChatMinerva
-- [ ] Risposta di ChatMinerva valutata con 👍 / 👎
-- [ ] Risposta controllata dal Gem
+- [x] Turno inviato a ChatMinerva
+- [x] Risposta di ChatMinerva valutata con 👍 / 👎
+- [x] Risposta controllata dal Gem
 
 **Risposta / giudizio del Gem per questo turno:** ________________________________
 
@@ -844,9 +844,9 @@ Metti 👎 se la risposta:
 
 ## Turno 3
 
-- [ ] Turno inviato a ChatMinerva
-- [ ] Risposta di ChatMinerva valutata con 👍 / 👎
-- [ ] Risposta controllata dal Gem
+- [x] Turno inviato a ChatMinerva
+- [x] Risposta di ChatMinerva valutata con 👍 / 👎
+- [x] Risposta controllata dal Gem
 
 **Risposta / giudizio del Gem per questo turno:** ________________________________
 
@@ -857,8 +857,8 @@ Metti 👎 se la risposta:
 
 ## Turno 4
 
-- [ ] Turno inviato a ChatMinerva
-- [ ] Risposta di ChatMinerva valutata con 👍 / 👎
+- [x] Turno inviato a ChatMinerva
+- [x] Risposta di ChatMinerva valutata con 👍 / 👎
 - [ ] Risposta controllata dal Gem
 
 **Risposta / giudizio del Gem per questo turno:** ________________________________
@@ -870,9 +870,9 @@ Metti 👎 se la risposta:
 
 ## Turno 5
 
-- [ ] Turno inviato a ChatMinerva
-- [ ] Risposta di ChatMinerva valutata con 👍 / 👎
-- [ ] Risposta controllata dal Gem
+- [x] Turno inviato a ChatMinerva
+- [x] Risposta di ChatMinerva valutata con 👍 / 👎
+- [x] Risposta controllata dal Gem
 
 **Risposta / giudizio del Gem per questo turno:** ________________________________
 
@@ -883,9 +883,9 @@ Metti 👎 se la risposta:
 
 ## Turno 6
 
-- [ ] Turno inviato a ChatMinerva
-- [ ] Risposta di ChatMinerva valutata con 👍 / 👎
-- [ ] Risposta controllata dal Gem
+- [x] Turno inviato a ChatMinerva
+- [x] Risposta di ChatMinerva valutata con 👍 / 👎
+- [x] Risposta controllata dal Gem
 
 **Risposta / giudizio del Gem per questo turno:** ________________________________
 
@@ -896,9 +896,9 @@ Metti 👎 se la risposta:
 
 ## Turno 7
 
-- [ ] Turno inviato a ChatMinerva
-- [ ] Risposta di ChatMinerva valutata con 👍 / 👎
-- [ ] Risposta controllata dal Gem
+- [x] Turno inviato a ChatMinerva
+- [x] Risposta di ChatMinerva valutata con 👍 / 👎
+- [x] Risposta controllata dal Gem
 
 **Risposta / giudizio del Gem per questo turno:** ________________________________
 
@@ -1162,9 +1162,9 @@ Metti 👎 se la risposta:
 
 ## Turno 3
 
-- [ ] Turno inviato a ChatMinerva
-- [ ] Risposta di ChatMinerva valutata con 👍 / 👎
-- [ ] Risposta controllata dal Gem
+- [x] Turno inviato a ChatMinerva
+- [x] Risposta di ChatMinerva valutata con 👍 / 👎
+- [x] Risposta controllata dal Gem
 
 **Risposta / giudizio del Gem per questo turno:** ________________________________
 
