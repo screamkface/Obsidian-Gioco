@@ -445,7 +445,7 @@ Devi produrre:
 
 ---
 
-![](../Pasted%20image%2020260621161638.png)
+![](../images/Pasted%20image%2020260621161638.png)
 
 # Exercise 1
 
