@@ -39,7 +39,7 @@ Eye Safe Writer exposes customization without editing CSS manually:
 
 Preferred: use Style Settings plugin and keep `eye-safe-palette-*` snippets disabled.
 
-Fallback: if Style Settings is not installed, enable exactly one `eye-safe-palette-*` snippet. Palette snippets are generated from same tokens as `theme.css`, so Gruvbox, Tokyo Night, Nord, and other choices override full UI color set.
+Fallback: if Style Settings is not installed, copy snippets from `snippets/` into `.obsidian/snippets/` and enable exactly one `eye-safe-palette-*` snippet. Palette snippets are generated from same tokens as `theme.css`, so Gruvbox, Tokyo Night, Nord, and other choices override full UI color set.
 
 ## QA Checklist
 

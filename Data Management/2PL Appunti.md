@@ -21,7 +21,7 @@ Una transazione segue il **Two-Phase Locking** se ha due fasi:
 ```
 
 
-![](../2pl_locking.webp)
+![](../images/2pl_locking.webp)
 
 Quindi dentro una transazione deve valere:
 

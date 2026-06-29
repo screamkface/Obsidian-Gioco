@@ -259,7 +259,7 @@ sl1(x) r1(x) xl1(y) w1(y) c1 u1(x) u1(y)
 ```
 
 Qui `T1` mantiene sia lo shared lock su `x` sia l’exclusive lock su `y` fino al commit.
-
+Dopo che viene effettuato il commit allora si puo fare **unlock**. 
 Quindi:
 
 ```text
@@ -288,7 +288,7 @@ poi lo rilascia prima del commit:
 u1(x) ... c1
 ```
 
-Questo non viola Strict 2PL, perché non è un exclusive lock.
+Questo non viola Strict 2PL, **perché non è un exclusive lock.**
 
 Ma viola Strong Strict 2PL, perché Strong Strict 2PL richiede di mantenere **tutti** i lock fino al commit.
 
@@ -429,7 +429,7 @@ Per ogni transazione:
 nessun lock dopo il primo unlock
 ```
 
-Se viola 2PL, allora non può essere né Strict 2PL né Strong Strict 2PL.
+Se viola 2PL, **allora non può essere né Strict 2PL né Strong Strict 2PL.**
 
 ---
 
@@ -592,9 +592,9 @@ xl1(x) w1(x) c1 u1(x) xl2(x) r2(x) c2 u2(x)
 Domande:
 
 ```text
-2PL?
-Strict 2PL?
-Strong Strict 2PL?
+2PL? Yes
+Strict 2PL? Yes
+Strong Strict 2PL? yes
 ```
 
 ## B
@@ -606,9 +606,9 @@ sl1(x) r1(x) u1(x) xl2(x) w2(x) c2 u2(x) c1
 Domande:
 
 ```text
-2PL?
-Strict 2PL?
-Strong Strict 2PL?
+2PL? Yes
+Strict 2PL? YES
+Strong Strict 2PL? NO because u1(x) before c1
 ```
 
 ## C
@@ -620,9 +620,9 @@ xl1(x) w1(x) u1(x) xl2(x) r2(x) c2 u2(x) c1
 Domande:
 
 ```text
-2PL?
-Strict 2PL?
-Strong Strict 2PL?
+2PL? Yes
+Strict 2PL? No
+Strong Strict 2PL? No
 ```
 
 Questi tre fissano subito la differenza tra **2PL**, **Strict 2PL** e **Strong Strict 2PL**.
