@@ -1176,492 +1176,20 @@ Ecco la **check-list mentale** da usare ogni volta negli esercizi sul **timestam
 
 ---
 
-# 1. Prima di iniziare
+# Timestamp-based method: scheduler
 
-Chiediti:
+## Metadata per ogni elemento `X`
 
-```text
-Quali sono i timestamp delle transazioni?
-```
-
-Di solito:
+Per ogni oggetto del database `X`, il sistema mantiene:
 
 ```text
-TS(T1)=1
-TS(T2)=2
-TS(T3)=3
-...
+rts(X)   = read timestamp di X
+wts(X)   = write timestamp di X
+wts-c(X) = write timestamp committed di X
+cb(X)    = commit bit di X
 ```
 
-Oppure, negli esercizi d’esame recenti, il timestamp viene assegnato **quando la transazione compare per la prima volta**.
-
-Poi scrivi lo stato iniziale degli oggetti:
-
-```text
-rts(x)=0
-wts(x)=0
-wts-c(x)=0
-cb(x)=true
-```
-
-per ogni oggetto coinvolto, ad esempio `x`, `y`, `z`.
-
----
-
-# 2. Prima domanda per ogni azione
-
-Per ogni operazione dello schedule, chiediti prima:
-
-```text
-La transazione è già stata abortita?
-```
-
-Se sì:
-
-```text
-ignoro questa azione
-```
-
-Esempio:
-
-```text
-r1(x) viene rifiutata -> T1 abortisce
-...
-c1
-```
-
-Allora:
-
-```text
-c1 viene ignorato
-```
-
-perché `T1` era già abortita.
-
----
-
-# 3. Se l’azione è una read `ri(x)`
-
-Quando vedi:
-
-```text
-ri(x)
-```
-
-devi chiederti:
-
-## Domanda 1
-
-```text
-TS(Ti) < wts(x)?
-```
-
-Se sì:
-
-```text
-read too late
-Ti abortisce
-```
-
-Perché `Ti` sta cercando di leggere `x` dopo che una transazione più giovane ha già scritto `x`.
-
-Esempio:
-
-```text
-w2(x) r1(x)
-```
-
-Dopo `w2(x)`:
-
-```text
-wts(x)=2
-```
-
-Poi arriva `r1(x)`:
-
-```text
-TS(T1)=1 < wts(x)=2
-```
-
-Quindi:
-
-```text
-r1(x) refused
-T1 aborts
-```
-
----
-
-## Domanda 2
-
-Se invece:
-
-```text
-TS(Ti) >= wts(x)
-```
-
-allora chiediti:
-
-```text
-cb(x) = true?
-```
-
-Se `cb(x)=true`, la read può procedere.
-
-Aggiorni:
-
-```text
-rts(x)=max(rts(x), TS(Ti))
-```
-
-Se `cb(x)=false`, significa che l’ultima write su `x` non è ancora committata.
-
-Quindi la transazione deve aspettare:
-
-```text
-commit oppure abort dell'ultima transazione che ha scritto x
-```
-
----
-
-## Schema per read
-
-```text
-ri(x)
-
-1. Ti è già abortita?
-   sì -> ignora ri(x)
-
-2. TS(Ti) < wts(x)?
-   sì -> read too late -> abort Ti
-
-3. cb(x)=false?
-   sì -> Ti aspetta commit/abort dell'ultimo writer
-
-4. altrimenti:
-   read accepted
-   rts(x)=max(rts(x), TS(Ti))
-```
-
----
-
-# 4. Se l’azione è una write `wi(x)`
-
-Quando vedi:
-
-```text
-wi(x)
-```
-
-devi chiederti prima la cosa più importante.
-
-## Domanda 1
-
-```text
-TS(Ti) < rts(x)?
-```
-
-Se sì:
-
-```text
-write too late
-Ti abortisce
-```
-
-Perché una transazione più giovane ha già letto `x`.
-
-Esempio:
-
-```text
-r2(x) w1(x)
-```
-
-Dopo `r2(x)`:
-
-```text
-rts(x)=2
-```
-
-Poi arriva `w1(x)`:
-
-```text
-TS(T1)=1 < rts(x)=2
-```
-
-Quindi:
-
-```text
-w1(x) refused
-T1 aborts
-```
-
-Qui **Thomas write rule non si applica**, perché il problema è una read già avvenuta.
-
----
-
-## Domanda 2
-
-Se invece:
-
-```text
-TS(Ti) >= rts(x)
-```
-
-allora chiediti:
-
-```text
-TS(Ti) < wts(x)?
-```
-
-Se sì, la write è vecchia rispetto a una write più recente.
-
-In questo caso:
-
-```text
-Thomas write rule
-wi(x) viene ignorata
-Ti NON abortisce
-```
-
-Attenzione:
-
-```text
-ignored ≠ abort
-```
-
-La transazione continua, ma quella write non modifica il database.
-
----
-
-## Domanda 3
-
-Se invece:
-
-```text
-TS(Ti) >= rts(x)
-TS(Ti) >= wts(x)
-```
-
-allora la write viene accettata.
-
-Aggiorni:
-
-```text
-wts(x)=TS(Ti)
-cb(x)=false
-```
-
-Perché `Ti` ha scritto `x`, ma non ha ancora committato.
-
----
-
-## Schema per write
-
-```text
-wi(x)
-
-1. Ti è già abortita?
-   sì -> ignora wi(x)
-
-2. TS(Ti) < rts(x)?
-   sì -> write too late -> abort Ti
-
-3. TS(Ti) < wts(x)?
-   sì -> Thomas write rule -> ignora wi(x), ma Ti continua
-
-4. altrimenti:
-   write accepted
-   wts(x)=TS(Ti)
-   cb(x)=false
-```
-
----
-
-# 5. Se l’azione è un commit `ci`
-
-Quando vedi:
-
-```text
-ci
-```
-
-chiediti:
-
-```text
-Ti è già abortita?
-```
-
-Se sì:
-
-```text
-ci viene ignorato
-```
-
-Se no, chiediti:
-
-```text
-Ti ha scritto qualche oggetto?
-```
-
-Se non ha scritto nulla:
-
-```text
-commit accepted
-nessun metadata cambia
-```
-
-Se ha scritto, per ogni oggetto `x` scritto da `Ti` aggiorni:
-
-```text
-cb(x)=true
-wts-c(x)=TS(Ti)
-```
-
----
-
-## Schema per commit
-
-```text
-ci
-
-1. Ti è già abortita?
-   sì -> ignora ci
-
-2. Ti ha scritto oggetti?
-   no -> commit accepted, nessun cambio
-
-3. Ti ha scritto x?
-   sì -> cb(x)=true
-         wts-c(x)=TS(Ti)
-```
-
----
-
-# 6. Se l’azione è un abort `ai`
-
-Quando vedi:
-
-```text
-ai
-```
-
-chiediti:
-
-```text
-Ti aveva scritto qualche oggetto?
-```
-
-Se sì, quelle write vengono annullate.
-
-Negli esercizi base spesso basta scrivere:
-
-```text
-Ti aborts
-all actions of Ti are removed from the resulting schedule
-```
-
-Poi, nel risultato finale, elimini tutte le azioni di `Ti`.
-
----
-
-# 7. Domande finali dopo aver analizzato tutto
-
-Alla fine chiediti:
-
-```text
-Quali transazioni sono abortite?
-```
-
-Poi:
-
-```text
-Quali write sono state ignorate da Thomas?
-```
-
-Poi costruisci lo schedule finale:
-
-```text
-tolgo tutte le azioni delle transazioni abortite
-tolgo le write ignorate da Thomas
-```
-
-Infine, se richiesto:
-
-```text
-lo schedule finale è rigorous?
-```
-
-Per controllare rigorous:
-
-```text
-per ogni conflitto ai < bj,
-il commit ci deve stare tra ai e bj
-```
-
----
-
-# 8. Mini-tabella da memorizzare
-
-```text
-READ ri(x):
-
-TS(Ti) < wts(x)
-    -> abort Ti
-
-TS(Ti) >= wts(x) and cb(x)=false
-    -> wait
-
-TS(Ti) >= wts(x) and cb(x)=true
-    -> accept, rts(x)=max(rts(x), TS(Ti))
-```
-
-```text
-WRITE wi(x):
-
-TS(Ti) < rts(x)
-    -> abort Ti
-
-TS(Ti) >= rts(x) and TS(Ti) < wts(x)
-    -> Thomas write rule, ignore wi(x)
-
-TS(Ti) >= rts(x) and TS(Ti) >= wts(x)
-    -> accept, wts(x)=TS(Ti), cb(x)=false
-```
-
-```text
-COMMIT ci:
-
-if Ti aborted
-    -> ignore ci
-
-else, for every x written by Ti:
-    cb(x)=true
-    wts-c(x)=TS(Ti)
-```
-
----
-
-# 9. Frase mentale velocissima
-
-Ogni volta pensa così:
-
-```text
-Read:
-sto leggendo dopo una write troppo giovane?
-
-Write:
-sto scrivendo dopo una read troppo giovane?
-se no, sto scrivendo sopra una write più giovane?
-
-Commit:
-la transazione era abortita?
-se no, confermo le sue write.
-```
-
----
-# Timestamp-based scheduler — Tabella corretta da memorizzare
-
-## Stato mantenuto per ogni oggetto `X`
+Significato:
 
 ```text
 rts(X)   = massimo timestamp tra le transazioni che hanno letto X
@@ -1681,573 +1209,421 @@ cb(X)=true
 
 ---
 
-# Regola generale importantissima
+# Action `ri(X)`
 
-Prima di processare qualsiasi azione di `Ti`, chiediti:
-
-```text
-Ti è già abortita?
-```
-
-Se sì:
-
-```text
-ignora l'azione
-```
-
-Esempio:
-
-```text
-r1(X) viene rifiutata -> T1 abortisce
-...
-c1
-```
-
-Allora:
-
-```text
-c1 viene ignorato
-```
-
----
-
-# READ `ri(X)`
-
-Quando arriva:
+Quando la transazione `Ti` vuole eseguire:
 
 ```text
 ri(X)
 ```
 
-segui questo ordine.
-
-## 1. Controllo timestamp
+il scheduler applica il seguente algoritmo.
 
 ```text
-TS(Ti) < wts(X)?
-```
+if ts(Ti) >= wts(X) then
 
-Se sì:
+    if cb(X) = true or ts(Ti) = wts(X) then
 
-```text
-read too late
-abort Ti
-```
+        rts(X) = max(ts(Ti), rts(X))
+        execute ri(X)
 
-Motivo:
+    else
 
-```text
-Ti è più vecchia dell'ultima transazione che ha scritto X.
-Quindi Ti avrebbe dovuto leggere prima di quella write.
+        put Ti in waiting
+        Ti waits for the commit or rollback
+        of the last transaction that wrote X
+
+else
+
+    rollback(Ti)
 ```
 
 ---
 
-## 2. Controllo commit-bit
+## READ spiegata in modo operativo
 
-Se invece:
+Per una read `ri(X)` ragiono così:
 
 ```text
-TS(Ti) >= wts(X)
+1. Controllo timestamp:
+
+   ts(Ti) < wts(X)?
+
+   sì -> rollback(Ti)
+   no -> continuo
+```
+
+Se:
+
+```text
+ts(Ti) >= wts(X)
 ```
 
 allora la read è compatibile con i timestamp.
 
-Ora controlla:
+A questo punto controllo il commit-bit:
 
 ```text
-cb(X) = true?
+2. cb(X)=true?
+
+   sì -> execute ri(X)
+         rts(X)=max(rts(X), ts(Ti))
 ```
 
-### Se `cb(X)=true`
-
-La read viene accettata:
+Se invece:
 
 ```text
-accept ri(X)
-rts(X)=max(rts(X), TS(Ti))
+cb(X)=false
 ```
 
-### Se `cb(X)=false`
-
-La read non può ancora leggere.
+devo controllare il caso speciale:
 
 ```text
-Ti waits
+3. ts(Ti)=wts(X)?
+
+   sì -> execute ri(X)
+         rts(X)=max(rts(X), ts(Ti))
+
+   no -> Ti waits
 ```
 
-Motivo:
-
-```text
-l'ultima write su X non è ancora committata
-```
-
-Attenzione:
-
-```text
-non aggiornare ancora rts(X)
-```
-
-Quando l'ultima transazione che ha scritto `X` farà commit o rollback, `Ti` verrà risvegliata e dovrai ricontrollare `ri(X)` da capo.
-
----
-
-## Tabella READ
+Quindi, in forma compatta:
 
 ```text
 READ ri(X)
 
-1. Ti già abortita?
-   sì -> ignora ri(X)
+if ts(Ti) < wts(X)
+    -> rollback(Ti)
 
-2. TS(Ti) < wts(X)?
-   sì -> abort Ti
+else if cb(X)=true
+    -> execute ri(X)
+       rts(X)=max(rts(X), ts(Ti))
 
-3. TS(Ti) >= wts(X) e cb(X)=false?
-   sì -> Ti waits
-         non aggiornare rts(X)
+else if ts(Ti)=wts(X)
+    -> execute ri(X)
+       rts(X)=max(rts(X), ts(Ti))
 
-4. TS(Ti) >= wts(X) e cb(X)=true?
-   sì -> accept ri(X)
-         rts(X)=max(rts(X), TS(Ti))
+else
+    -> Ti waits
 ```
 
 ---
 
-# WRITE `wi(X)`
+# Action `wi(X)`
 
-Quando arriva:
+Quando la transazione `Ti` vuole eseguire:
 
 ```text
 wi(X)
 ```
 
-segui questo ordine.
-
-## 1. Controllo su `rts(X)`
+il scheduler applica il seguente algoritmo.
 
 ```text
-TS(Ti) < rts(X)?
-```
+if ts(Ti) >= rts(X) and ts(Ti) >= wts(X) then
 
-Se sì:
+    if cb(X) = true then
 
-```text
-write too late
-abort Ti
-```
+        wts(X) = ts(Ti)
+        cb(X) = false
+        execute wi(X)
 
-Motivo:
+    else
 
-```text
-una transazione più giovane ha già letto X.
-Ti, essendo più vecchia, avrebbe dovuto scrivere prima di quella read.
-```
+        put Ti in waiting
+        Ti waits for the commit or rollback
+        of the last transaction that wrote X
 
-Questo è il caso più grave.
+elsesistema mantiene
 
-Attenzione:
 
-```text
-se TS(Ti) < rts(X), Thomas write rule NON si applica.
+    if ts(Ti) >= rts(X) and ts(Ti) < wts(X) then
+
+        if cb(X) = true then
+
+            ignore wi(X)
+
+        else
+
+            put Ti in waiting
+            Ti waits for the commit or rollback
+            of the last transaction that wrote X
+
+    else
+
+        rollback(Ti)
 ```
 
 ---
 
-## 2. Controllo su `wts(X)`
+## WRITE spiegata in modo operativo
 
-Se invece:
+Per una write `wi(X)` ragiono così:
 
 ```text
-TS(Ti) >= rts(X)
+1. Controllo se Ti è più vecchia di una read già avvenuta:
+
+   ts(Ti) < rts(X)?
+
+   sì -> rollback(Ti)
+   no -> continuo
 ```
 
-allora guardi `wts(X)`.
+Se non viene abortita, controllo `wts(X)`.
 
-### Caso A
+---
+
+## Caso 1: `ts(Ti) >= wts(X)`
+
+La transazione `Ti` non è più vecchia dell'ultima write su `X`.
 
 ```text
-TS(Ti) >= wts(X)
+if ts(Ti) >= rts(X) and ts(Ti) >= wts(X)
 ```
 
-La write sarebbe compatibile.
+Ora controllo `cb(X)`.
 
-Ora controlla `cb(X)`.
-
-#### Se `cb(X)=true`
-
-La write viene accettata:
+### Se `cb(X)=true`
 
 ```text
-accept wi(X)
-wts(X)=TS(Ti)
+execute wi(X)
+wts(X)=ts(Ti)
 cb(X)=false
 ```
 
-Motivo:
+La write viene eseguita.
 
-```text
-Ti ha scritto X, ma non ha ancora committato.
-```
+`cb(X)` diventa `false` perché `Ti` ha scritto `X`, ma non ha ancora fatto commit.
 
-#### Se `cb(X)=false`
-
-La write non può ancora essere eseguita:
+### Se `cb(X)=false`
 
 ```text
 Ti waits
 ```
 
-Motivo:
-
-```text
-l'ultima write su X non è ancora committata
-```
-
-Attenzione:
-
-```text
-non aggiornare ancora wts(X)
-non mettere ancora cb(X)=false
-```
-
-Quando l'ultima transazione che ha scritto `X` farà commit o rollback, `Ti` verrà risvegliata e dovrai ricontrollare `wi(X)` da capo.
+La write non può essere eseguita subito perché l'ultima write su `X` non è ancora committata.
 
 ---
 
-### Caso B
+## Caso 2: `ts(Ti) < wts(X)`
+
+La transazione `Ti` è più vecchia dell'ultima write su `X`.
 
 ```text
-TS(Ti) < wts(X)
+if ts(Ti) >= rts(X) and ts(Ti) < wts(X)
 ```
 
-La write di `Ti` è vecchia rispetto a una write più giovane.
+Ora controllo `cb(X)`.
 
-Ora controlla `cb(X)`.
-
-#### Se `cb(X)=true`
-
-Applichi Thomas write rule:
+### Se `cb(X)=true`
 
 ```text
 ignore wi(X)
-Ti NON abortisce
 ```
 
-Motivo:
+Questa è la **Thomas write rule**.
 
-```text
-la write di Ti è obsoleta, perché una transazione più giovane ha già scritto X.
-```
+La write viene ignorata perché è obsoleta, ma `Ti` non abortisce.
 
-Attenzione:
-
-```text
-ignored ≠ abort
-```
-
-La transazione continua.
-
-#### Se `cb(X)=false`
-
-Non puoi ancora applicare Thomas.
+### Se `cb(X)=false`
 
 ```text
 Ti waits
 ```
 
-Motivo:
-
-```text
-la write più giovane non è ancora committata
-```
-
-Quando l'ultima transazione che ha scritto `X` farà commit o rollback, `Ti` verrà risvegliata e dovrai ricontrollare `wi(X)` da capo.
-
-Se quella write più giovane committa, probabilmente `wi(X)` sarà ignorata da Thomas.
-
-Se quella write più giovane abortisce, `wts(X)` può tornare a `wts-c(X)`, quindi `wi(X)` potrebbe diventare accettabile.
+Non posso ancora applicare Thomas, perché la write più recente non è ancora committata.
 
 ---
 
-## Tabella WRITE
+## WRITE in forma compatta
 
 ```text
 WRITE wi(X)
 
-1. Ti già abortita?
-   sì -> ignora wi(X)
+if ts(Ti) < rts(X)
+    -> rollback(Ti)
 
-2. TS(Ti) < rts(X)?
-   sì -> abort Ti
-         Thomas NON si applica
+else if ts(Ti) >= wts(X) then
 
-3. TS(Ti) >= rts(X) e TS(Ti) >= wts(X) e cb(X)=true?
-   sì -> accept wi(X)
-         wts(X)=TS(Ti)
-         cb(X)=false
+    if cb(X)=true
+        -> execute wi(X)
+           wts(X)=ts(Ti)
+           cb(X)=false
 
-4. TS(Ti) >= rts(X) e TS(Ti) >= wts(X) e cb(X)=false?
-   sì -> Ti waits
-         non aggiornare wts(X)
+    else
+        -> Ti waits
 
-5. TS(Ti) >= rts(X) e TS(Ti) < wts(X) e cb(X)=true?
-   sì -> Thomas write rule
-         ignore wi(X)
-         Ti continua
+else if ts(Ti) < wts(X) then
 
-6. TS(Ti) >= rts(X) e TS(Ti) < wts(X) e cb(X)=false?
-   sì -> Ti waits
-         non ignorare ancora la write
+    if cb(X)=true
+        -> ignore wi(X)          // Thomas write rule
+
+    else
+        -> Ti waits
 ```
 
 ---
 
-# COMMIT `ci`
+# Commit `ci`
 
-Quando arriva:
+Quando la transazione `Ti` esegue:
 
 ```text
 ci
 ```
 
-chiediti prima:
-
-```text
-Ti è già abortita?
-```
-
-## Caso 1: `Ti` era abortita
-
-```text
-ignore ci
-```
-
-Una transazione abortita non può committare.
-
----
-
-## Caso 2: `Ti` non era abortita e non ha scritto nulla
-
-```text
-commit accepted
-nessun metadata cambia
-```
-
-Esempio:
-
-```text
-r1(X) c1
-```
-
-`T1` ha solo letto, quindi `c1` non aggiorna `wts`, `wts-c` o `cb`.
-
----
-
-## Caso 3: `Ti` non era abortita e ha scritto oggetti
-
-Per ogni oggetto `X` scritto davvero da `Ti`:
+per ogni elemento `X` scritto da `Ti`:
 
 ```text
 cb(X)=true
-wts-c(X)=TS(Ti)
+wts-c(X)=ts(Ti)
 ```
 
-Attenzione:
+Poi, per ogni transazione `Tj` che stava aspettando:
 
 ```text
-se una write di Ti è stata ignorata da Thomas,
-allora quella write non conta come write effettiva.
+allow Tj to proceed
 ```
 
-Dopo il commit, le transazioni che aspettavano su `X` possono ripartire.
+Cioè le transazioni in waiting possono ripartire.
 
-Quando ripartono:
-
-```text
-ricontrolla la loro azione da capo
-```
+Il sistema sceglie quale transazione far procedere.
 
 ---
 
-## Tabella COMMIT
+## COMMIT in forma operativa
 
 ```text
 COMMIT ci
 
-1. Ti già abortita?
-   sì -> ignore ci
+for each X written by Ti do
 
-2. Ti non ha scritto oggetti effettivi?
-   sì -> commit accepted
-         nessun metadata cambia
+    cb(X)=true
+    wts-c(X)=ts(Ti)
 
-3. Ti ha scritto X effettivamente?
-   sì -> cb(X)=true
-         wts-c(X)=TS(Ti)
+for each Tj waiting for X do
 
-4. Ci sono transazioni in wait su X?
-   sì -> risvegliale
-         ricontrolla la loro azione da capo
+    allow Tj to proceed
+```
+
+Quando una transazione in waiting riparte, la sua azione deve essere ricontrollata da capo usando i valori aggiornati di:
+
+```text
+rts(X), wts(X), wts-c(X), cb(X)
 ```
 
 ---
 
-# ROLLBACK / ABORT `ai`
+# Rollback `bi`
 
-Una transazione può abortire perché:
-
-```text
-1. compare esplicitamente ai
-2. il timestamp scheduler rifiuta una sua read/write
-```
-
-Quando `Ti` abortisce:
+Quando la transazione `Ti` esegue il rollback:
 
 ```text
-tutte le sue azioni vengono eliminate dallo schedule finale
+bi
 ```
 
-Se `Ti` aveva scritto qualche oggetto `X`, bisogna annullare le sue write.
-
-Per ogni oggetto `X` scritto da `Ti`:
+per ogni elemento `X` scritto da `Ti`:
 
 ```text
 wts(X)=wts-c(X)
 cb(X)=true
 ```
 
-Motivo:
+Cioè si torna all'ultima write committata su `X`.
+
+Poi, per ogni transazione `Tj` che stava aspettando:
 
 ```text
-si torna all'ultima versione committata di X
+allow Tj to proceed
 ```
 
-Poi le transazioni che aspettavano su `X` possono ripartire.
+Il sistema sceglie quale transazione far procedere.
 
-Quando ripartono:
+---
+
+## ROLLBACK in forma operativa
 
 ```text
-ricontrolla la loro azione da capo
+ROLLBACK bi
+
+for each X written by Ti do
+
+    wts(X)=wts-c(X)
+    cb(X)=true
+
+for each Tj waiting for X do
+
+    allow Tj to proceed
 ```
 
 ---
 
-## Tabella ABORT
+# Regole mentali finali
+
+## READ
 
 ```text
-ABORT Ti
+READ ri(X)
 
-1. Ti viene abortita
+1. ts(Ti) < wts(X)?
+   sì -> rollback(Ti)
 
-2. Tutte le azioni future di Ti vengono ignorate
+2. cb(X)=true?
+   sì -> execute ri(X)
+         rts(X)=max(rts(X), ts(Ti))
 
-3. Per ogni X scritto effettivamente da Ti:
-   wts(X)=wts-c(X)
-   cb(X)=true
+3. cb(X)=false ma ts(Ti)=wts(X)?
+   sì -> execute ri(X)
+         rts(X)=max(rts(X), ts(Ti))
 
-4. Le transazioni in wait su X possono ripartire
-
-5. Quando ripartono:
-   ricontrolla la loro azione da capo
+4. cb(X)=false e ts(Ti)>wts(X)?
+   sì -> Ti waits
 ```
 
 ---
 
-# WAIT
-
-Questo è il punto che crea più confusione.
-
-Quando una transazione va in wait:
+## WRITE
 
 ```text
-l'azione non è ancora accettata
-l'azione non è ancora rifiutata
-l'azione non è ancora ignorata da Thomas
-```
+WRITE wi(X)
 
-È semplicemente sospesa.
+1. ts(Ti) < rts(X)?
+   sì -> rollback(Ti)
 
-Quindi:
+2. ts(Ti) >= wts(X) e cb(X)=true?
+   sì -> execute wi(X)
+         wts(X)=ts(Ti)
+         cb(X)=false
 
-```text
-non aggiornare rts(X)
-non aggiornare wts(X)
-non aggiornare cb(X)
-non applicare Thomas ancora
-```
+3. ts(Ti) >= wts(X) e cb(X)=false?
+   sì -> Ti waits
 
-Quando la transazione viene risvegliata:
+4. ts(Ti) < wts(X) e cb(X)=true?
+   sì -> ignore wi(X)
+         Thomas write rule
 
-```text
-ricontrolla la stessa azione da capo
-usando i valori aggiornati di rts, wts, wts-c, cb
+5. ts(Ti) < wts(X) e cb(X)=false?
+   sì -> Ti waits
 ```
 
 ---
 
-# Frase mentale velocissima
+# Differenza importante
 
 ```text
-READ:
-1. Sono più vecchio dell'ultima write?
-   sì -> abort
-
-2. L'ultima write non è committata?
-   sì -> wait
-
-3. Altrimenti leggo e aggiorno rts.
+rollback(Ti)
 ```
+
+significa che la transazione viene abortita.
 
 ```text
-WRITE:
-1. Sono più vecchio di una read già fatta?
-   sì -> abort
-
-2. Sono più vecchio dell'ultima write?
-   sì:
-      se quella write è committata -> Thomas, ignore
-      se quella write non è committata -> wait
-
-3. Non sono più vecchio dell'ultima write?
-   sì:
-      se l'ultima write è committata -> scrivo, wts=TS, cb=false
-      se l'ultima write non è committata -> wait
+ignore wi(X)
 ```
+
+significa che solo quella write viene ignorata, ma la transazione continua.
 
 ```text
-COMMIT:
-1. La transazione era abortita?
-   sì -> ignora commit
-
-2. Ha scritto davvero qualcosa?
-   sì -> cb=true, wts-c=TS
-
-3. Risveglia chi aspettava.
+Ti waits
 ```
 
-```text
-ABORT:
-1. Elimina la transazione
-
-2. Se aveva scritto X:
-   wts(X)=wts-c(X)
-   cb(X)=true
-
-3. Risveglia chi aspettava.
-```
-
----
-
-# Regola finale per lo schedule risultante
-
-Alla fine costruisci lo schedule finale così:
-
-```text
-1. elimina tutte le azioni delle transazioni abortite
-
-2. elimina le write ignorate da Thomas
-
-3. lascia i commit delle transazioni non abortite,
-   anche se le loro write sono state ignorate
-```
+significa che la transazione non è né abortita né accettata: aspetta il commit o rollback dell'ultima transazione che ha scritto X.
